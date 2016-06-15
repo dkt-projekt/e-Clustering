@@ -19,9 +19,7 @@ In addition to the input, informat and outformat parameters, the following param
 `condat_types`: model generated using the data provided by Condat and the types associated to every document.  
 `condat_categories`: model generated using the data provided by Condat and the categories associated to every document.  
 `kreuzwerker_categories`: model generated using the data provided by Kreuzwerker and the categories associated to every document.  
-`kreuzwerker_subcategories`: model generated using the data provided by Kreuzwerker and the subcategories associated to every document.  
-`kreuzwerker_topics`: model generated using the data provided by Kreuzwerker and the topics associated to every document.  
-  
+
 `modelPath`: [optional] this parameter is only used is other location for models is used inside the server. This parameter has been meant for local installation of the service.
 
 ### Output
@@ -42,7 +40,6 @@ In addition to the input, informat and outformat parameters, the following param
 `language`: the language of the input text. For now, this service only admits german (`de`).  
   
 `modelName`: the model that is used for topic modelling. There are some models available:  
-`3pc`: model generated using the data provided by 3pc (Mendehlson letters).  
 `condat`: model generated using the data provided by Condat.  
 `kreuzwerker`: model generated using the data provided by Kreuzwerker.    
   
