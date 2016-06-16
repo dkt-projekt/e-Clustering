@@ -47,7 +47,7 @@ In addition to the input, informat and outformat parameters, the following param
 Output
 A document with NIF format annotated with the topic assigned to the input text. The topic information is included as an annotation in the Context element:  
 Example cURL post:  
-`curl -X POST "http://dev.digitale-kuratierung.de/api/e-topicmodelling?language=de&modelName=3pc&informat=text/plain&input=Einige interessanten Texte die etwas witchtiges drinnen haben über Medizin"`
+`curl -X POST "http://dev.digitale-kuratierung.de/api/e-topicmodelling?language=de&modelName=condat&informat=text/plain&input=Einige interessanten Texte die etwas witchtiges drinnen haben über Medizin"`
 
 
 # e-Clustering
@@ -63,7 +63,7 @@ The following parameters have to be set to perform clustering on the input:
   
 `language`: the language of the input files. Currently de and en are supported.  
 
-`input`: the input for this service has to be in the form of an .arff file. See http://www.cs.waikato.ac.nz/ml/weka/arff.html for an explanation of this format.
+`inputFile`: the input for this service has to be in the form of an .arff file. See http://www.cs.waikato.ac.nz/ml/weka/arff.html for an explanation of this format.
 The .arff file can be posted directly in a variable called inputFile.
-The content of the .arff file can be put in the body, or in the URL and specified with the parameter input.
+
 
