@@ -66,7 +66,6 @@ public class SimpleKMeansClustering {
 			 
 			remove.setInputFormat(isTrainingSet);
 			isTrainingSet = Filter.useFilter(isTrainingSet, remove);
-
 			SimpleKMeans skm = new SimpleKMeans();
 			String[] options2 = new String[4];
 			options2[0] = "-I";                 // max. iterations
@@ -74,8 +73,7 @@ public class SimpleKMeansClustering {
 			options2[2] = "-N";                 // max. iterations
 			options2[3] = "5";
 			skm.setOptions(options2);     // set the options
-
-//			double upperthreshold = 0.99;
+			double upperthreshold = 0.99;
 			double threshold = 0;
 			
 			skm.buildClusterer(isTrainingSet);
@@ -86,12 +84,10 @@ public class SimpleKMeansClustering {
 			JSONObject obj = new JSONObject();
 			JSONObject joResults = new JSONObject();
 			joResults.put("numberClusters", clusterer.numberOfClusters());
-
 			JSONObject joDocuments = new JSONObject();
 			for (int i = 0; i < centroids.numInstances(); i++) {
 //				System.out.println("_---------------------------------");
 				Instance inst = centroids.instance(i);
-				
 				JSONObject resultJSON = new JSONObject();
 				resultJSON.put("clusterId", i+1);
 				JSONObject objEntities = new JSONObject();
@@ -101,7 +97,7 @@ public class SimpleKMeansClustering {
 					if(inst.value(j)>threshold){
 						JSONObject objE = new JSONObject();
 						Attribute at = inst.attribute(j);
-						System.out.print(at.name() + "(" + inst.value(j) + ")" + "\t");
+						
 //						System.out.println(inst.value(j));
 //						System.out.println(" \t\t"+inst.toString());
 						objE.put("label", at.name());
@@ -110,7 +106,7 @@ public class SimpleKMeansClustering {
 					}
 					counter++;
 				}
-				resultJSON.put("entitites", objEntities);
+				resultJSON.put("entities", objEntities);
 				joDocuments.put("cluster"+(i+1),resultJSON);
 
 			}

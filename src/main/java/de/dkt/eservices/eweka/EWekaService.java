@@ -27,7 +27,7 @@ public class EWekaService {
 
     public JSONObject generateClusters(String inputFile, String algorithm, String language) 
     		throws ExternalServiceFailedException, BadRequestException {
-        try {
+    	try {
         	if(algorithm.equalsIgnoreCase("em")){
         		return EMClustering.trainModelAndClusterInstances(inputFile, language);
         	}

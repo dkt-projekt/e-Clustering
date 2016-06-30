@@ -102,7 +102,7 @@ public class EMClustering {
 						counter++;
 					}
 				}
-				resultJSON.put("entitites", objEntities);
+				resultJSON.put("entities", objEntities);
 				joDocuments.put("cluster"+(i+1),resultJSON);
 			}
 			

@@ -92,16 +92,16 @@ public class EWekaServiceStandAlone extends BaseRestController{
 		        	logger.error("The given file was empty.");
 		        	throw new BadRequestException("The given file was empty.");
 		        }
-		        System.out.println("DEBUG FILE: "+new String(bytes));
+		        //System.out.println("DEBUG FILE: "+new String(bytes));
 	        }
 			else{
 				if(input!=null){
 					bytes = input.getBytes();
-			        System.out.println("DEBUG INPUT: "+new String(bytes));
+			        //System.out.println("DEBUG INPUT: "+new String(bytes));
 				}
 				else if(postBody!=null){
 					bytes = postBody.getBytes();
-			        System.out.println("DEBUG BODY: "+new String(bytes));
+			        //System.out.println("DEBUG BODY: "+new String(bytes));
 				}
 				else{
 					throw new BadRequestException("No input found: nor file, neither input, neither body content.");
@@ -109,7 +109,7 @@ public class EWekaServiceStandAlone extends BaseRestController{
 			}
 	   		//File tmpFile = FileFactory.generateOrCreateFileInstance(tmpFolder + tmpFileName);
 	   		File tmpFile = File.createTempFile("temp", Long.toString(System.nanoTime())+".arff");
-	   		System.out.println("DEBUG: "+tmpFile.getAbsolutePath());
+	   		//System.out.println("DEBUG: "+tmpFile.getAbsolutePath());
         	try {
         		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(tmpFile));
         		stream.write(bytes);
