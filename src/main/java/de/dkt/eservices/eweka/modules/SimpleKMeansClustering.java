@@ -55,9 +55,10 @@ public class SimpleKMeansClustering {
 
 	public static JSONObject trainModelAndClusterInstances(String trainDataFile, String language) throws ExternalServiceFailedException {
 		try{
+			System.out.println("TrainingDataFile:" + trainDataFile);
 			File trainingData = FileFactory.generateFileInstance(trainDataFile);
 			Instances isTrainingSet = DataLoader.loadDataFromFile(trainingData.getAbsolutePath());
-
+			System.out.println("DEBUGGING training instances:" +isTrainingSet.toString());
 			String[] options = new String[2];
 			options[0] = "-R";                                    // "range"
 			options[1] = "1";                                     // first attribute
@@ -97,7 +98,7 @@ public class SimpleKMeansClustering {
 					if(inst.value(j)>threshold){
 						JSONObject objE = new JSONObject();
 						Attribute at = inst.attribute(j);
-						
+						System.out.println("DEBUGGINg at name:" + at.name());
 //						System.out.println(inst.value(j));
 //						System.out.println(" \t\t"+inst.toString());
 						objE.put("label", at.name());
