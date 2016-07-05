@@ -6,7 +6,7 @@ This service contains endpoints for classification, topic modeling and clusterin
 This service determines the class of a given text. The different available classes depend on the model that is used (see next section). 
 
 ## Endpoint
-`http://dev.digitale-kuratierung.de/api/e-documentclassification`
+`http://api.digitale-kuratierung.de/api/e-documentclassification`
 
 ### Input
 The API conforms to the general NIF API specifications. For more details, see: http://persistence.uni-leipzig.org/nlp2rdf/specification/api.html
@@ -25,14 +25,14 @@ In addition to the input, informat and outformat parameters, the following param
 ### Output
 A document with NIF format annotated with the class assigned to the input text. The document class is included as an annotation in the Context element:  
 Example cURL post:  
-`curl -X POST "http://dev.digitale-kuratierung.de/api/e-documentclassification?language=de&modelName=3pc&informat=text/plain&input=Einige interessanten Texte die etwas witchtiges drinnen haben über Medizin"`
+`curl -X POST "http://api.digitale-kuratierung.de/api/e-documentclassification?language=de&modelName=3pc&informat=text/plain&input=Einige interessanten Texte die etwas witchtiges drinnen haben über Medizin"`
 
 
 # e-TopicModelling
 This service determines the ‘topic’ of a given text. A set of documents is used by Mallet to train a topic modelling model. It clusters the terms into the documents to model the ‘topics’, so each ‘topic’ is defined as the terms (words) that are included in the corresponding ‘topic’ (cluster). 
 
 ## Endpoint
-`http://dev.digitale-kuratierung.de/api/e-topicmodelling`
+`http://api.digitale-kuratierung.de/api/e-topicmodelling`
 
 ### Input
 The API conforms to the general NIF API specifications. For more details, see: http://persistence.uni-leipzig.org/nlp2rdf/specification/api.html
@@ -47,7 +47,7 @@ In addition to the input, informat and outformat parameters, the following param
 Output
 A document with NIF format annotated with the topic assigned to the input text. The topic information is included as an annotation in the Context element:  
 Example cURL post:  
-`curl -X POST "http://dev.digitale-kuratierung.de/api/e-topicmodelling?language=de&modelName=condat&informat=text/plain&input=Einige interessanten Texte die etwas witchtiges drinnen haben über Medizin"`
+`curl -X POST "http://api.digitale-kuratierung.de/api/e-topicmodelling?language=de&modelName=condat&informat=text/plain&input=Einige interessanten Texte die etwas witchtiges drinnen haben über Medizin"`
 
 
 # e-Clustering
@@ -55,7 +55,7 @@ Example cURL post:
 This service clusters the input document collection. The document collection first has to be converted to a set of vectors. Note that this is not included in this service. The service expects the input in this particular format (see Output section for details and an example) and then proceeds to find clusters in this input data. The output contains information on the number of clusters found and specific values for the found clusters.
 
 ## Endpoint
-`http://dev.digitale-kuratierung.de/api/e-clustering/generateClusters`
+`http://api.digitale-kuratierung.de/api/e-clustering/generateClusters`
 
 ### Input
 The following parameters have to be set to perform clustering on the input:  
