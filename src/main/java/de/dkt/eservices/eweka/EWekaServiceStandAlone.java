@@ -110,6 +110,9 @@ public class EWekaServiceStandAlone extends BaseRestController{
 	   		//File tmpFile = FileFactory.generateOrCreateFileInstance(tmpFolder + tmpFileName);
 	   		File tmpFile = File.createTempFile("temp", Long.toString(System.nanoTime())+".arff");
 	   		//System.out.println("DEBUG: "+tmpFile.getAbsolutePath());
+
+	   		logger.debug("INPUT CLUS: "+bytes);
+	   		
         	try {
         		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(tmpFile));
         		stream.write(bytes);
@@ -121,8 +124,11 @@ public class EWekaServiceStandAlone extends BaseRestController{
 
             JSONObject outObject;
             outObject = service.generateClusters(path, algorithm, language);
+            
+	   		logger.debug("OUTPUT CLUS: "+outObject.toString(1));
+	   		
             HttpHeaders responseHeaders = new HttpHeaders();
-			responseHeaders.add("Content-Type", "text/plain");
+			responseHeaders.add("Content-Type", "text/plain; charset=utf-8");
 			ResponseEntity<String> response = new ResponseEntity<String>(outObject.toString(1), responseHeaders, HttpStatus.OK);
 			return response;
 		} catch (BadRequestException e) {

@@ -214,10 +214,84 @@ public class EClusteringTest {
 	public void testW_1_simpleEMTest() throws UnirestException, IOException,
 			Exception {
 
+		String input = ""
++ "	@RELATION CondatTest6_Clustering\n"
++ " @ATTRIBUTE DOCUMENT_NAME  STRING\n"
++ "	@ATTRIBUTE Washington  NUMERIC\n"
++ "	@ATTRIBUTE Jonathan_Pollard  NUMERIC\n"
++ "	@ATTRIBUTE Suchstichwörter  NUMERIC\n"
++ "	@ATTRIBUTE Fähigkeiten_von_Ländern  NUMERIC\n"
++ "	@ATTRIBUTE Alistair_Baskey  NUMERIC\n"
++ "	@ATTRIBUTE Kerry  NUMERIC\n"
++ "	@ATTRIBUTE Einem_von_Pollards_Anwälten  NUMERIC\n"
++ "	@ATTRIBUTE John_Kerry  NUMERIC\n"
++ "	@ATTRIBUTE Angelika_Engler  NUMERIC\n"
++ "	@ATTRIBUTE Saudi  NUMERIC\n"
++ "	@ATTRIBUTE Sydney  NUMERIC\n"
++ "	@ATTRIBUTE Iran  NUMERIC\n"
++ "	@ATTRIBUTE Israels__Haltung  NUMERIC\n"
++ "	@ATTRIBUTE November_1985  NUMERIC\n"
++ "	@ATTRIBUTE Bewährungsauflagen_von_Pollard  NUMERIC\n"
++ "	@ATTRIBUTE Barack_Obama  NUMERIC\n"
++ "	@ATTRIBUTE Fall  NUMERIC\n"
++ "	@ATTRIBUTE November  NUMERIC\n"
++ "	@ATTRIBUTE US  NUMERIC\n"
++ "	@ATTRIBUTE Gegenleistung  NUMERIC\n"
++ "	@ATTRIBUTE Uwe_Käding  NUMERIC\n"
++ "	@ATTRIBUTE Bernard_Darko  NUMERIC\n"
++ "	@ATTRIBUTE European_News_Wire  NUMERIC\n"
++ "	@ATTRIBUTE Kim_Alexander_Zickenheiner  NUMERIC\n"
++ "	@ATTRIBUTE Württemberg  NUMERIC\n"
++ "	@ATTRIBUTE Hybridbusse  NUMERIC\n"
++ "	@ATTRIBUTE Dresden  NUMERIC\n"
++ "	@ATTRIBUTE Frank_Metzger  NUMERIC\n"
++ "	@ATTRIBUTE Ende_Juni_Strom  NUMERIC\n"
++ "	@ATTRIBUTE MAN  NUMERIC\n"
++ "	@ATTRIBUTE Baden  NUMERIC\n"
++ "	@ATTRIBUTE Preise  NUMERIC\n"
++ "	@ATTRIBUTE Matthias_Schröter  NUMERIC\n"
++ "	@ATTRIBUTE Susanne_Schupp  NUMERIC\n"
++ "	@ATTRIBUTE 2852  NUMERIC\n"
++ "	@ATTRIBUTE René_Weintz  NUMERIC\n"
++ "	@ATTRIBUTE 2015  NUMERIC\n"
++ "	@ATTRIBUTE Henrik_Petermann  NUMERIC\n"
++ "	@ATTRIBUTE 2020  NUMERIC\n"
++ "	@ATTRIBUTE Lars_Wagner  NUMERIC\n"
++ "	@ATTRIBUTE 2012  NUMERIC\n"
++ "	@ATTRIBUTE Hamburg  NUMERIC\n"
++ "	@ATTRIBUTE Volvo  NUMERIC\n"
++ "	@ATTRIBUTE Jan  NUMERIC\n"
++ "	@ATTRIBUTE Christoph_Kreienbaum  NUMERIC\n"
++ "	@ATTRIBUTE Pressestelle_Verkehrsministerium_Baden  NUMERIC\n"
++ "	@ATTRIBUTE Hannover  NUMERIC\n"
++ "	@ATTRIBUTE Unterstützung_von_Elektromotoren  NUMERIC\n"
++ "	@ATTRIBUTE Thomas_Tuchel  NUMERIC\n"
++ "	@ATTRIBUTE April  NUMERIC\n"
++ "	@ATTRIBUTE Axel_Schweitzer  NUMERIC\n"
++ "	@ATTRIBUTE Sasa_Obradovic  NUMERIC\n"
++ "	@ATTRIBUTE Scouting  NUMERIC\n"
++ "	@ATTRIBUTE Berlin  NUMERIC\n"
++ "	@ATTRIBUTE Schwarz  NUMERIC\n"
++ "	@ATTRIBUTE Bayern  NUMERIC\n"
++ "	@ATTRIBUTE Frankfurter_Museums_Junge_Kunst_Armin_Hauer  NUMERIC\n"
++ "	@ATTRIBUTE Deutsche_Bahn  NUMERIC\n"
++ "	@ATTRIBUTE Rathaus  NUMERIC\n"
++ "	@ATTRIBUTE 1936  NUMERIC\n"
++ "\n"
++ "	@DATA\n"
++ "	CondatTest6_3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0\n"
++ "	CondatTest6_2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0\n"
++ "	CondatTest6_1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n"
++ "	CondatTest6_6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1\n"
++ "	CondatTest6_5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0\n"
++ "	CondatTest6_4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0\n";
+		
+		
 		HttpResponse<String> response2 = clusteringRequest()
 				.queryString("language", "en")
-				.queryString("algorithm", "EM")
-				.body(TestConstants.sampleARFF)
+				.queryString("algorithm", "kmeans")
+//				.body(TestConstants.sampleARFF)
+				.body(input)
 				.asString();
 				
 		System.out.println("DEBUGGING output here:" + response2.getBody());
