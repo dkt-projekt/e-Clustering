@@ -2,8 +2,10 @@ package de.dkt.eservices.eweka;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.text.DateFormat;
@@ -29,10 +31,13 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import de.dkt.common.filemanagement.FileFactory;
+import de.dkt.eservices.eweka.modules.DataLoader;
 import eu.freme.common.exception.BadRequestException;
 import eu.freme.common.exception.ExternalServiceFailedException;
 import eu.freme.common.rest.BaseRestController;
 //import junit.framework.Test;
+import weka.core.Instances;
+import weka.core.converters.ConverterUtils.DataSource;
 
 @RestController
 public class EWekaServiceStandAlone extends BaseRestController{
@@ -53,93 +58,6 @@ public class EWekaServiceStandAlone extends BaseRestController{
 	    return response;
 	}
 	
-	@RequestMapping(value = "/e-clustering/generateClusters2", method = {RequestMethod.POST, RequestMethod.GET })
-	public ResponseEntity<String> documentClustering2(
-			HttpServletRequest request, 
-			@RequestParam(value = "input", required = false) String input,
-			@RequestParam(value = "i", required = false) String i,
-			@RequestParam(value = "informat", required = false) String informat,
-			@RequestParam(value = "f", required = false) String f,
-			@RequestParam(value = "outformat", required = false) String outformat,
-			@RequestParam(value = "o", required = false) String o,
-			@RequestParam(value = "prefix", required = false) String prefix,
-			@RequestParam(value = "p", required = false) String p,
-			@RequestHeader(value = "Accept", required = false) String acceptHeader,
-			@RequestHeader(value = "Content-Type", required = false) String contentTypeHeader,
-            @RequestParam Map<String, String> allParams,
-
-			@RequestParam(value = "language", required = false) String language,
-			@RequestParam(value = "algorithm", required = false) String algorithm,
-			@RequestBody(required = false) String postBody) throws Exception {
-		
-//		System.err.println(postBody);
-		try {
-	        MultipartFile file1 = null;
-    		byte[] bytes;
-        	String text ="";
-			if (request instanceof MultipartHttpServletRequest){
-		           MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
-		           file1 = multipartRequest.getFile("inputFile");
-		   		if(file1==null){
-					logger.error("No file received in request");
-					throw new BadRequestException("No file received in request");
-				}
-		        if (!file1.isEmpty()) {
-	        		String fileContent = "";
-		        	try {
-//		        		bytes = file1.getBytes();
-		        		BufferedReader br = new BufferedReader(new InputStreamReader(file1.getInputStream(), "UTF-8"));
-		        		String line = br.readLine();
-		        		while(line!=null){
-		        			fileContent += line+"\n";
-		        			line = br.readLine();
-		        		}
-		        		br.close();
-		        	} catch (Exception e) {
-		        		logger.error("Fail at reading input file.");
-		        		throw new BadRequestException("Fail at reading input file.");
-		        	}
-		        	text = fileContent;
-		        	System.out.println("---- FILE CONTENT: "+text);
-		        } else {
-		        	logger.error("The given file was empty.");
-		        	throw new BadRequestException("The given file was empty.");
-		        }
-		        //System.out.println("DEBUG FILE: "+new String(bytes));
-	        }
-			else{
-				if(input!=null){
-		        	System.out.println("---- INPUT: "+input);
-					bytes = input.getBytes("UTF-8");
-					text = input;
-			        //System.out.println("DEBUG INPUT: "+new String(bytes));
-				}
-				else if(postBody!=null){
-		        	System.out.println("---- INPUT: "+postBody);
-//					bytes = postBody.getBytes("UTF-8");
-					text = postBody;
-			        //System.out.println("DEBUG BODY: "+new String(bytes));
-				}
-				else{
-					throw new BadRequestException("No input found: nor file, neither input, neither body content.");
-				}
-//				text = new String(bytes, "UTF-8");
-			}
-	   		System.out.println("INPUT CLUS: "+text);            
-	   		
-            HttpHeaders responseHeaders = new HttpHeaders();
-//			responseHeaders.add("Content-Type", "text/plain; charset=utf-8");
-			ResponseEntity<String> response = new ResponseEntity<String>(text, responseHeaders, HttpStatus.OK);
-			return response;
-		} catch (BadRequestException e) {
-			logger.error("EXCEPTION: "+e.getMessage());
-			throw e;
-		} catch (ExternalServiceFailedException e) {
-			logger.error("EXCEPTION: "+e.getMessage());
-			throw e;
-		}
-	}
-	
 	@RequestMapping(value = "/e-clustering/generateClusters", method = {RequestMethod.POST, RequestMethod.GET })
 	public ResponseEntity<String> documentClustering(
 			HttpServletRequest request, 
@@ -155,6 +73,8 @@ public class EWekaServiceStandAlone extends BaseRestController{
 			@RequestHeader(value = "Content-Type", required = false) String contentTypeHeader,
             @RequestParam Map<String, String> allParams,
 
+			@RequestParam(value = "option", required = false) String option,
+			@RequestParam(value = "encodingG", required = false) String encoding,
 			@RequestParam(value = "language", required = false) String language,
 			@RequestParam(value = "algorithm", required = false) String algorithm,
 			@RequestBody(required = false) String postBody) throws Exception {
@@ -228,13 +148,60 @@ public class EWekaServiceStandAlone extends BaseRestController{
 //        	String path = tmpFile.getAbsolutePath();
             JSONObject outObject;
 //            outObject = service.generateClusters(path, algorithm, language);
-            outObject = service.generateClusters("content", text, algorithm, language);
             
-	   		System.out.println("OUTPUT CLUS: "+outObject.toString(1));
-	   		
+            String result = "";
+            if(option.equalsIgnoreCase("normal")){
+                outObject = service.generateClusters("content", text, algorithm, language);
+            	result = outObject.toString();
+            }
+            else if(option.equalsIgnoreCase("loopback")){
+            	result = text;
+            }
+            else if(option.equalsIgnoreCase("testDataLoader")){
+//    			Instances isTrainingSet = DataLoader.loadDataFromString(text);
+    			InputStream is = null;
+    			if(encoding!=null){
+    				is = new ByteArrayInputStream( text.getBytes(encoding) );
+    			}
+    			else{
+    				is = new ByteArrayInputStream( text.getBytes() );
+    			}
+    			Instances data1 = DataSource.read(is);
+    			for (int j = 0; j < data1.numInstances(); j++) {
+    				result += "label: "+data1.attribute(j).name()+"\n";
+				}
+            }
+            else if(option.equalsIgnoreCase("inputstream")){
+    			InputStream is = null;
+    			if(encoding!=null){
+    				is = new ByteArrayInputStream( text.getBytes(encoding) );
+    			}
+    			else{
+    				is = new ByteArrayInputStream( text.getBytes() );
+    			}
+    			byte[] bb = new byte[50000];
+    			is.read(bb, 0, 50000);
+    			result = new String(bb);
+            }
+            else if(option.equalsIgnoreCase("inputstream2")){
+    			InputStream is = null;
+    			if(encoding!=null){
+    				is = new ByteArrayInputStream( text.getBytes(encoding) );
+    			}
+    			else{
+    				is = new ByteArrayInputStream( text.getBytes() );
+    			}
+    			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+    			String line = br.readLine();
+    			while(line!=null){
+    				result += line + "\n";
+    				line = br.readLine();
+    			}
+            }
+            
             HttpHeaders responseHeaders = new HttpHeaders();
 //			responseHeaders.add("Content-Type", "text/plain; charset=utf-8");
-			ResponseEntity<String> response = new ResponseEntity<String>(outObject.toString(1), responseHeaders, HttpStatus.OK);
+			ResponseEntity<String> response = new ResponseEntity<String>(result, responseHeaders, HttpStatus.OK);
 			return response;
 		} catch (BadRequestException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
