@@ -288,13 +288,16 @@ public class EClusteringTest {
 + "	CondatTest6_4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0\n";
 		
 		
+		byte[] bb = input.getBytes();
+		String input2 = new String(bb, "utf-8");
+		System.out.println("INPUT2: "+input2);
 //		HttpResponse<String> response2 = clusteringRequest()
 		HttpResponse<String> response2 = Unirest.post("http://dev.digitale-kuratierung.de/api/e-clustering/generateClusters")
-				.header("Content-Type", "text/plain; encoding=utf8")
+				//.header("Content-Type", "text/plain; encoding=utf8")
 				.queryString("language", "en")
 				.queryString("algorithm", "kmeans")
 //				.body(TestConstants.sampleARFF)
-				.body(input)
+				.body(input2)
 				.asString();
 				
 		System.out.println("DEBUGGING output here:" + response2.getBody());

@@ -111,17 +111,19 @@ public class EWekaServiceStandAlone extends BaseRestController{
 				if(input!=null){
 		        	System.out.println("---- INPUT: "+input);
 					bytes = input.getBytes("UTF-8");
+					text = input;
 			        //System.out.println("DEBUG INPUT: "+new String(bytes));
 				}
 				else if(postBody!=null){
 		        	System.out.println("---- INPUT: "+postBody);
-					bytes = postBody.getBytes("UTF-8");
+//					bytes = postBody.getBytes("UTF-8");
+					text = postBody;
 			        //System.out.println("DEBUG BODY: "+new String(bytes));
 				}
 				else{
 					throw new BadRequestException("No input found: nor file, neither input, neither body content.");
 				}
-				text = new String(bytes, "UTF-8");
+//				text = new String(bytes, "UTF-8");
 			}
 //	   		//File tmpFile = FileFactory.generateOrCreateFileInstance(tmpFolder + tmpFileName);
 //	   		File tmpFile = File.createTempFile("temp", Long.toString(System.nanoTime())+".arff");

@@ -26,7 +26,7 @@ public class DataLoader {
 	}
 	
 	public static Instances loadDataFromString(String content) throws Exception {
-		InputStream is = new ByteArrayInputStream( content.getBytes("UTF-8") );
+		InputStream is = new ByteArrayInputStream( content.getBytes() );
 		Instances data1 = DataSource.read(is);
 		return data1;
 	}
