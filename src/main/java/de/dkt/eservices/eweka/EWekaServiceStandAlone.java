@@ -82,7 +82,6 @@ public class EWekaServiceStandAlone extends BaseRestController{
 //		System.err.println(postBody);
 		try {
 	        MultipartFile file1 = null;
-    		byte[] bytes;
         	String text ="";
 			if (request instanceof MultipartHttpServletRequest){
 		           MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
@@ -94,7 +93,6 @@ public class EWekaServiceStandAlone extends BaseRestController{
 		        if (!file1.isEmpty()) {
 	        		String fileContent = "";
 		        	try {
-//		        		bytes = file1.getBytes();
 		        		BufferedReader br = new BufferedReader(new InputStreamReader(file1.getInputStream(), "UTF-8"));
 		        		String line = br.readLine();
 		        		while(line!=null){
@@ -107,25 +105,17 @@ public class EWekaServiceStandAlone extends BaseRestController{
 		        		throw new BadRequestException("Fail at reading input file.");
 		        	}
 		        	text = fileContent;
-		        	System.out.println("---- FILE CONTENT: "+text);
 		        } else {
 		        	logger.error("The given file was empty.");
 		        	throw new BadRequestException("The given file was empty.");
 		        }
-		        //System.out.println("DEBUG FILE: "+new String(bytes));
 	        }
 			else{
 				if(input!=null){
-		        	System.out.println("---- INPUT: "+input);
-					bytes = input.getBytes("UTF-8");
 					text = input;
-			        //System.out.println("DEBUG INPUT: "+new String(bytes));
 				}
 				else if(postBody!=null){
-		        	System.out.println("---- INPUT: "+postBody);
-//					bytes = postBody.getBytes("UTF-8");
 					text = postBody;
-			        //System.out.println("DEBUG BODY: "+new String(bytes));
 				}
 				else{
 					throw new BadRequestException("No input found: nor file, neither input, neither body content.");
@@ -136,7 +126,6 @@ public class EWekaServiceStandAlone extends BaseRestController{
 //	   		File tmpFile = File.createTempFile("temp", Long.toString(System.nanoTime())+".arff");
 //	   		//System.out.println("DEBUG: "+tmpFile.getAbsolutePath());
 //
-	   		System.out.println("INPUT CLUS: "+text);
 //	   		
 //        	try {
 //        		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(tmpFile));
@@ -147,76 +136,76 @@ public class EWekaServiceStandAlone extends BaseRestController{
 //        	}
 //        	String path = tmpFile.getAbsolutePath();
             JSONObject outObject;
-//            outObject = service.generateClusters(path, algorithm, language);
+            outObject = service.generateClusters("content", text, algorithm, language);
             
-            String result = "";
-            if(option.equalsIgnoreCase("normal")){
-                outObject = service.generateClusters("content", text, algorithm, language);
-            	result = outObject.toString();
-            }
-            else if(option.equalsIgnoreCase("loopback")){
-            	result = text;
-            }
-            else if(option.equalsIgnoreCase("testDataLoader")){
-//    			Instances isTrainingSet = DataLoader.loadDataFromString(text);
-    			InputStream is = null;
-    			if(encoding!=null){
-    				is = new ByteArrayInputStream( text.getBytes(encoding) );
-    			}
-    			else{
-    				is = new ByteArrayInputStream( text.getBytes() );
-    			}
-    			Instances data1 = DataSource.read(is);
-    			for (int j = 0; j < data1.numInstances(); j++) {
-    				result += "label: "+data1.attribute(j).name()+"\n";
-				}
-            }
-            else if(option.equalsIgnoreCase("testDataLoader2")){
-//    			Instances isTrainingSet = DataLoader.loadDataFromString(text);
-    			InputStream is = null;
-    			BufferedReader br = null;
-    			if(encoding!=null){
-    				is = new ByteArrayInputStream( text.getBytes(encoding) );
-    				br = new BufferedReader(new InputStreamReader(is,encoding));
-    			}
-    			else{
-    				is = new ByteArrayInputStream( text.getBytes() );
-    				br = new BufferedReader(new InputStreamReader(is));
-    			}
-    			Instances data1 = new Instances(br);
-    			for (int j = 0; j < data1.numInstances(); j++) {
-    				result += "label: "+data1.attribute(j).name()+"\n";
-				}
-            }
-            else if(option.equalsIgnoreCase("inputstream")){
-    			InputStream is = null;
-    			if(encoding!=null){
-    				is = new ByteArrayInputStream( text.getBytes(encoding) );
-    			}
-    			else{
-    				is = new ByteArrayInputStream( text.getBytes() );
-    			}
-    			byte[] bb = new byte[50000];
-    			is.read(bb, 0, 50000);
-    			result = new String(bb);
-            }
-            else if(option.equalsIgnoreCase("inputstream2")){
-    			InputStream is = null;
-    			BufferedReader br = null;
-    			if(encoding!=null){
-    				is = new ByteArrayInputStream( text.getBytes(encoding) );
-    				br = new BufferedReader(new InputStreamReader(is,encoding));
-    			}
-    			else{
-    				is = new ByteArrayInputStream( text.getBytes() );
-    				br = new BufferedReader(new InputStreamReader(is));
-    			}
-    			String line = br.readLine();
-    			while(line!=null){
-    				result += line + "\n";
-    				line = br.readLine();
-    			}
-            }
+            String result = outObject.toString(1);
+//            if(option.equalsIgnoreCase("normal")){
+//                outObject = service.generateClusters("content", text, algorithm, language);
+//            	result = outObject.toString();
+//            }
+//            else if(option.equalsIgnoreCase("loopback")){
+//            	result = text;
+//            }
+//            else if(option.equalsIgnoreCase("testDataLoader")){
+////    			Instances isTrainingSet = DataLoader.loadDataFromString(text);
+//    			InputStream is = null;
+//    			if(encoding!=null){
+//    				is = new ByteArrayInputStream( text.getBytes(encoding) );
+//    			}
+//    			else{
+//    				is = new ByteArrayInputStream( text.getBytes() );
+//    			}
+//    			Instances data1 = DataSource.read(is);
+//    			for (int j = 0; j < data1.numInstances(); j++) {
+//    				result += "label: "+data1.attribute(j).name()+"\n";
+//				}
+//            }
+//            else if(option.equalsIgnoreCase("testDataLoader2")){
+////    			Instances isTrainingSet = DataLoader.loadDataFromString(text);
+//    			InputStream is = null;
+//    			BufferedReader br = null;
+//    			if(encoding!=null){
+//    				is = new ByteArrayInputStream( text.getBytes(encoding) );
+//    				br = new BufferedReader(new InputStreamReader(is,encoding));
+//    			}
+//    			else{
+//    				is = new ByteArrayInputStream( text.getBytes() );
+//    				br = new BufferedReader(new InputStreamReader(is));
+//    			}
+//    			Instances data1 = new Instances(br);
+//    			for (int j = 0; j < data1.numInstances(); j++) {
+//    				result += "label: "+data1.attribute(j).name()+"\n";
+//				}
+//            }
+//            else if(option.equalsIgnoreCase("inputstream")){
+//    			InputStream is = null;
+//    			if(encoding!=null){
+//    				is = new ByteArrayInputStream( text.getBytes(encoding) );
+//    			}
+//    			else{
+//    				is = new ByteArrayInputStream( text.getBytes() );
+//    			}
+//    			byte[] bb = new byte[50000];
+//    			is.read(bb, 0, 50000);
+//    			result = new String(bb);
+//            }
+//            else if(option.equalsIgnoreCase("inputstream2")){
+//    			InputStream is = null;
+//    			BufferedReader br = null;
+//    			if(encoding!=null){
+//    				is = new ByteArrayInputStream( text.getBytes(encoding) );
+//    				br = new BufferedReader(new InputStreamReader(is,encoding));
+//    			}
+//    			else{
+//    				is = new ByteArrayInputStream( text.getBytes() );
+//    				br = new BufferedReader(new InputStreamReader(is));
+//    			}
+//    			String line = br.readLine();
+//    			while(line!=null){
+//    				result += line + "\n";
+//    				line = br.readLine();
+//    			}
+//            }
             
             HttpHeaders responseHeaders = new HttpHeaders();
 //			responseHeaders.add("Content-Type", "text/plain; charset=utf-8");
