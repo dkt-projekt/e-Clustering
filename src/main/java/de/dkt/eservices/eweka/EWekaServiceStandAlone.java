@@ -177,11 +177,11 @@ public class EWekaServiceStandAlone extends BaseRestController{
     			BufferedReader br = null;
     			if(encoding!=null){
     				is = new ByteArrayInputStream( text.getBytes(encoding) );
-    				br = new BufferedReader(new InputStreamReader(is));
+    				br = new BufferedReader(new InputStreamReader(is,encoding));
     			}
     			else{
     				is = new ByteArrayInputStream( text.getBytes() );
-    				br = new BufferedReader(new InputStreamReader(is,encoding));
+    				br = new BufferedReader(new InputStreamReader(is));
     			}
     			Instances data1 = new Instances(br);
     			for (int j = 0; j < data1.numInstances(); j++) {
@@ -202,13 +202,15 @@ public class EWekaServiceStandAlone extends BaseRestController{
             }
             else if(option.equalsIgnoreCase("inputstream2")){
     			InputStream is = null;
+    			BufferedReader br = null;
     			if(encoding!=null){
     				is = new ByteArrayInputStream( text.getBytes(encoding) );
+    				br = new BufferedReader(new InputStreamReader(is,encoding));
     			}
     			else{
     				is = new ByteArrayInputStream( text.getBytes() );
+    				br = new BufferedReader(new InputStreamReader(is));
     			}
-    			BufferedReader br = new BufferedReader(new InputStreamReader(is));
     			String line = br.readLine();
     			while(line!=null){
     				result += line + "\n";
