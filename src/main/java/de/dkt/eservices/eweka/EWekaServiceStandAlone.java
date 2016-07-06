@@ -171,6 +171,23 @@ public class EWekaServiceStandAlone extends BaseRestController{
     				result += "label: "+data1.attribute(j).name()+"\n";
 				}
             }
+            else if(option.equalsIgnoreCase("testDataLoader")){
+//    			Instances isTrainingSet = DataLoader.loadDataFromString(text);
+    			InputStream is = null;
+    			BufferedReader br = null;
+    			if(encoding!=null){
+    				is = new ByteArrayInputStream( text.getBytes(encoding) );
+    				br = new BufferedReader(new InputStreamReader(is));
+    			}
+    			else{
+    				is = new ByteArrayInputStream( text.getBytes() );
+    				br = new BufferedReader(new InputStreamReader(is,encoding));
+    			}
+    			Instances data1 = new Instances(br);
+    			for (int j = 0; j < data1.numInstances(); j++) {
+    				result += "label: "+data1.attribute(j).name()+"\n";
+				}
+            }
             else if(option.equalsIgnoreCase("inputstream")){
     			InputStream is = null;
     			if(encoding!=null){
