@@ -171,7 +171,7 @@ public class EWekaServiceStandAlone extends BaseRestController{
     				result += "label: "+data1.attribute(j).name()+"\n";
 				}
             }
-            else if(option.equalsIgnoreCase("testDataLoader")){
+            else if(option.equalsIgnoreCase("testDataLoader2")){
 //    			Instances isTrainingSet = DataLoader.loadDataFromString(text);
     			InputStream is = null;
     			BufferedReader br = null;
