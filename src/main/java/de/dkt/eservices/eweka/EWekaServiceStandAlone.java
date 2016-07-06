@@ -124,7 +124,7 @@ public class EWekaServiceStandAlone extends BaseRestController{
 //	   		File tmpFile = File.createTempFile("temp", Long.toString(System.nanoTime())+".arff");
 //	   		//System.out.println("DEBUG: "+tmpFile.getAbsolutePath());
 //
-//	   		System.out.println("INPUT CLUS: "+bytes);
+	   		System.out.println("INPUT CLUS: "+text);
 //	   		
 //        	try {
 //        		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(tmpFile));
