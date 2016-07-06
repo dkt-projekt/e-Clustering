@@ -288,8 +288,9 @@ public class EClusteringTest {
 + "	CondatTest6_4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0\n";
 		
 		
-		HttpResponse<String> response2 = clusteringRequest()
-//		HttpResponse<String> response2 = Unirest.post("http://dev.digitale-kuratierung.de/api/e-clustering/generateClusters")
+//		HttpResponse<String> response2 = clusteringRequest()
+		HttpResponse<String> response2 = Unirest.post("http://dev.digitale-kuratierung.de/api/e-clustering/generateClusters")
+				.header("Content-Type", "text/plain; encoding=utf8")
 				.queryString("language", "en")
 				.queryString("algorithm", "kmeans")
 //				.body(TestConstants.sampleARFF)

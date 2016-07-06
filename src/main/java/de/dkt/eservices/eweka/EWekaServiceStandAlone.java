@@ -100,6 +100,7 @@ public class EWekaServiceStandAlone extends BaseRestController{
 		        		throw new BadRequestException("Fail at reading input file.");
 		        	}
 		        	text = fileContent;
+		        	System.out.println("---- FILE CONTENT: "+text);
 		        } else {
 		        	logger.error("The given file was empty.");
 		        	throw new BadRequestException("The given file was empty.");
@@ -108,10 +109,12 @@ public class EWekaServiceStandAlone extends BaseRestController{
 	        }
 			else{
 				if(input!=null){
+		        	System.out.println("---- INPUT: "+input);
 					bytes = input.getBytes("UTF-8");
 			        //System.out.println("DEBUG INPUT: "+new String(bytes));
 				}
 				else if(postBody!=null){
+		        	System.out.println("---- INPUT: "+postBody);
 					bytes = postBody.getBytes("UTF-8");
 			        //System.out.println("DEBUG BODY: "+new String(bytes));
 				}
