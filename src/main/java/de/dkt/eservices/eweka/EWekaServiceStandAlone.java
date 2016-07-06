@@ -53,6 +53,93 @@ public class EWekaServiceStandAlone extends BaseRestController{
 	    return response;
 	}
 	
+	@RequestMapping(value = "/e-clustering/generateClusters2", method = {RequestMethod.POST, RequestMethod.GET })
+	public ResponseEntity<String> documentClustering2(
+			HttpServletRequest request, 
+			@RequestParam(value = "input", required = false) String input,
+			@RequestParam(value = "i", required = false) String i,
+			@RequestParam(value = "informat", required = false) String informat,
+			@RequestParam(value = "f", required = false) String f,
+			@RequestParam(value = "outformat", required = false) String outformat,
+			@RequestParam(value = "o", required = false) String o,
+			@RequestParam(value = "prefix", required = false) String prefix,
+			@RequestParam(value = "p", required = false) String p,
+			@RequestHeader(value = "Accept", required = false) String acceptHeader,
+			@RequestHeader(value = "Content-Type", required = false) String contentTypeHeader,
+            @RequestParam Map<String, String> allParams,
+
+			@RequestParam(value = "language", required = false) String language,
+			@RequestParam(value = "algorithm", required = false) String algorithm,
+			@RequestBody(required = false) String postBody) throws Exception {
+		
+//		System.err.println(postBody);
+		try {
+	        MultipartFile file1 = null;
+    		byte[] bytes;
+        	String text ="";
+			if (request instanceof MultipartHttpServletRequest){
+		           MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+		           file1 = multipartRequest.getFile("inputFile");
+		   		if(file1==null){
+					logger.error("No file received in request");
+					throw new BadRequestException("No file received in request");
+				}
+		        if (!file1.isEmpty()) {
+	        		String fileContent = "";
+		        	try {
+//		        		bytes = file1.getBytes();
+		        		BufferedReader br = new BufferedReader(new InputStreamReader(file1.getInputStream(), "UTF-8"));
+		        		String line = br.readLine();
+		        		while(line!=null){
+		        			fileContent += line+"\n";
+		        			line = br.readLine();
+		        		}
+		        		br.close();
+		        	} catch (Exception e) {
+		        		logger.error("Fail at reading input file.");
+		        		throw new BadRequestException("Fail at reading input file.");
+		        	}
+		        	text = fileContent;
+		        	System.out.println("---- FILE CONTENT: "+text);
+		        } else {
+		        	logger.error("The given file was empty.");
+		        	throw new BadRequestException("The given file was empty.");
+		        }
+		        //System.out.println("DEBUG FILE: "+new String(bytes));
+	        }
+			else{
+				if(input!=null){
+		        	System.out.println("---- INPUT: "+input);
+					bytes = input.getBytes("UTF-8");
+					text = input;
+			        //System.out.println("DEBUG INPUT: "+new String(bytes));
+				}
+				else if(postBody!=null){
+		        	System.out.println("---- INPUT: "+postBody);
+//					bytes = postBody.getBytes("UTF-8");
+					text = postBody;
+			        //System.out.println("DEBUG BODY: "+new String(bytes));
+				}
+				else{
+					throw new BadRequestException("No input found: nor file, neither input, neither body content.");
+				}
+//				text = new String(bytes, "UTF-8");
+			}
+	   		System.out.println("INPUT CLUS: "+text);            
+	   		
+            HttpHeaders responseHeaders = new HttpHeaders();
+//			responseHeaders.add("Content-Type", "text/plain; charset=utf-8");
+			ResponseEntity<String> response = new ResponseEntity<String>(text, responseHeaders, HttpStatus.OK);
+			return response;
+		} catch (BadRequestException e) {
+			logger.error("EXCEPTION: "+e.getMessage());
+			throw e;
+		} catch (ExternalServiceFailedException e) {
+			logger.error("EXCEPTION: "+e.getMessage());
+			throw e;
+		}
+	}
+	
 	@RequestMapping(value = "/e-clustering/generateClusters", method = {RequestMethod.POST, RequestMethod.GET })
 	public ResponseEntity<String> documentClustering(
 			HttpServletRequest request, 
@@ -146,7 +233,7 @@ public class EWekaServiceStandAlone extends BaseRestController{
 	   		System.out.println("OUTPUT CLUS: "+outObject.toString(1));
 	   		
             HttpHeaders responseHeaders = new HttpHeaders();
-			responseHeaders.add("Content-Type", "text/plain; charset=utf-8");
+//			responseHeaders.add("Content-Type", "text/plain; charset=utf-8");
 			ResponseEntity<String> response = new ResponseEntity<String>(outObject.toString(1), responseHeaders, HttpStatus.OK);
 			return response;
 		} catch (BadRequestException e) {
