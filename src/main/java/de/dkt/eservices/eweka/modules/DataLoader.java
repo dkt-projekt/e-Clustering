@@ -1,8 +1,10 @@
 package de.dkt.eservices.eweka.modules;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import eu.freme.common.exception.BadRequestException;
 import weka.core.Instances;
@@ -26,8 +28,15 @@ public class DataLoader {
 	}
 	
 	public static Instances loadDataFromString(String content) throws Exception {
-		InputStream is = new ByteArrayInputStream( content.getBytes() );
-		Instances data1 = DataSource.read(is);
+		String encoding = "utf-8";
+		InputStream is = null;
+		BufferedReader br = null;
+		is = new ByteArrayInputStream( content.getBytes(encoding) );
+		br = new BufferedReader(new InputStreamReader(is,encoding));
+		Instances data1 = new Instances(br);
+//		
+//		InputStream is = new ByteArrayInputStream( content.getBytes() );
+//		Instances data1 = DataSource.read(is);
 		return data1;
 	}
 	
