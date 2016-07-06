@@ -48,10 +48,16 @@ public class EMClustering {
 //		}
 //	}
 
-	public static JSONObject trainModelAndClusterInstances(String trainDataFile, String language) throws ExternalServiceFailedException {
+	public static JSONObject trainModelAndClusterInstances(String mode, String trainDataFile, String language) throws ExternalServiceFailedException {
 		try{
-			File trainingData = FileFactory.generateFileInstance(trainDataFile);
-			Instances isTrainingSet = DataLoader.loadDataFromFile(trainingData.getAbsolutePath());
+			Instances isTrainingSet = null;
+			if(mode.equalsIgnoreCase("file")){
+				File trainingData = FileFactory.generateFileInstance(trainDataFile);
+				isTrainingSet = DataLoader.loadDataFromFile(trainingData.getAbsolutePath());
+			}
+			else{
+				isTrainingSet = DataLoader.loadDataFromString(trainDataFile);
+			}
 
 			String[] options = new String[2];
 			options[0] = "-R";                                    // "range"

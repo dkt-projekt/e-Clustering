@@ -25,14 +25,14 @@ public class EWekaService {
 	@Autowired
 	RDFConversionService rdfConversionService;
 
-    public JSONObject generateClusters(String inputFile, String algorithm, String language) 
+    public JSONObject generateClusters(String mode, String inputFile, String algorithm, String language) 
     		throws ExternalServiceFailedException, BadRequestException {
     	try {
         	if(algorithm.equalsIgnoreCase("em")){
-        		return EMClustering.trainModelAndClusterInstances(inputFile, language);
+        		return EMClustering.trainModelAndClusterInstances(mode, inputFile, language);
         	}
         	else if(algorithm.equalsIgnoreCase("kmeans")){
-        		return SimpleKMeansClustering.trainModelAndClusterInstances(inputFile, language);
+        		return SimpleKMeansClustering.trainModelAndClusterInstances(mode, inputFile, language);
         	}
         	else{
         		throw new BadRequestException("Unsupported algorithm. Only EM/KMeans are available for now.");

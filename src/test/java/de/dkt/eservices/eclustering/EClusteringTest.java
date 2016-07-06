@@ -287,8 +287,8 @@ public class EClusteringTest {
 + "	CondatTest6_4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0\n";
 		
 		
-//		HttpResponse<String> response2 = clusteringRequest()
-		HttpResponse<String> response2 = Unirest.post("http://dev.digitale-kuratierung.de:8092/e-clustering/generateClusters")
+		HttpResponse<String> response2 = clusteringRequest()
+//		HttpResponse<String> response2 = Unirest.post("http://dev.digitale-kuratierung.de/api/e-clustering/generateClusters")
 				.queryString("language", "en")
 				.queryString("algorithm", "kmeans")
 //				.body(TestConstants.sampleARFF)
@@ -302,7 +302,7 @@ public class EClusteringTest {
 		//assertTrue(response.getStatus() == 200);
 		//assertTrue(response.getBody().length() > 0);
 		
-	}	
+	}
 
 ////	@Test
 ////	public void simpleEMTest() throws UnirestException, IOException,

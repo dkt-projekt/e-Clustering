@@ -1,8 +1,10 @@
 package de.dkt.eservices.eweka;
 
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -74,6 +76,7 @@ public class EWekaServiceStandAlone extends BaseRestController{
 		try {
 	        MultipartFile file1 = null;
     		byte[] bytes;
+        	String text ="";
 			if (request instanceof MultipartHttpServletRequest){
 		           MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		           file1 = multipartRequest.getFile("inputFile");
@@ -82,12 +85,21 @@ public class EWekaServiceStandAlone extends BaseRestController{
 					throw new BadRequestException("No file received in request");
 				}
 		        if (!file1.isEmpty()) {
+	        		String fileContent = "";
 		        	try {
-		        		bytes = file1.getBytes();
+//		        		bytes = file1.getBytes();
+		        		BufferedReader br = new BufferedReader(new InputStreamReader(file1.getInputStream(), "UTF-8"));
+		        		String line = br.readLine();
+		        		while(line!=null){
+		        			fileContent += line+"\n";
+		        			line = br.readLine();
+		        		}
+		        		br.close();
 		        	} catch (Exception e) {
 		        		logger.error("Fail at reading input file.");
 		        		throw new BadRequestException("Fail at reading input file.");
 		        	}
+		        	text = fileContent;
 		        } else {
 		        	logger.error("The given file was empty.");
 		        	throw new BadRequestException("The given file was empty.");
@@ -96,34 +108,35 @@ public class EWekaServiceStandAlone extends BaseRestController{
 	        }
 			else{
 				if(input!=null){
-					bytes = input.getBytes();
+					bytes = input.getBytes("UTF-8");
 			        //System.out.println("DEBUG INPUT: "+new String(bytes));
 				}
 				else if(postBody!=null){
-					bytes = postBody.getBytes();
+					bytes = postBody.getBytes("UTF-8");
 			        //System.out.println("DEBUG BODY: "+new String(bytes));
 				}
 				else{
 					throw new BadRequestException("No input found: nor file, neither input, neither body content.");
 				}
+				text = new String(bytes, "UTF-8");
 			}
-	   		//File tmpFile = FileFactory.generateOrCreateFileInstance(tmpFolder + tmpFileName);
-	   		File tmpFile = File.createTempFile("temp", Long.toString(System.nanoTime())+".arff");
-	   		//System.out.println("DEBUG: "+tmpFile.getAbsolutePath());
-
-	   		System.out.println("INPUT CLUS: "+bytes);
-	   		
-        	try {
-        		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(tmpFile));
-        		stream.write(bytes);
-        		stream.close();
-        	} catch (Exception e) {
-        		throw new BadRequestException("Fail at uploading the file.");
-        	}
-        	String path = tmpFile.getAbsolutePath();
-
+//	   		//File tmpFile = FileFactory.generateOrCreateFileInstance(tmpFolder + tmpFileName);
+//	   		File tmpFile = File.createTempFile("temp", Long.toString(System.nanoTime())+".arff");
+//	   		//System.out.println("DEBUG: "+tmpFile.getAbsolutePath());
+//
+//	   		System.out.println("INPUT CLUS: "+bytes);
+//	   		
+//        	try {
+//        		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(tmpFile));
+//        		stream.write(bytes);
+//        		stream.close();
+//        	} catch (Exception e) {
+//        		throw new BadRequestException("Fail at uploading the file.");
+//        	}
+//        	String path = tmpFile.getAbsolutePath();
             JSONObject outObject;
-            outObject = service.generateClusters(path, algorithm, language);
+//            outObject = service.generateClusters(path, algorithm, language);
+            outObject = service.generateClusters("content", text, algorithm, language);
             
 	   		System.out.println("OUTPUT CLUS: "+outObject.toString(1));
 	   		
