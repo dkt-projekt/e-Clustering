@@ -152,7 +152,7 @@ public class EMalletServiceStandAlone extends BaseRestController{
             HttpHeaders responseHeaders = new HttpHeaders();
             responseHeaders.add("Content-Type", "text/plain");
     		ResponseEntity<String> response = new ResponseEntity<String>(outString, responseHeaders, HttpStatus.OK);
-			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-mallet/trainModel", "Success", "", "Exception", "", "");
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-mallet/trainModel", "Success", "", "", "", "");
 			return response;
 		} catch (BadRequestException e) {
 			logger.error(e.getMessage());
@@ -211,7 +211,7 @@ public class EMalletServiceStandAlone extends BaseRestController{
             }
             Model outModel;
             outModel = service.analyzeText(textForProcessing, "documentclassification", modelPath, modelName, language, informat, outformat);
-			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-documentclassification", "Success", "", "Exception", "", "");
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-documentclassification", "Success", "", "", "", "");
 			return createSuccessResponse(outModel, nifParameters.getOutformat());
 		} catch (BadRequestException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
@@ -241,7 +241,7 @@ public class EMalletServiceStandAlone extends BaseRestController{
 			HttpHeaders responseHeaders = new HttpHeaders();
 			responseHeaders.add("Content-Type", "text/plain");
 			ResponseEntity<String> response = new ResponseEntity<String>(sFiles, responseHeaders, HttpStatus.OK);
-			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-documentclassification/models", "Success", "", "Exception", "", "");
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-documentclassification/models", "Success", "", "", "", "");
 			return response;
 		}
 		String msg = "Error in the model directory: it is not a directory or there are no models.";
@@ -267,7 +267,7 @@ public class EMalletServiceStandAlone extends BaseRestController{
 			HttpHeaders responseHeaders = new HttpHeaders();
 			responseHeaders.add("Content-Type", "text/plain");
 			ResponseEntity<String> response = new ResponseEntity<String>(sFiles, responseHeaders, HttpStatus.OK);
-			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-topicmodelling/models", "Success", "", "Exception", "", "");
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-topicmodelling/models", "Success", "", "", "", "");
 			return response;
 		}
 		String msg = "Error in the model directory: it is not a directory or there are no models.";
@@ -322,7 +322,7 @@ public class EMalletServiceStandAlone extends BaseRestController{
             }
             Model outModel;
 			outModel = service.analyzeText(textForProcessing, "topicmodelling", modelPath, modelName, language, informat, outformat);
-			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-topicmodelling", "Success", "", "Exception", "", "");
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-topicmodelling", "Success", "", "", "", "");
 			return createSuccessResponse(outModel, nifParameters.getOutformat());
 		} catch (BadRequestException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
