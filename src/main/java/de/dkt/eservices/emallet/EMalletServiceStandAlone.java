@@ -23,6 +23,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
+import de.dkt.common.feedback.InteractionManagement;
 import de.dkt.common.filemanagement.FileFactory;
 import de.dkt.common.niftools.NIFReader;
 import de.dkt.common.tools.ParameterChecker;
@@ -79,8 +80,11 @@ public class EMalletServiceStandAlone extends BaseRestController{
 		           MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		           file = multipartRequest.getFile("trainingFile");
 		   		if(file==null){
-					logger.error("No file received in request");
-					throw new BadRequestException("No file received in request");
+	    			String msg = "No file received in request";
+	    			logger.error(msg);
+	    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", msg, 
+	    					"", "Exception", msg, "");
+	    			throw new BadRequestException(msg);
 				}
 		        if (!file.isEmpty()) {
 			        trainDataFile="tmpFiles" + File.separator+file.getOriginalFilename();
@@ -89,32 +93,45 @@ public class EMalletServiceStandAlone extends BaseRestController{
 		        	try {
 		        		tmpFile = FileFactory.generateOrCreateFileInstance(trainDataFile);
 		        	} catch (Exception e) {
-//		        		e.printStackTrace();
-		        		logger.error("Fail at generating temporary file.");
-		        		throw new BadRequestException("Fail at generating temporary file.");
+		    			String msg = "Fail at generating temporary file.";
+		    			logger.error(msg);
+		    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", msg, 
+		    					"", "Exception", msg, "");
+		    			throw new BadRequestException(msg);
 		        	}
 		        	try {
 		        		bytes = file.getBytes();
 		        	} catch (Exception e) {
-		        		logger.error("Fail at reading input file.");
-		        		throw new BadRequestException("Fail at reading input file.");
+		    			String msg = "Fail at reading input file.";
+		    			logger.error(msg);
+		    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", msg, 
+		    					"", "Exception", msg, "");
+		    			throw new BadRequestException(msg);
 		        	}
 		        	try {
 		        	    FileOutputStream fos = new FileOutputStream(tmpFile); 
 		        	    fos.write(bytes);
 		        	    fos.close();
 		        	} catch (Exception e) {
-		        		logger.error("Fail at writting temporary file.");
-		        		throw new BadRequestException("Fail at writting temporary file.");
+		    			String msg = "Fail at writting temporary file.";
+		    			logger.error(msg);
+		    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", msg, 
+		    					"", "Exception", msg, "");
+		    			throw new BadRequestException(msg);
 		        	}
 		        } else {
-		        	logger.error("The given file was empty.");
-		        	throw new BadRequestException("The given file was empty.");
+	    			String msg = "The given file was empty.";
+	    			logger.error(msg);
+	    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", msg, 
+	    					"", "Exception", msg, "");
+	    			throw new BadRequestException(msg);
 		        }
 	        }
 			else{
-	        	logger.error("No training file provided: HTTPREQUEST is no multipart.");
-	        	throw new BadRequestException("No training file provided: HTTPREQUEST is no multipart.");
+    			String msg = "No training file provided: HTTPREQUEST is no multipart.";
+    			logger.error(msg);
+    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", msg, "", "Exception", msg, "");
+    			throw new BadRequestException(msg);
 			}
             
 			ParameterChecker.checkNotNullOrEmpty(trainDataFile, "trainingDataFile", logger);
@@ -126,24 +143,31 @@ public class EMalletServiceStandAlone extends BaseRestController{
 				outString = service.trainModelClassification(trainDataFile, modelPath, modelName, language);
 			}
 			else{
-				logger.error("The input analysis ["+analysis+"] is not supported. Only topicmodelling/classification are available.");
-				throw new BadRequestException("The input analysis ["+analysis+"] is not supported. Only topicmodelling/classification are available.");
+    			String msg = "The input analysis ["+analysis+"] is not supported. Only topicmodelling/classification are available.";
+    			logger.error(msg);
+    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", msg, 
+    					"", "Exception", msg, "");
+    			throw new BadRequestException(msg);
 			}
             HttpHeaders responseHeaders = new HttpHeaders();
             responseHeaders.add("Content-Type", "text/plain");
     		ResponseEntity<String> response = new ResponseEntity<String>(outString, responseHeaders, HttpStatus.OK);
-    		return response;
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-mallet/trainModel", "Success", "", "Exception", "", "");
+			return response;
 		} catch (BadRequestException e) {
 			logger.error(e.getMessage());
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", e.getMessage(), "", "Exception", e.getMessage(), "");
 			throw e;
 		} catch (ExternalServiceFailedException e) {
 			logger.error(e.getMessage());
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-mallet/trainModel", e.getMessage(), "", "Exception", e.getMessage(), "");
 			throw e;
 		}
 	}
 	
 	@RequestMapping(value = "/e-documentclassification", method = {RequestMethod.POST, RequestMethod.GET })
 	public ResponseEntity<String> documentClassification(
+			HttpServletRequest request, 
 			@RequestParam(value = "input", required = false) String input,
 			@RequestParam(value = "i", required = false) String i,
 			@RequestParam(value = "informat", required = false) String informat,
@@ -178,24 +202,31 @@ public class EMalletServiceStandAlone extends BaseRestController{
                     textForProcessing = postBody;
             	}
                 if (textForProcessing == null) {
-                    logger.error("BADREQUEST: No text to process.");
-                    throw new BadRequestException("No text to process.");
+        			String msg = "No text to process.";
+        			logger.error(msg);
+        			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-documentclassification", msg, 
+        					"", "Exception", msg, "");
+        			throw new BadRequestException(msg);
                 }
             }
             Model outModel;
             outModel = service.analyzeText(textForProcessing, "documentclassification", modelPath, modelName, language, informat, outformat);
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-documentclassification", "Success", "", "Exception", "", "");
 			return createSuccessResponse(outModel, nifParameters.getOutformat());
 		} catch (BadRequestException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-documentclassification", e.getMessage(), "", "Exception", e.getMessage(), "");
 			throw e;
 		} catch (ExternalServiceFailedException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-documentclassification", e.getMessage(), "", "Exception", e.getMessage(), "");
 			throw e;
 		}
 	}
 	
 	@RequestMapping(value = "/e-documentclassification/models", method = { RequestMethod.POST, RequestMethod.GET })
 	public ResponseEntity<String> documentclassificationModels(
+			HttpServletRequest request, 
 			@RequestBody(required = false) String postBody) throws Exception {
 
 		File f = FileFactory.generateOrCreateDirectoryInstance("trainedModels" + File.separator + "documentClassification" + File.separator);
@@ -210,13 +241,18 @@ public class EMalletServiceStandAlone extends BaseRestController{
 			HttpHeaders responseHeaders = new HttpHeaders();
 			responseHeaders.add("Content-Type", "text/plain");
 			ResponseEntity<String> response = new ResponseEntity<String>(sFiles, responseHeaders, HttpStatus.OK);
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-documentclassification/models", "Success", "", "Exception", "", "");
 			return response;
 		}
-		return null;
+		String msg = "Error in the model directory: it is not a directory or there are no models.";
+		logger.error(msg);
+		InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-documentclassification/models", msg, "", "Exception", msg, "");
+		throw new ExternalServiceFailedException(msg);
 	}
 
 	@RequestMapping(value = "/e-topicmodelling/models", method = { RequestMethod.POST, RequestMethod.GET })
 	public ResponseEntity<String> topicModellingModels(
+			HttpServletRequest request, 
 			@RequestBody(required = false) String postBody) throws Exception {
 		File f = FileFactory.generateOrCreateDirectoryInstance("trainedModels" + File.separator + "topicModelling" + File.separator);
 		if(f.isDirectory()){
@@ -231,13 +267,18 @@ public class EMalletServiceStandAlone extends BaseRestController{
 			HttpHeaders responseHeaders = new HttpHeaders();
 			responseHeaders.add("Content-Type", "text/plain");
 			ResponseEntity<String> response = new ResponseEntity<String>(sFiles, responseHeaders, HttpStatus.OK);
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-topicmodelling/models", "Success", "", "Exception", "", "");
 			return response;
 		}
-		return null;
+		String msg = "Error in the model directory: it is not a directory or there are no models.";
+		logger.error(msg);
+		InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-topicmodelling/models", msg, "", "Exception", msg, "");
+		throw new ExternalServiceFailedException(msg);
 	}
 	
 	@RequestMapping(value = "/e-topicmodelling", method = {RequestMethod.POST, RequestMethod.GET })
 	public ResponseEntity<String> topicModelling(
+			HttpServletRequest request, 
 			@RequestParam(value = "input", required = false) String input,
 			@RequestParam(value = "i", required = false) String i,
 			@RequestParam(value = "informat", required = false) String informat,
@@ -273,18 +314,23 @@ public class EMalletServiceStandAlone extends BaseRestController{
                     textForProcessing = postBody;
             	}
                 if (textForProcessing == null) {
-                    logger.error("BADREQUEST: No text to process.");
-                    throw new BadRequestException("No text to process.");
+        			String msg = "No text to process.";
+        			logger.error(msg);
+        			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-documentclassification", msg, "", "Exception", msg, "");
+        			throw new BadRequestException(msg);
                 }
             }
             Model outModel;
 			outModel = service.analyzeText(textForProcessing, "topicmodelling", modelPath, modelName, language, informat, outformat);
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-topicmodelling", "Success", "", "Exception", "", "");
 			return createSuccessResponse(outModel, nifParameters.getOutformat());
 		} catch (BadRequestException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-documentclassification", e.getMessage(), "", "Exception", e.getMessage(), "");
 			throw e;
 		} catch (ExternalServiceFailedException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-documentclassification", e.getMessage(), "", "Exception", e.getMessage(), "");
 			throw e;
 		}
 	}

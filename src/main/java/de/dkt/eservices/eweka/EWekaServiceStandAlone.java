@@ -30,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import de.dkt.common.feedback.InteractionManagement;
 import de.dkt.common.filemanagement.FileFactory;
 import de.dkt.eservices.eweka.modules.DataLoader;
 import eu.freme.common.exception.BadRequestException;
@@ -87,8 +88,11 @@ public class EWekaServiceStandAlone extends BaseRestController{
 		           MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		           file1 = multipartRequest.getFile("inputFile");
 		   		if(file1==null){
-					logger.error("No file received in request");
-					throw new BadRequestException("No file received in request");
+	    			String msg = "No file received in request";
+	    			logger.error(msg);
+	    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-Clustering/generateClusters", msg, 
+	    					"", "Exception", msg, "");
+	    			throw new BadRequestException(msg);
 				}
 		        if (!file1.isEmpty()) {
 	        		String fileContent = "";
@@ -101,13 +105,19 @@ public class EWekaServiceStandAlone extends BaseRestController{
 		        		}
 		        		br.close();
 		        	} catch (Exception e) {
-		        		logger.error("Fail at reading input file.");
-		        		throw new BadRequestException("Fail at reading input file.");
+		    			String msg = "Fail at reading input file.";
+		    			logger.error(msg);
+		    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-Clustering/generateClusters", msg, 
+		    					"", "Exception", msg, "");
+		    			throw new BadRequestException(msg);
 		        	}
 		        	text = fileContent;
 		        } else {
-		        	logger.error("The given file was empty.");
-		        	throw new BadRequestException("The given file was empty.");
+	    			String msg = "The given file was empty.";
+	    			logger.error(msg);
+	    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-Clustering/generateClusters", msg, 
+	    					"", "Exception", msg, "");
+	    			throw new BadRequestException(msg);
 		        }
 	        }
 			else{
@@ -118,7 +128,12 @@ public class EWekaServiceStandAlone extends BaseRestController{
 					text = postBody;
 				}
 				else{
-					throw new BadRequestException("No input found: nor file, neither input, neither body content.");
+	    			String msg = "No input found: nor file, neither input, neither body content.";
+	    			logger.error(msg);
+	    			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-Clustering/generateClusters", msg, 
+	    					"", "Exception", msg, "");
+	    			throw new BadRequestException(msg);
+
 				}
 //				text = new String(bytes, "UTF-8");
 			}
@@ -139,6 +154,8 @@ public class EWekaServiceStandAlone extends BaseRestController{
             outObject = service.generateClusters("content", text, algorithm, language);
             
             String result = outObject.toString(1);
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "usage", "e-Clustering/generateClusters", "Success", "", "Exception", "", "");
+
 //            if(option.equalsIgnoreCase("normal")){
 //                outObject = service.generateClusters("content", text, algorithm, language);
 //            	result = outObject.toString();
@@ -213,9 +230,11 @@ public class EWekaServiceStandAlone extends BaseRestController{
 			return response;
 		} catch (BadRequestException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-Clustering/generateClusters", e.getMessage(), "", "Exception", e.getMessage(), "");
 			throw e;
 		} catch (ExternalServiceFailedException e) {
 			logger.error("EXCEPTION: "+e.getMessage());
+			InteractionManagement.sendInteraction("dkt-usage@"+request.getRemoteAddr(), "error", "e-Clustering/generateClusters", e.getMessage(), "", "Exception", e.getMessage(), "");
 			throw e;
 		}
 	}
