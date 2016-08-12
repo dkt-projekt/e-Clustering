@@ -33,12 +33,15 @@
 			<groupId>de.dkt</groupId>
 			<artifactId>DKTCommon</artifactId>
 			<version>0.4-SNAPSHOT</version>
+			
 		</dependency>
 		<dependency>
 			<groupId>eu.freme.bservices.filters</groupId>
 			<artifactId>logging</artifactId>
 			<version>0.1</version>
+			
 		</dependency>
+		
 	</dependencies>	
 	<repositories>
 		<repository>
