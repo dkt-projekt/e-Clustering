@@ -43,6 +43,7 @@ public class TestConstants {
 			"";
 	public static String expectedResponseClassification = 
 			"@prefix dktnif: <http://dkt.dfki.de/ontologies/nif#> .\n" +
+	"@prefix nif-ann: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-annotation#> .\n" +
 					"@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n" +
 					"@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .\n" +
 					"@prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .\n" +
@@ -95,6 +96,7 @@ public class TestConstants {
 	
 	public static String expectedStartingResponseTopic = 
 			"@prefix dktnif: <http://dkt.dfki.de/ontologies/nif#> .\n" +
+					"@prefix nif-ann: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-annotation#> .\n" +
 			"@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n" +
 			"@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .\n" +
 			"@prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .\n" +
