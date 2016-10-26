@@ -6,7 +6,7 @@ This service contains endpoints for classification, topic modeling and clusterin
 This service determines the class of a given text. The different available classes depend on the model that is used (see next section). 
 
 ## Endpoint
-`http://api.digitale-kuratierung.de/api/e-documentclassification`
+`http://api.digitale-kuratierung.de/api/e-documentclassification `
 
 ### Input
 The API conforms to the general NIF API specifications. For more details, see: http://persistence.uni-leipzig.org/nlp2rdf/specification/api.html
