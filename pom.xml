@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.dkt</groupId>
   <artifactId>e-Clustering</artifactId>
-  <version>0.4</version>
+  <version>0.5-SNAPSHOT</version>
   <properties>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -99,7 +99,7 @@
                 <connection>scm:git:git@github.com:dkt-projekt/e-Clustering.git</connection>
                 <url>scm:git:git@github.com/dkt-projekt/e-Clustering.git</url>
                 <developerConnection>scm:git:git@github.com:dkt-projekt/e-Clustering.git</developerConnection>
-                <tag>e-Clustering-0.4</tag>
+                <tag>HEAD</tag>
         </scm>
 
 </project>
