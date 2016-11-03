@@ -2,10 +2,10 @@
 
 This service contains endpoints for classification, topic modeling and clustering.
 
-# e-DocumentClassification
+## e-DocumentClassification
 This service determines the class of a given text. The different available classes depend on the model that is used (see next section). 
 
-## Endpoint
+### Endpoint
 `http://api.digitale-kuratierung.de/api/e-documentclassification `
 
 ### Input
@@ -28,10 +28,10 @@ Example cURL post:
 `curl -X POST "http://api.digitale-kuratierung.de/api/e-documentclassification?language=de&modelName=3pc&informat=text/plain&input=Einige interessanten Texte die etwas witchtiges drinnen haben über Medizin"`
 
 
-# e-TopicModelling
+## e-TopicModelling
 This service determines the ‘topic’ of a given text. A set of documents is used by Mallet to train a topic modelling model. It clusters the terms into the documents to model the ‘topics’, so each ‘topic’ is defined as the terms (words) that are included in the corresponding ‘topic’ (cluster). 
 
-## Endpoint
+### Endpoint
 `http://api.digitale-kuratierung.de/api/e-topicmodelling`
 
 ### Input
@@ -50,11 +50,11 @@ Example cURL post:
 `curl -X POST "http://api.digitale-kuratierung.de/api/e-topicmodelling?language=de&modelName=condat&informat=text/plain&input=Einige interessanten Texte die etwas witchtiges drinnen haben über Medizin"`
 
 
-# e-Clustering
+## Clustering ARFF file
 
 This service clusters the input document collection. The document collection first has to be converted to a set of vectors. Note that this is not included in this service. The service expects the input in this particular format (see Output section for details and an example) and then proceeds to find clusters in this input data. The output contains information on the number of clusters found and specific values for the found clusters.
 
-## Endpoint
+### Endpoint
 `http://api.digitale-kuratierung.de/api/e-clustering/generateClusters`
 
 ### Input
@@ -65,5 +65,21 @@ The following parameters have to be set to perform clustering on the input:
 
 `inputFile`: The input for this service has to be in the form of an .arff file. See http://www.cs.waikato.ac.nz/ml/weka/arff.html for an explanation of this format.
 The .arff file can be posted directly in a variable called inputFile.
+
+
+## Clustering NIF collections
+
+This service clusters the input document collection in NIF format. The document collection first has to be converted to a set of vectors. Note that this is not included in this service. The service expects the input in this particular format (see Output section for details and an example) and then proceeds to find clusters in this input data. The output contains information on the number of clusters found and specific values for the found clusters.
+
+### Endpoint
+`http://api.digitale-kuratierung.de/api/e-clustering/clusterCollection`
+
+### Input
+The following parameters have to be set to perform clustering on the input:  
+`algorithm`: The algorithm to be used during clustering. Currently EM and Kmeans are supported.  
+`language`: The language of the input files. Currently `de` and `en` are supported.  
+`arffGeneratorType`: The type of information that will be included in the ARFF file that willl be processed by WEKA. There are two options: `wordfrequencyappearance`, that counts frequency of appearance of entities in the documents and `wordappearance` that assigns a 0 or 1 value to each entity depending if it is contained in the document or not.
+`arffDataSetName`: The name to be given to the dataset in the ARFF file. This is just an internal name, any set of letter canbe provided and will not affect the result. It has been made available jsut for future modifications.
+`body`: The nif content of the collection must be provided as the body of the request. The informat of the content must also be provided.
 
 
