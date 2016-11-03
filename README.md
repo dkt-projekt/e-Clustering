@@ -76,10 +76,15 @@ This service clusters the input document collection in NIF format. The document 
 
 ### Input
 The following parameters have to be set to perform clustering on the input:  
+
 `algorithm`: The algorithm to be used during clustering. Currently EM and Kmeans are supported.  
+
 `language`: The language of the input files. Currently `de` and `en` are supported.  
+
 `arffGeneratorType`: The type of information that will be included in the ARFF file that willl be processed by WEKA. There are two options: `wordfrequencyappearance`, that counts frequency of appearance of entities in the documents and `wordappearance` that assigns a 0 or 1 value to each entity depending if it is contained in the document or not.
+
 `arffDataSetName`: The name to be given to the dataset in the ARFF file. This is just an internal name, any set of letter canbe provided and will not affect the result. It has been made available jsut for future modifications.
+
 `body`: The nif content of the collection must be provided as the body of the request. The informat of the content must also be provided.
 
 
