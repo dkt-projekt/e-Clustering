@@ -1,6 +1,8 @@
 package de.dkt.eservices.eweka.modules;
 
 import java.io.File;
+import java.util.Enumeration;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
@@ -9,6 +11,7 @@ import de.dkt.common.filemanagement.FileFactory;
 import de.dkt.eservices.eweka.EWekaService;
 import eu.freme.common.exception.ExternalServiceFailedException;
 import weka.clusterers.EM;
+import weka.core.Instance;
 import weka.core.Instances;
 import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.Remove;
@@ -83,13 +86,17 @@ public class EMClustering {
 			double [][][] arr3 = em.getClusterModelsNumericAtts();
 //			double upperthreshold = 0.99;
 			double threshold = 0;
-			
+
 			JSONObject obj = new JSONObject();
 			JSONObject joResults = new JSONObject();
 			joResults.put("numberClusters", em.getNumClusters());
 			
+			System.out.println(arr3.length);
 			JSONObject joDocuments = new JSONObject();
 			for (int i = 0; i < arr3.length; i++) {
+				
+				SortedAttributesList sal = new SortedAttributesList();
+
 //				System.out.println("-----------CLUSTER "+i+"----------");
 				JSONObject resultJSON = new JSONObject();
 				resultJSON.put("clusterId", i+1);
@@ -102,6 +109,9 @@ public class EMClustering {
 //						System.out.print("\t"+labeled.attribute(j).name());
 //						System.out.println("\t"+"["+d1[j][0]+"--"+d1[j][1]+"--"+d1[j][2]+"]");
 //						System.out.println("\t"+"["+d1[j][0]+"]");
+						
+						sal.addInstance(new EntityValuePair(labeled.attribute(j).name(), d1[j][0]));
+
 						objE.put("label", labeled.attribute(j).name());
 						objE.put("meanValue", d1[j][0]);
 						objEntities.put("entity"+counter, objE);
@@ -110,8 +120,15 @@ public class EMClustering {
 				}
 				resultJSON.put("entities", objEntities);
 				joDocuments.put("cluster"+(i+1),resultJSON);
+				List<EntityValuePair> evplist = sal.getLimitedList(10);
+				System.out.print("--");
+				for (EntityValuePair evp : evplist) {
+					System.out.print(""+evp.entity+"["+evp.value+"]|");
+				}
+				System.out.println();
+
 			}
-			
+
 			joResults.put("clusters", joDocuments);
 //			listResults.put(new JSONObject().put("documents", listDocuments));
 //			obj.put("results", listResults);

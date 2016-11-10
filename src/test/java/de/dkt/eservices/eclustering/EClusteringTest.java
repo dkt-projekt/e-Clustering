@@ -13,12 +13,14 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Iterator;
 
+import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.context.ApplicationContext;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
@@ -77,6 +79,11 @@ public class EClusteringTest {
 	
 	private HttpRequestWithBody clusteringRequest() {
 		String url = testHelper.getAPIBaseUrl() + "/e-clustering/generateClusters";
+		return Unirest.post(url);
+	}
+	
+	private HttpRequestWithBody clusteringCollectionRequest() {
+		String url = testHelper.getAPIBaseUrl() + "/e-clustering/clusterCollection";
 		return Unirest.post(url);
 	}
 	
@@ -337,4 +344,28 @@ public class EClusteringTest {
 ////		String output = labeling.getLabelAtRank(0).toString();
 ////		System.out.println(output);
 ////	}	
+	
+	@Test
+	public void test_99_collectionTest() throws UnirestException, IOException,
+			Exception {
+		String filePath = "/Users/jumo04/Documents/DFKI/DKT/testForNIFManagement/fronteoCollection.nif";
+		String content = IOUtils.toString(new FileInputStream(filePath), "utf-8");
+		
+		HttpResponse<String> response2 = clusteringCollectionRequest()
+				//.header("Content-Type", "text/plain; encoding=utf8")
+				.queryString("informat", "turtle")
+				.queryString("outformat", "turtle")
+				.queryString("language", "en")
+				.queryString("algorithm", "kmeans")
+				.queryString("arffGeneratorType", "wordfrequencyappearance")
+//				.queryString("arffGeneratorType", "wordappearance")
+				.queryString("arffDataSetName", "TESTDATASET")
+//				.body(TestConstants.sampleARFF)
+				.body(content)
+				.asString();
+				
+//		System.out.println("DEBUGGING output Collection:" + response2.getBody());
+		
+	}
+
 }

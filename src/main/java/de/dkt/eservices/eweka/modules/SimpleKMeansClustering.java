@@ -1,6 +1,8 @@
 package de.dkt.eservices.eweka.modules;
 
 import java.io.File;
+import java.util.Enumeration;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
@@ -63,6 +65,8 @@ public class SimpleKMeansClustering {
 			else{
 				isTrainingSet = DataLoader.loadDataFromString(trainDataFile);
 			}
+			
+			Instances unfiltered = new Instances(isTrainingSet);
 			//System.out.println("TrainingDataFile:" + trainDataFile);
 			//System.out.println("DEBUGGING training instances:" +isTrainingSet.toString());
 			String[] options = new String[2];
@@ -80,7 +84,7 @@ public class SimpleKMeansClustering {
 			options2[2] = "-N";                 // max. iterations
 			options2[3] = "5";
 			skm.setOptions(options2);     // set the options
-			double upperthreshold = 0.99;
+			double upperthreshold = 2.99;
 			double threshold = 0;
 			
 			skm.buildClusterer(isTrainingSet);
@@ -88,6 +92,7 @@ public class SimpleKMeansClustering {
 			
 			clusterer = skm;
 
+			SortedAttributesList sal = new SortedAttributesList();
 			JSONObject obj = new JSONObject();
 			JSONObject joResults = new JSONObject();
 			joResults.put("numberClusters", clusterer.numberOfClusters());
@@ -96,6 +101,10 @@ public class SimpleKMeansClustering {
 //				System.out.println("_---------------------------------");
 				Instance inst = centroids.instance(i);
 				JSONObject resultJSON = new JSONObject();
+				
+//				System.out.println("Cluster"+(i+1));
+//				System.out.print("\t");
+				
 				resultJSON.put("clusterId", i+1);
 				JSONObject objEntities = new JSONObject();
 				int counter = 1;
@@ -107,16 +116,40 @@ public class SimpleKMeansClustering {
 						//System.out.println("DEBUGGINg at name:" + at.name());
 //						System.out.println(inst.value(j));
 //						System.out.println(" \t\t"+inst.toString());
+						
+						
+						sal.addInstance(new EntityValuePair(at.name(), inst.value(j)));
+						
 						objE.put("label", at.name());
 						objE.put("meanValue", inst.value(j));
+//						System.out.print(""+at.name()+"|");
 						objEntities.put("entity"+counter, objE);
 					}
 					counter++;
 				}
+//				System.out.println();
+				
+//				List<EntityValuePair> evplist = sal.getLimitedList(10);
+//				System.out.print("--");
+//				for (EntityValuePair evp : evplist) {
+//					System.out.print(""+evp.entity+"["+evp.value+"]|");
+//				}
+//				System.out.println();
+				
 				resultJSON.put("entities", objEntities);
 				joDocuments.put("cluster"+(i+1),resultJSON);
 
 			}
+			
+			JSONObject joInstances = new JSONObject();
+			for (int i = 0; i < isTrainingSet.numInstances(); i++) {
+				Instance ins = isTrainingSet.instance(i);
+				int clus = skm.clusterInstance(ins);
+//				System.out.println(clus);
+				joInstances.put(unfiltered.instance(i).stringValue(0), clus);
+			}
+			joResults.put("clustered", joInstances);
+
 			joResults.put("clusters", joDocuments);
 			obj.put("results", joResults);
 			return obj;		

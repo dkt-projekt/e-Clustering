@@ -46,7 +46,6 @@ public class EMalletServiceStandAlone extends BaseRestController{
 	EMalletService service;
 	
 	public EMalletServiceStandAlone() {
-		System.err.println("xxx");
 	}
 	
 	@RequestMapping(value = "/e-mallet/testURL", method = { RequestMethod.POST, RequestMethod.GET })
