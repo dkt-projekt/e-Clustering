@@ -2,6 +2,32 @@
 
 This service contains endpoints for classification, topic modeling and clustering.
 
+## Cluster a NIF Collection od Documents
+This endpoint generates a set of clusters from a given set of documents (in NIF collection format). 
+
+### Endpoint
+`http://api.digitale-kuratierung.de/api/e-clustering/clusterCollection`
+
+### Input
+The API conforms to the general NIF API specifications. For more details, see: http://persistence.uni-leipzig.org/nlp2rdf/specification/api.html
+In addition to the input, informat and outformat parameters, the following parameters have to be set to perform Document Classification on the input:  
+  
+`language`: The language of the input text.  
+
+`algorithm`: The algorithm to be used during clustering. Currently `em` and `kmeans` supported.  
+
+`arffGeneratorType`: Determines the information from nthe collections that will be used as features for the clustering. There are four available values: `entityfrequencyappearance` (each feature is the number of times that a concrete ENTITY appears in the document), `entityappearance` (each feature is 1/0 depending if an ENTITY appears or not in the document), `wordfrequencyappearance` (each feature is the number of times that a concrete WORD appears in the document) and `wordappearance` (each feature is 1/0 depending if an WORD appears or not in the document).
+
+`arffDataSetName`: internal name used in the ARFF generation process. It has no influence in the final result.
+
+### Output
+A JSON document containing information about the generated clusters. @TODO Include EXAMPLE  
+
+### Example cURL post
+
+`curl -X POST "http://api.digitale-kuratierung.de/api/e-clustering/clusterCollection?language=en&algorithm=em&arffGeneratorType=entityfrequencyappearance&arffDataSetName=DATASET"`
+
+
 ## e-DocumentClassification
 This service determines the class of a given text. The different available classes depend on the model that is used (see next section). 
 
