@@ -1,0 +1,2199 @@
+@prefix dktnif: <http://dkt.dfki.de/ontologies/nif#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos/> .
+@prefix nif-ann: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-annotation#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
+@prefix nif:   <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=497,525>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX Mortgage Service Center"^^xsd:string ;
+        nif:beginIndex        "497"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "525"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1297874.nif#char=276,281>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Fargo"^^xsd:string ;
+        nif:beginIndex        "276"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "281"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297874.nif#char=0,764> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Wells_Fargo> .
+
+<http://dkt.dfki.de/documents/1297850.nif#char=0,775>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "775"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297850\t24-03-2015\tCredit reporting\tIncorrect information on credit report\tAccount status\t\"I received my auto insurance policy renewal  after reviewing it and saw it increased by {$450.00} since the previous XXXX month renewal I call communicated with the insurance company  XXXX XXXX. They said the reason for the increase was because of credit report. I told XXXX XXXX my credit had not changed except that I got a home mortgage and I had great credit history and score  otherwise I could have not gotten a large home loan. I could not review my credit history online. I have a very good job  have never not paid my insurance policy premium. If getting a mortgage loan has given me a bad credit score then some it bad wrong with this system and needs to be eliminated. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296693.nif#char=84,101>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "RBS Citizens Bank"^^xsd:string ;
+        nif:beginIndex        "84"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "101"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1296693.nif#char=0,3767> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=1039,1042>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "1039"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1042"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297594.nif#char=135,139>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2009"^^xsd:string ;
+        nif:beginIndex         "135"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "139"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2010-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2009-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297594.nif#char=0,366>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-04-01T01:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2009-06-25T01:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "366"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297594\t24-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"Green Tree Financial somehow got XXXX Loan AFTER bankruptcy ( 2009 ) and has REFUSED TO REMOVE IT FROM MY CREDIT REPORT. The Credit Bureaus REFUSE to remove this information as well. I 've sent Certified Mail several times. The \"\" non-payment '' history is impacting my credit negatively. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297377.nif#char=397,400>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "397"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "400"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297377.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=755,763>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "755"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "763"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297676.nif#char=0,1103> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1297662.nif#char=0,382>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "382"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297662\t24-03-2015\tDebt collection\tDisclosure verification of debt\tNot disclosed as an attempt to collect\t\"Portfolio Recovery does not disclose who is calling or why. Only after looking the phone number up online did I discover that they were a collection agency. __They are also trying to collect on debt that is past its statute of limitations. _\"  \"Portfolio Recovery Associates\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296693.nif#char=2249,2253>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "2249"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2253"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297874.nif#char=737,742>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Fargo"^^xsd:string ;
+        nif:beginIndex        "737"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "742"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297874.nif#char=0,764> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Wells_Fargo> .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=666,694>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX Mortgage Service Center"^^xsd:string ;
+        nif:beginIndex        "666"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "694"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=858,866>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "858"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "866"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1297874.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297874.nif#char=731,742>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Wells Fargo"^^xsd:string ;
+        nif:beginIndex        "731"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "742"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297874.nif#char=0,764> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Location> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/Wells_Fargo> .
+
+<http://dkt.dfki.de/documents/1290516.nif#char=0,436>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-04-05T05:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2014-03-15T05:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "436"^^xsd:nonNegativeInteger ;
+        nif:isString          "1290516\t19-03-2015\tDebt collection\t health club\t etc.)\"\tCont'd attempts collect debt not owed Debt was paid \"XXXX has claimed I owe them {$27.00} for XXXX years despite the PROOF of PAYMENT I sent them : canceled check and their ownPAID INVOICE for {$27.00}! _They continue to insist I owe them and collection agencies are after me. _How can I stop this harassment for a bill I already paid four years ago? _\"  \"Diversified Consultants\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297773.nif#char=372,401>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Citizens Bank Wire Department"^^xsd:string ;
+        nif:beginIndex        "372"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "401"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297773.nif#char=0,3051> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1296880.nif#char=0,803>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-04-17T01:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2013-06-08T01:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "803"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296880\t23-03-2015\tCredit card\tLate fee\t\t\"XXXX Card services was bought out by Capital One  I was never notified  my payments continued to go to XXXX  Capital One can not locate my payments  I have been charged numerous late fees d/t payments not getting to Capital One  my due date changed as well  Capital One has reported a XXXX late pay on my credit  I have contacted customer service and spoke to managers several times and they will not correct matter in the time frame I need to buy a home  I am being told it may be XXXX days before this is corrected. My statements clearly show my account current until Capital One took over in XXXX 2013. Even though I am being charged late fees  my payments were still made monthly and on time  my due date changed from the XXXX of the month to the XXXX. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296890.nif#char=1028,1033>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "today"^^xsd:string ;
+        nif:beginIndex         "1028"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1033"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296880.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297589.nif#char=926,930>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "926"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "930"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=1670,1678>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "1670"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1678"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1296693.nif#char=3742,3766>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Citizens Financial Group"^^xsd:string ;
+        nif:beginIndex        "3742"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "3766"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1296693.nif#char=0,3767> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/Citizens_Financial_Group> .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=1217,1227>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "1217"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1227"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1296727.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=1060,1068>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "1060"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1068"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1295409.nif#char=0,801>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-09-28T01:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2014-12-26T01:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "801"^^xsd:nonNegativeInteger ;
+        nif:isString          "1295409\t23-03-2015\tDebt collection\tDisclosure verification of debt\tNot given enough info to verify debt\t\"I recieved a notice from Midland Credit Management   Inc. ( MCM ) that I owed an \"\" original Creditor : '' XXXX ( South Dakota )  XXXX. and that the current balance was {$18000.00}. It does not describe what the debt is for or any details concerning it. I have no knowledge of any such debt. _MCM offers a 70 % discount if I pay {$5500.00} by XX/XX/2015. _I have never failed to pay a debt in my life. _I called the phone number which is on the front page of their notice  at least XXXX places  XXXX times over a three day period and recieve a recorded answer : \"\" All circuits are busy  please call back later '' or \"\" Call can not be completed  try again later '' \"\" message TX XXXX MN. '' _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297500.nif#char=0,1723>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1723"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297500\t24-03-2015\tCredit reporting\tIncorrect information on credit report\tAccount status\t\"Please investigate the practices of Experian. They have manipulated my credit report and score. They are unresponsive and vague. My score has recently dropped XXXX points yet no one is able to give me a consistent answer as to what has happened. I have filed several disputes and they remain unresolved in addition I have cancelled my monitoring service. 2 days before the cancellation I was notified my score dropped XXXX points. I pay my credit card balances in full every month and I do not have any late payments that are undisputed. In addition  they are allowing a creditor to continue to \"\" update '' information that is 15 years old. I have made XXXX calls and spoke with a manager \"\" XXXX '' who all provided me with inconsistent and unverified information. I am exhausted with the run around  the responses I receive from Experian are. '' We do n't know ''  \"\" Probably ''  \"\" Contact the lender ''  \"\" It will take 30 days for a response '' I am in need of assistance from a governing agency above and beyond Experian and again I want a complete review into the very suspicious dramatic decline of my credit score upon cancellation of my subscription service. That is key information and I am willing to contact local media to investigate this company. In addition  it is my concern that this action is discriminatory. PLEASE contact me ASAP  I have been caught in this cycle for over a year and I have pending important matters that I need to take care of that involve my credit. Time is of the essence  I need to bring attention to and STOP this FRAUDULENT behavior. _\" Company chooses not to provide a public response\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=1216,1221>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "20.00"^^xsd:string ;
+        nif:beginIndex         "1216"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1221"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-12-21T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-12-20T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=1026,1036>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "1026"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1036"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=1345,1373>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX Mortgage Service Center"^^xsd:string ;
+        nif:beginIndex        "1345"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1373"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=847,857>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "847"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "857"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1295409.nif#char=454,458>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "454"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "458"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=1399,1407>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "1399"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1407"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1297377.nif#char=1482,1485>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "3-4"^^xsd:string ;
+        nif:beginIndex         "1482"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1485"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-04-04T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-04-03T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1290514.nif#char=1110,1113>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "1110"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1113"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1295228.nif#char=136,144>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "136"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "144"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1295228.nif#char=0,599> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1292065.nif#char=3794,3798>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1200"^^xsd:string ;
+        nif:beginIndex         "3794"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "3798"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "1201-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "1200-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296823.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292137.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "19-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-20T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-19T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292065.nif#char=2333,2337>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1200"^^xsd:string ;
+        nif:beginIndex         "2333"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2337"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "1201-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "1200-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1295228.nif#char=322,330>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "322"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "330"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1295228.nif#char=0,599> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1297685.nif#char=216,220>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "7.00"^^xsd:string ;
+        nif:beginIndex         "216"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "220"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-12-08T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-12-07T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296831.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296831.nif#char=1674,1680>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "monday"^^xsd:string ;
+        nif:beginIndex         "1674"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1680"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-01-06T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-05T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297377.nif#char=524,540>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "American Express"^^xsd:string ;
+        nif:beginIndex        "524"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "540"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297377.nif#char=0,1503> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/American_Express> .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=412,416>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1300"^^xsd:string ;
+        nif:beginIndex         "412"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "416"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "1301-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "1300-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296890.nif#char=785,790>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "today"^^xsd:string ;
+        nif:beginIndex         "785"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "790"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=1510,1538>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX Mortgage Service Center"^^xsd:string ;
+        nif:beginIndex        "1510"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1538"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=372,377>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "25.00"^^xsd:string ;
+        nif:beginIndex         "372"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "377"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-12-26T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-12-25T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=0,3219>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-11-08T11:22:30"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-07-01T11:22:30"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "3219"^^xsd:nonNegativeInteger ;
+        nif:isString          "1299258\t24-03-2015\tPayday loan\tCan't stop charges to bank account\tCan't stop charges to bank account\t\"I took out a Loan from Cash Central XXXX  Al for {$300.00} sense that time I lost my job and also my medications went through the roof so I was unable to pay the Loan back. Every sense that time I have been receiving phone calls everyday. Not a day pass they are calling me and they always call from a different number so I never know who it is calling. They have caused me to pay out so much money at my Bank  at the time my Bank was XXXX XXXX in XXXX  Al. They have caused me to pay out hundreds of dollars in overdraft fees  money that I could have paid them with but they would not stop trying to debit my account. They call every day starting at around XXXX I am telling them the same thing each time they call me that I do not have any money to pay them now if I did have the money I would pay them each month until I paid them up but until my income increase I am not able to pay them. I am on a fix income and I can not pay them now and I can not tell you when I can pay because I do n't know my self. I am so tired of the harassing phone calls I am on XXXX and XXXX and every day it gets worse and worse and I ca n't keep putting up with them calling every day like this it works on my nerves and it up sets me really bad. I told XXXX people that call me that I would try to pay something next month and she screamed at me and said next month  why next month? I told her I had to see how my bills would run and I could not give her and amount so to how much I can pay. I know even if I could pay them it would not be more than {$4.00} or {$5.00} dollars if that much. They just keep calling and calling every day. They have been doing this for the pass 6 or 7 months and I ca n't take it any longer. My nerves are to bad and they runs my XXXX XXXX up by calling every day. If they were to slow down the calls except to may be once a month then that would be helpful a little but I still do n't know if I would have any money to pay them even then. I can try if I have any money left but I seriously doubt it not right now until my bills comes down. I am paying high bills right now and it is taking all of my money to just keep my house going so that I can have some where to live. It 's not that I do n't want to pay them but I do not have the money now. They ruined my Bank account and I had to close it because of all the over draft fees the Bank was charging me. Each day they sent the debit through for the {$300.00} and some dollars and every day the Bank charged me {$38.00} per transaction  I paid out a lot of money to the Bank for these transactions  money they could have had if they would not have kept trying to debit my account. I am so tired of this and I do n't know nothing else to do except not answer the phone but If I did that I could miss important phone calls from other people I need to talk to. I am just tired of the harassing phone calls. This is not good for my illness. Regardless of what I say to them they still call every day. I just want the calls to stop. I will pay something when ever I can. _\" Company chooses not to provide a public response \"Community Choice Financial\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=660,665>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "15.00"^^xsd:string ;
+        nif:beginIndex         "660"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "665"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-12-16T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-12-15T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=1423,1426>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "Now"^^xsd:string ;
+        nif:beginIndex         "1423"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1426"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=461,465>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1400"^^xsd:string ;
+        nif:beginIndex         "461"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "465"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "1401-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "1400-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=0,1685>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T00:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2014-12-02T00:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1685"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297629\t24-03-2015\tBank account or service\tUsing a debit or ATM card\t\t\"I 'm no longer an account holder of SunTrust. I used to be until I realized how unethical of a company that is. Let me explain to you why I believe this : For years  SunTrust advertised and promoted in big letters their XXXX XXXX debit card. With that card  an account holder could earn XXXX mile for every {$1.00} spent ( for debit and credit card transactions ). SunTrust even advertised that they would not put a cap on a cardholder 's ability to earn miles. __Over the past XXXX months  SunTrust must have reviewed their debit card portfolio and what they did as a result of their review is shocking : They closed all account holders who had earned above average number of miles regardless of the types of products they purchased  regardless of the length of their relationship with SunTrust  and regardless of the amount of money in their checking accounts. I know of at least XXXX cases where SunTrust contacted XXXX XXXX to have the miles in the cardholder 's account reversed!!! __SunTrust is clearly engaging in what is commonly referred to as \"\" bait and switch ''  a marketing strategy of getting customers to sign up for a product ( that  by the way  carries a yearly fee of {$75.00} ) and then  once a certain number of miles are earned  the account is closed. This is unacceptable and a regulatory violation. __If SunTrust does not immediately stop closing accounts and reversing miles already earned  I 'll notify a well-known XXXX XXXX lawfirm to pursue a class action lawsuit against SunTrust and its XXXX and XXXX individually. _\" Company chooses not to provide a public response \"SunTrust Banks\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297589.nif#char=0,3075>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-04-23T17:36:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-01-17T17:36:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "3075"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297589\t24-03-2015\tDebt collection\t health club\t etc.)\"\tFalse statements or representation Attempted to collect wrong amount \"I agreed to a settlement arrangement on a account with a rep which I believe was name XXXX on XXXX/XXXX/2015 the settlement was for XXXX  the rep advised that he had to get it approved because it was less than XXXX %  I requested proof of the settlement ( letter/email/fax ) stating that we were agreeing to settle the account. I was advised that it could be requested from the main office and given contact information. I attempted to contact the company and keep being routed to a voicemail system. I then attempted to contact XXXX on XXXX/XXXX/2015 at XXXX and again at XXXX and was repeated sent to a voice message system on the last attempt I spoke with a women who took a message. I received a call back at XXXX  it was a missed call for me because I was at work. I attempted back on XXXX/XXXX/2015 and got a rep that I tried to ask for assist with get a letter showing the agreement that we had decided on and she blind transferred me a male by the name of XXXX XXXX who then basically screamed on the phone that since I requested proof of settlement offer that the offer was off the table and that I needed to pay what I owed or else. I tried to explain that I just needed proof for my records and he keep yelling over me I asked for a manager and he said that he was the manager and that I could n't speak with anyone higher and then hung up. I called back to get a new rep and he answer and hung up at XXXX I tried calling back again at XXXX and XXXX and no one answered the telephone. I then search on line to see what company this was and called another XXXX number and a woman by the name of XXXX XXXX answered and listen to the issue and placed me on hold the line was then picked up by a XXXX XXXX and he just yelled into the telephone what do you want and I was surprised that I had been transferred and was like huh  he said you called here what do you want  I advised that I would try call XXXX XXXX back and he hung up. I did call her back and ask could she just send me a letter of review the process and she advised that she could n't help because I was not her rep. I asked for the owner and was advised the he was out but she did give his name a different XXXX XXXX than I spoke with and sais she would give him the message for request for a return call. I then got a call from XXXX from a gentleman that did n't provide his name but basically stated \"\" they will not settle with me now since I want them to jump through hops '' by asking for a letter of the arrangement of settlement. Then he disconnected the call. I am only requesting the settlement letter because that would be my only proof that the account was settled and its shows in writing what we agreed to. I expressed several times that I did n't want to make a payment and then someone else tries to come after me for the remaining balance. I have no way of ensuing that this company honors the agreement if I can get something showing that we are agreeing. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296955.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297644.nif#char=178,182>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "178"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "182"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=862,865>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "862"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "865"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=92,100>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "citibank"^^xsd:string ;
+        nif:beginIndex        "92"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "100"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=3224,3227>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "3224"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "3227"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296823.nif#char=0,1804>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-08-29T23:30:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T23:30:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1804"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296823\t23-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"I am assisted with my mortgage through an agency. Since I am XXXX  XXXX  and on a XXXX this helps me pay my mortgage. GreenTree Mortgage bought my mortgage from XXXX Mortgage XXXX year ago. I have my mortgage amount debited out with auto pay from my credit union and the agency sends the balance through their account which is automatically deposited in Greentree 's account from their bank. Periodically Greentree has called me and asked me where was the agency 's payment and I have told them to call the agency. In XXXX I received a call from XXXX at Greentree XXXX asking me for XXXX 's payment from the agency. After calling the Agency and being advised by them that Greentree should look through their lists of bank deposits and my telling Greentree what they said. I also told them that my portion was being discontinued as of XXXX XXXX and just the agency was paying the full amount. I was asked by XXXX to send proof with the letter sent to me by the agency  along with a cancelled check  my bank statement showing the amount deducted and a letter stating that I no longer wanted the amount I had been paying deducted out of my account. Greentree still deducted the payment and after I called to ask when they were going to reimburse me I was told by the Customer service rep that because I had blackened all the transactions on my bank statement they would n't send me a refund. That I needed to send them a bank statement without the blackening of my transactions. I responded that I did n't blacken the amount withdrawn by Greentree and I believed my transactions were private and there was no need for Greentree to know my business. To this date  I have not received my refund and they are not returning my calls. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296727.nif#char=0,788>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-11-18T15:20:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-07-31T15:20:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "788"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296727\t23-03-2015\tDebt collection\tImproper contact or sharing of info\tTalked to a third party about my debt\t\"I received a call from a XXXX XXXX from XXXX @ XXXX Ext XXXX stating that I owed {$400.00} to XXXX  but they wanted XXXX however they would take less. I asked for a validation of debt he transferred me to someone else who got made because he wanted me to go online & I was at work & told him now was not good to give me a number & I would call at a better time. He got mad & said he was going to tell the debtor I did n't want to pay. Now today XXXX XXXX  2015 XXXX XXXX had come called people from my XXXX page saying I had used them as a reference. They will now not return my calls as I stated they I was going to make a complaint about their tactics. _\"  \"Big Picture Loans\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=749,753>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2000"^^xsd:string ;
+        nif:beginIndex         "749"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "753"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2001-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2000-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297371.nif#char=412,416>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "USPS"^^xsd:string ;
+        nif:beginIndex        "412"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "416"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297371.nif#char=0,760> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/property/usps> .
+
+<http://dkt.dfki.de/documents/1297874.nif#char=0,764>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "764"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297874\t24-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"I was emailed that my online account had been suspended. It stated my account password had been entered XXXX times. Well ... ... .I have not tried to get into my account for weeks. I tried to call Wells Fargo and the kept transferring me and repeatedly asked me for my information. They would not transfer me to the fraud department. I am a XXXX veteran with a XXXX and they would not help me. I do n't want some XXXX to access my equity in my home or open new debt. So I want to know what happened and what they are going to do but obviously they are not going to do anything I wish they did n't buy my mortgage!!!! i certainly would never do business with Wells Fargo in the future!!! _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=352,356>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1200"^^xsd:string ;
+        nif:beginIndex         "352"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "356"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "1201-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "1200-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=1040,1045>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "20.00"^^xsd:string ;
+        nif:beginIndex         "1040"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1045"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2012-12-21T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2012-12-20T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=0,4180>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-08-14T12:32:43"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2014-03-16T12:32:43"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "4180"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297939\tDate received\tProduct\tIssue\tSub-issue\tConsumer complaint narrative Company public response Company State ZIP code Tags Consumer consent provided? Submitted via Date sent to company Company response to consumer Timely response? Consumer disputed? Complaint ID_24-03-2015 Credit card  Other  \"Received Capital One charge card offer XXXX. Applied  was accepted ( {$500.00} limit )  activated card and used for XXXX presents. Charge card # XXXX. Right after activating card ... Capital One sent me another card with same {$500.00} limit ... never activated ... never used that card. First bill from above card # came due XXXX and minimum payment due was {$15.00}. I sent in {$20.00} via USPMO and sent in before due date. With the XXXX non-activated  non used credit card ... ..they also sent me bill for some yearly fees when never even activated the card. So called them up ... ... .told them did not want the card and sent back to them. Well ... .get my next bill from the card # above ( XXXX ) ... .they did not credit me for the {$20.00} payment and charged me outrageous over the limit fees  late fees  etc ... and now {$70.00} payment due. So  I called up  their rep stated they accidentally applied my {$20.00} payment to wrong account number and would be corrected. So  I sent in a {$70.00} payment via USPMO along with note to make sure account corrected and both payments applied to correct account number ( minimum due and wanted to keep that card and also repair my credit from bankruptcy in XXXX or XXXX. ) So ... XXXX bill came in the mail ... .and once again ... ..they did not apply my payment of {$70.00}  nor the previous payment of {$20.00} ... .which they stated they would correct. They charged me more outrageous over the limit fees  late fees  etc  along with some stupid note about \"\" spreading yourself too thin. '' I thought wow ... .this is total bs ... ..so I called numerous times  wrote numerous times ... with no success of them correcting my account  when they acknowledged their mistake ( s ) ... ... then they wanted {$120.00} for minimum payment ... .I thought this is totally illegal. Sent my payments in on time and sent in more than minimum to even begin with. Kept calling and writing  with no resolution like they stated. I totally quit paying at that point ... Did not know what else to do at that time. Sometime around end of XXXX started getting threatening phone calls from some collection agency ... ... I mean really threatening. Like about every other day. Well  I ended up extremely ill  in and out of hospitals around that time  doctors  more hospitals  XXXX  XXXX  XXXX ... ..etc ... ..ended up in XXXX and XXXX entire summer  due to XXXX  XXXX ( XXXX at time ) XXXX ... XXXX  XXXX  and more ( Have all the records. ) Anyway ... come XXXX or XXXX  XXXX  XXXX  XXXX put a freeze on my bank account. ( currently XXXX XXXX ... Never knew took me to court & did an illegal Judgement. Called Capital One ... they new NOTHING ... Called XXXX etc..asked for verification XXXX XXXX )  etc..of my account  payments  court order  etc. Did receive back some info of my account. It clearly shows that they put my more than minimum payments onto a totally different account ... ..I now have the proof  of their illegal practices regarding Capital One and XXXX  XXXX and XXXX. I also have my stubs from my payments sent to them via USPMO for further proof. Now  just recently I have been calls at my home from unknown number stating to call XXXX stating something to the effect of ( my name ) and \"\" property at ( my home ) address '' being sent from the clerks office. My Mother  who is owner of this home  has also been getting such calls and days in row ... regarding me and the \"\" property at ( my home address. ) and clerk of court. Now she is the owner of this home which we rent ... and her property has nothing to do with my Capital One account which they totally illegally screwed me on..along with XXXX  XXXX XXXX XXXX illegal collection practices. So  I did look on website  and the Attorney for XXXX  XXXX  XXXX did do a Judgement renewal previous to us getting these harassing  threatening  illegal calls. Need help here. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1292065.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "19-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-20T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-19T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297644.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297371.nif#char=0,760>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "760"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297371\t24-03-2015\tDebt collection\t health club\t etc.)\"\tFalse statements or representation Attempted to collect wrong amount \"I received a letter from Penn Credit Collection agency dated XXXX XXXX  XXXX. _The letter saying I owed {$56.00} for a parking ticket ( XXXX ) from XXXX XXXX  XXXX to the city of XXXX. __I had paid the ticket in full in XXXX XXXX to a collection agency called XXXX XXXX XXXX  XXXX with USPS money order ( receipt number XXXX ) in the amount of {$56.00}. __The amount I paid in XXXX is {$56.00} is the same ticket number XXXX from XXXX XXXX. __I am not sure why Penn Credit is trying to make me pay for a ticket I 've paid for almost three years ago in full. _\" Company believes it acted appropriately as authorized by contract or law\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296693.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=850,856>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "Monday"^^xsd:string ;
+        nif:beginIndex         "850"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "856"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-31T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-30T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297644.nif#char=95,106>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Wells Fargo"^^xsd:string ;
+        nif:beginIndex        "95"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "106"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297644.nif#char=0,230> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Location> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/Wells_Fargo> .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=211,219>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "211"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "219"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297676.nif#char=0,1103> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=680,685>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "20.00"^^xsd:string ;
+        nif:beginIndex         "680"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "685"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2013-12-21T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2013-12-20T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297316.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=1148,1158>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "1148"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1158"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1296774.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297783.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296727.nif#char=549,554>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "today"^^xsd:string ;
+        nif:beginIndex         "549"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "554"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297589.nif#char=230,234>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "230"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "234"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=2674,2680>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "summer"^^xsd:string ;
+        nif:beginIndex         "2674"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2680"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-08-31T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-06-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=248,252>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX"^^xsd:string ;
+        nif:beginIndex        "248"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "252"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/XXXX> .
+
+<http://dkt.dfki.de/documents/1296693.nif#char=888,892>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "888"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "892"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=1658,1663>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "20.00"^^xsd:string ;
+        nif:beginIndex         "1658"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1663"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-12-21T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-12-20T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=835,841>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "Friday"^^xsd:string ;
+        nif:beginIndex         "835"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "841"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-28T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-27T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=562,570>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "562"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "570"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1295409.nif#char=130,161>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Midland Credit Management   Inc"^^xsd:string ;
+        nif:beginIndex        "130"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "161"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1295409.nif#char=0,801> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=1670,1684>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust Banks"^^xsd:string ;
+        nif:beginIndex        "1670"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1684"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=380,384>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1.00"^^xsd:string ;
+        nif:beginIndex         "380"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "384"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-12-02T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-12-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=1640,1644>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "4.00"^^xsd:string ;
+        nif:beginIndex         "1640"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1644"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-12-05T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-12-04T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297589.nif#char=2532,2535>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "2532"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2535"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=0,1689>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "1951-02-05T09:36:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "1141-08-05T09:36:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1689"^^xsd:nonNegativeInteger ;
+        nif:isString          "1299207\t24-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"I paid off my mortgage with XXXX Mortgage Service Center. The payoff funds were sent overnight mail by the title agent on XXXX XXXX  XX/XX/XXXX and posted on XXXX XXXX  XX/XX/XXXX. Since the payoff amount of {$200000.00} was valid through XXXX XXXX  XX/XX/XXXX  I paid an extra day 's interest of {$25.00}. My escrow account balance was {$1300.00}  therefore my refund should have been {$1400.00}. The check I received from XXXX Mortgage Service Center was for {$1000.00} dated XXXX XXXX  XX/XX/XXXX. This amount is incorrect. Due to a separate complaint issue I filed with the CFPB regarding XXXX Mortgage Service Center earlier this year  XXXX separately agreed to refund a paid processing fee of {$370.00} for a release of liability processing fee I paid which had nothing to do with my escrow balance ( separate account : escrow account versus paid fee ). Since XXXX Mortgage Service Center could not process my release of liability request timely and requested documents not applicable to my specific situation because of my recorded oral stipulation for divorce and recorded quick claim deed ( validating no financial exchange and my need to refinance )  I elected to finally refinance with another lender due to the multiple servicing issues I had experienced with XXXX Mortgage Service Center. This is the primary reason why I refinanced with another lender ; simple processing tasks for some reason were not handled properly by XXXX Mortgage Service Center. Although I spoke to several XXXX employee 's during this process ; they really just do n't seem to truly understand the process being conducted. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297500.nif#char=923,931>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Experian"^^xsd:string ;
+        nif:beginIndex        "923"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "931"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297500.nif#char=0,1723> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Experian> .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=691,701>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "691"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "701"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1292137.nif#char=898,901>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "898"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "901"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1290545.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "19-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-20T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-19T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297685.nif#char=286,290>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2010"^^xsd:string ;
+        nif:beginIndex         "286"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "290"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2011-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2010-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=1229,1233>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citi"^^xsd:string ;
+        nif:beginIndex        "1229"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1233"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1296955.nif#char=0,623>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-23T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-23T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "623"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296955\t23-03-2015\tCredit reporting\tIncorrect information on credit report\tInformation is not mine\t\"After looking at my credit report  I saw a collection account that does not belong to me. I am not allowed to dispute this information online on Experian or over the phone making it impossible for me. This false information is ruining my credit and knowing full well this people did not do their job and allow people to just post false accounts on my report. They need to delete this information immediately and do a proper investigation as this information is not mine. _\" Company chooses not to provide a public response\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1295228.nif#char=176,184>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "176"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "184"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1295228.nif#char=0,599> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1295409.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1290516.nif#char=139,144>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "27.00"^^xsd:string ;
+        nif:beginIndex         "139"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "144"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-12-28T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-12-27T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297773.nif#char=637,661>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Citizens Wire Department"^^xsd:string ;
+        nif:beginIndex        "637"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "661"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297773.nif#char=0,3051> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=475,483>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "475"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "483"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1297327.nif#char=575,582>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Barclay"^^xsd:string ;
+        nif:beginIndex        "575"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "582"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297327.nif#char=0,1108> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Barclays> .
+
+<http://dkt.dfki.de/documents/1296727.nif#char=671,674>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "671"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "674"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292065.nif#char=2474,2479>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "30.00"^^xsd:string ;
+        nif:beginIndex         "2474"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2479"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "1199-12-31T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "1199-12-30T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297685.nif#char=0,1139>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-09-25T13:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2011-05-17T13:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1139"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297685\t24-03-2015\tDebt collection\tCont'd attempts collect debt not owed\tDebt is not mine\t\"I find this medical debt reported on my credit report  but I do not remember ever owing a bill with a remaining balance of {$7.00}. It looks like the company dated the opening of this debt XX/XX/2010. I looked for the collection company on line  but it is as though it does n't exist. It appears to have impact on my credit score. I am willing to pay it if I could get an itemized bill showing the date of the procedure and when and what my medical insurance company reports about it. Also  if the company no longer exist  IT WILL NEED TO BE REMOVE FROM MY CREDIT REPORT. My complaint is that this company has not sent me a bill showing the details of my so called debt  but has reported to the credit bureau that I owe this debt. This is harming my credit score and it is not making it 's contact information available to me. How am I to clear up my credit report if this company does n't exist  but they have reported that I owe a debt that I have no explanation for? _\" Company chooses not to provide a public response \"Healthcare Collections-I\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296593.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1290516.nif#char=251,256>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "27.00"^^xsd:string ;
+        nif:beginIndex         "251"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "256"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2013-12-28T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2013-12-27T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=1488,1498>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "1488"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1498"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=106,114>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "106"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "114"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297676.nif#char=0,1103> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/Citibank> , <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1296890.nif#char=0,1924>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-12-14T02:36:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-10-21T02:36:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1924"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296890\t23-03-2015\tCredit card\tBilling disputes\t\t\"I was reported late by Discover Card to the reporting agencies for XXXX and XXXX as XXXX days late for each month  but I was not allowed to change my billing date to accommodate my monthly federal payment date of the XXXX of the month ( which can post as late as XXXX of the month ). I got behind in XXXX and did not make a full payment trying to finish the larger high school tuition payments for my daughter and pay for her college acceptance monies that all took place in XXXX and XXXX XXXX payment was made every month typically the XXXX of the month and based on the online discover website. I paid a huge XXXX monthly payment over XXXX payments {$150.00} ( XXXX ) and {$330.00} ( XXXX ). Now  the discover representative told me today that I have no payment due in XXXX! The balance minimums due in the online system were for XXXX and XXXX? And  they reported me late for XXXX after paying what was asked of {$480.00}. They refused to change my billing payment date until today to the XXXX of each month so the cycle billing date would align me the way I asked for it to do in XXXX. My credit has been adversely affected for the first time in XXXX plus years as I have not been late in the past. AND  I did make payments each month  XX/XX/XXXX  XX/XX/XXXX  XX/XX/XXXX  XXXX  XX/XX/XXXX  XX/XX/XXXX and XX/XX/XXXX. The representative did not care that I have been a good customer and always made my payments. And  that somehow I got caught in a billing cycle mess that I just now was able to get out of. BUT  to report me and then say you do not owe a payment for XXXX after all of these payments and report me late XXXX days for XXXX and XX/XX/XXXX. I told the representative that I would still make my payment on XX/XX/XXXX regardless that her system shows no balance due because I make monthly payments. Please help me to get this credit issue fixed if you can. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296785.nif#char=0,1346>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-29T01:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2007-06-27T01:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1346"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296785\t23-03-2015\tCredit reporting\tIncorrect information on credit report\tInformation is not mine\t\"I had my purse stolen in 2007. They never found the person responsible. I cancelled everything  credit cards  debit cards etc. My social security card was in this purse as well as my license. Several years later I was contacted by certified mail and told I needed to appear in court in XXXX maine. It stated I had a very large medical bill I had not paid. I called the lawyer representing the medical facility and explained it was not my bill. He took some information then and asked me if my identity had been stolen. I did n't think so  because there were no other things showing up. Since then there is a different name aka on my credit report and many  many accounts that are not mine. They are actually fairly good credit. My debt to income ration according to this report is extremely high. In actuality my debt to income is extremely low. I have tried to dispute this with XXXX. I even tried to go through XXXX XXXX. At this point the horse is out of the barn  so to speak  so XXXX XXXX does n't do me any good. I have read up on this and found that I have a crossed credit or something. They say it is the most difficult to fix. Any help you could give me would be wonderful. Thank you _\" Company chooses not to provide a public response\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297773.nif#char=2780,2784>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1.00"^^xsd:string ;
+        nif:beginIndex         "2780"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2784"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-12-02T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-12-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=191,195>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1300"^^xsd:string ;
+        nif:beginIndex         "191"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "195"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "1301-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "1300-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=112,116>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2014"^^xsd:string ;
+        nif:beginIndex         "112"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "116"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=939,967>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX Mortgage Service Center"^^xsd:string ;
+        nif:beginIndex        "939"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "967"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=1916,1926>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "1916"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1926"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1296727.nif#char=566,570>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "566"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "570"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296777.nif#char=0,454>
+        a                        nif:RFC5147String , nif:Context , nif:String ;
+        dktnif:averageLatitude   "35.458606"^^xsd:double ;
+        dktnif:averageLongitude  "-119.355165"^^xsd:double ;
+        dktnif:meanDateEnd       "2015-03-23T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart     "2015-03-23T12:00:00"^^xsd:dateTime ;
+        dktnif:standardDeviationLatitude
+                "0.0"^^xsd:double ;
+        dktnif:standardDeviationLongitude
+                "0.0"^^xsd:double ;
+        nif:beginIndex           "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex             "454"^^xsd:nonNegativeInteger ;
+        nif:isString             "1296777\t23-03-2015\tDebt collection\t health club\t etc.)\"\tCont'd attempts collect debt not owed Debt resulted from identity theft \"Continued attempts by XXXX XXXX XXXX to collect on debt under my name. The debt was clearly shown under another name and address in a state I have never lived. I also was currently living in the northeast while the debt is in California. _I have disputed several times but the debt keeps showing up in my credit reports. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=737,745>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "citibank"^^xsd:string ;
+        nif:beginIndex        "737"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "745"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1297626.nif#char=0,840>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "840"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297626\t24-03-2015\tMortgage\tCredit decision / Underwriting\t\t\"To whom it may concern  To those that follow the markets you might know that XXXX interest rates will rise over the next few years. But if you 're not aware of financial trends  a 1 year adjustable mortgage might sound tempting but it is utterly foolish since such a mortgage will only get more expensive over the next few years. Hence my surprise when XXXX sent me offer to swap my 30 year fixed rate mortgage for a 1 year adjustable mortgage based on the XXXX. Are we going to get into the same mess that brought ruin to both XXXX XXXX and XXXX XXXX XXXX years ago? Why is XXXX offering products that they know are not in the best interests of consumers? Please ask XXXX why they think this is a good offer? Why are they not offering me a 30 year fixed mortgage refinance? _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=3779,3782>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "Now"^^xsd:string ;
+        nif:beginIndex         "3779"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "3782"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=265,273>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "265"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "273"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297676.nif#char=0,1103> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=427,437>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "427"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "437"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=714,718>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX"^^xsd:string ;
+        nif:beginIndex        "714"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "718"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/XXXX> .
+
+<http://dkt.dfki.de/documents/1297500.nif#char=127,135>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Experian"^^xsd:string ;
+        nif:beginIndex        "127"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "135"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297500.nif#char=0,1723> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Experian> .
+
+<http://dkt.dfki.de/documents/1297609.nif#char=157,161>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2005"^^xsd:string ;
+        nif:beginIndex         "157"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "161"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2006-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2005-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=1572,1580>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "1572"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1580"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1295228.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=2183,2192>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "right now"^^xsd:string ;
+        nif:beginIndex         "2183"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2192"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296593.nif#char=413,435>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "CCS Financial Services"^^xsd:string ;
+        nif:beginIndex        "413"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "435"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1296593.nif#char=0,436> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1297662.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297589.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297874.nif#char=270,281>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Wells Fargo"^^xsd:string ;
+        nif:beginIndex        "270"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "281"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297874.nif#char=0,764> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Location> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/Wells_Fargo> .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=0,2149>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "2149"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297382\t24-03-2015\tCredit reporting\tCredit reporting company's investigation\tNo notice of investigation status/result\t\"I noticed an incorrect item when I received free credit report from Transunion. I contacted data provider ( XXXX XXXX ) immediately and data provider resolved the issue after reviewing the facts. Data provider notified me that data provider will take care of notifying to credit reporting agencies including Transunion. I called Data provider to verify and confirm that they have notified credit reporting agencies and data provider confirmed that all data has been updated with credit reporting agencies. I did not get any notification or revised free credit report from Transunion even after filing dispute with them. But another credit reporting agency  XXXX resolved the issue as soon as data provider resolved the issue. __Transunion did not take any action on this even after I disputed this specific item online using their website XXXX _1. I expected notification or revised free credit report from Transunion after incorrect information has been corrected. This did not happen. _2. I expected an email notification from Transunion after I disputed this item. There is no notification from Transunion. _3. I am checking the status online daily few times and do n't see any kind of update except that their target date is sometime in XXXX. __When data provider and another credit reporting agency XXXX XXXX XXXX confirmed that they resolved these issues  why is Transunion not taking any action and why are they ignoring my requests or service provider updates? __I hope practices of these credit reporting agencies will be reviewed and their standards will be improved to ensure that customer information is kept up-to-date with data providers. There is no need to waste consumers time for data synchronization issues between credit reporting agencies and data providers. I am hoping that Transunion will review data from data provider and take prompt action on this matter. It is really frustrating consumer experience dealing with issues like these that should have never occurred. _\"  \"TransUnion Intermediate Holdings\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296831.nif#char=0,2579>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-08-05T13:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2014-11-24T13:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "2579"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296831\t23-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"i submitted a payment on XXXX XXXX 2015 for my sons mortgage payment as i do every month and it popped up that i had to pay speed pay cause 10 or more days thats what you have to do his payment is due on the XXXX so i did. then on the XXXX i had a payment go threw my bank and they told me it was denied which it should n't have been so i went on line to my bank and so that my sons mortgage place took XXXX payments out XXXX on the XXXX and XXXX on the XXXX so i called the number for company and told the gentleman by the name of agent # XXXX his name XXXX he told me he could see that i was charged and would have them reinburse me and took down the information and said i would also get back the XXXX dollars i was charged for me to hold on till he put the information in and said it would take XXXX to 6 days i explained to him it had to be as soon as possible or my bills would bounce they can take in XXXX they should put back in XXXX he said he had it ready for approval and would put rush on it. i gave them till the XXXX and called and got a XXXX and she said she would have someone contact me. i called on the XXXX and got XXXX agent # XXXX and she would not let me speak with a manager and hung up on me. I called again on the after she hung up on me and got her again and she finally after a few words connected me to a supervisor named XXXX agentXXXX i spoke with her and explained the sittuation and she looked up and said she saw XXXX had put payment in to be reversed and then asked me to send her my bank statement showing they took the XXXX payments and she would get back to me on monday the XXXX and took my number and i did not hear from her by XXXX so i called and got XXXX agent XXXX and had a fight with her over speaking to supervisor XXXX and refused to let me speak to her and said someone would get back with me in 24 to 48 hours so i went to my bank to see if they could help get my money back cause they are giving me a run around and looks like they are not going to return me my money and the heck with my bills we are not talking a few dollars but XXXX this is the worse experience i have ever had in my XXXX years of life dealing with any company so i can only hope my bank can help me out and someone should do something with this company to be able to take what they want from a persons bank and then not want to give it back. the name of the company is ocwen loan service mtg and the number I have is XXXX and punch number XXXX or god knows where you will wind up _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296777.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296955.nif#char=245,253>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Experian"^^xsd:string ;
+        nif:beginIndex        "245"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "253"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1296955.nif#char=0,623> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Experian> .
+
+<http://dkt.dfki.de/documents/1297371.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1295146.nif#char=204,208>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2010"^^xsd:string ;
+        nif:beginIndex         "204"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "208"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2011-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2010-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=693,703>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Nationstar"^^xsd:string ;
+        nif:beginIndex        "693"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "703"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1292139.nif#char=0,2057> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Nationstar_Mortgage> .
+
+<http://dkt.dfki.de/documents/1297609.nif#char=307,310>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "9.5"^^xsd:string ;
+        nif:beginIndex         "307"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "310"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2005-05-10T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2005-05-09T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297626.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297327.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296785.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297644.nif#char=101,106>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Fargo"^^xsd:string ;
+        nif:beginIndex        "101"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "106"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297644.nif#char=0,230> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Wells_Fargo> .
+
+<http://dkt.dfki.de/documents/1296880.nif#char=642,646>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2013"^^xsd:string ;
+        nif:beginIndex         "642"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "646"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2013-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296823.nif#char=1722,1731>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "this date"^^xsd:string ;
+        nif:beginIndex         "1722"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1731"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297327.nif#char=656,663>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Barclay"^^xsd:string ;
+        nif:beginIndex        "656"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "663"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297327.nif#char=0,1108> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Barclays> .
+
+<http://dkt.dfki.de/documents/1292065.nif#char=0,3908>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "1756-11-29T00:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "1051-03-17T00:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "3908"^^xsd:nonNegativeInteger ;
+        nif:isString          "1292065\t19-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"I am writing this letter because my mortgage account experienced an error when it was servicer transferred from XXXX XXXX XXXX to Select Portfolio Servicing on XXXX XXXX  XXXX. I was in the middle of a trial loan modification that began on XXXX XXXX  XXXX. _I made all of my payments on time  which kept me locked into my trial modification agreement. I have attached a copy of my bank records  which show the payments being withdrawn from my bank account each month since the trial modification began. After the initial XXXX month trial period  I was informed by XXXX XXXX XXXX that my permanent loan modification documents were not ready to be produced yet. I was instructed by XXXX to keep making my payments each month in the same amount as the trial period payment. I ended up making payments for XXXX and XXXX in the trial amount of {$640.00}. I spoke to an XXXX representative named XXXX in XXXX XXXX. He informed me that I can begin to make my payments in the amount of the permanently modified payment  which came out to be {$850.00}  but the permanent documents are not ready yet. I made the payments for XXXX and XXXX XXXX in this amount. _I spoke to XXXX from XXXX again on XXXX XXXX  XXXX. He was very apologetic about the errors on XXXX 's end. He explained that the XXXX and XXXX payments are short of the normally scheduled payment of {$850.00} because they had informed us to make payments of {$640.00} during these months. Each XXXX of these months is {$200.00} short from making a full modified payment. In order to credit the account for the full payments in XXXX and XXXX  he said the account is due for {$410.00}. He informed us to make the shortage payment along with the payment for XXXX and the account will be permanently modified and brought completely current. This would allow them to apply all of the funds properly through XXXX XXXX  XXXX. He said XXXX is working to rectify the issue prior to the transfer to Select Portfolio Servicing  but they will notify SPS of their error prior to the transfer so that there are no issues with the modification when the loan is transferred to SPS. _As you can see in my bank records  which are attached  I made the payment to Select Portfolio Servicing on XXXX/XXXX/XXXX in the amount of {$1200.00}  which can be broken down into {$410.00} for the shortage in XXXX and XXXX plus {$850.00} for the XXXX payment plus an additional {$30.00}. I contacted SPS on XXXX/XXXX/XXXX to ensure that the payment had been received. I was informed that the payment was received  however they were still working on the transfer process. I called back and spoke to SPS on XXXX/XXXX/XXXX and I was informed that they were showing the account due for XXXX payments. I tried to explain that the account was current and I was advised to send in a dispute letter for the account. _I ended up submitting a dispute letter on XXXX/XXXX/XXXX. I received a response on XXXX/XXXX/XXXX that SPS could not find any errors on their end and there is still a delinquency on the account. However  this is not correct information  as you can see in my bank statements that a payment has been withdrawn for each month since I began my trial modification in XXXX XXXX. I sent another dispute letter into SPS on XXXX/XXXX/XXXX. They responded with the same letter as their first response and claimed that there is not a payment issue on the file and they claim that I am XXXX payment behind on the mortgage  which is not the case. I ordered a payment history to prove that payments were made  but SPS conveniently began their payment history on XXXX/XXXX/XXXX  whereas the payment was made and accepted by them on XXXX/XXXX/XXXX  in which they claim they did not receive the payment of {$1200.00}. _\" Company believes it acted appropriately as authorized by contract or law \"Select Portfolio Servicing\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1299120.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297500.nif#char=1111,1119>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Experian"^^xsd:string ;
+        nif:beginIndex        "1111"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1119"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297500.nif#char=0,1723> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Experian> .
+
+<http://dkt.dfki.de/documents/1297685.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297758.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=187,197>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Transunion"^^xsd:string ;
+        nif:beginIndex        "187"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "197"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1295228.nif#char=0,599>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-23T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-23T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "599"^^xsd:nonNegativeInteger ;
+        nif:isString          "1295228\t23-03-2015\tStudent loan\tCan't repay my loan\tCan't decrease my monthly payments\t\"This is a continuation of a previous issue with Citibank that has reached another XXXX. Citibank increased my monthly payments XXXX and I have been unable to reach an agreement with them about my monthly payment. I am requesting that Citibank reconsider my request for graduated repayment  so that I am not forced into Collections. I would like to pursue a payment plan that works with my current financial situation and allows me be responsible for my debt. _\" Company chooses not to provide a public response\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=970,978>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "970"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "978"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1292137.nif#char=739,752>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "Federal Court"^^xsd:string ;
+        nif:beginIndex        "739"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "752"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1292137.nif#char=0,1592> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Location> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/Federal_Court> .
+
+<http://dkt.dfki.de/documents/1297773.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297784.nif#char=0,631>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "631"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297784\t24-03-2015\tDebt collection\tCont'd attempts collect debt not owed\tDebt is not mine\t\"This company continues to report on my credit report after I sent them a letter telling them that this account was not mine and I have no idea what it is or who it belongs to! __I asked for proof of a signed contract  I asked for a license to collect in my state  I asked for copies of all information referenced for this debt and still to date  I have not received anything but harassment from this company! __THIS IS NOT MY DEBT! __I WANT THIS ACCOUNT REMOVED FROM MY CREDIT REPORT AND THIS COMPANY TO STOP CONTACTING ME IMMEDIATELY! _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296890.nif#char=744,747>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "Now"^^xsd:string ;
+        nif:beginIndex         "744"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "747"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1295146.nif#char=623,627>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citi"^^xsd:string ;
+        nif:beginIndex        "623"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "627"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1295146.nif#char=0,717> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1290514.nif#char=2372,2377>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "18.00"^^xsd:string ;
+        nif:beginIndex         "2372"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2377"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-12-19T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-12-18T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297609.nif#char=0,792>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2013-04-27T12:40:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2004-01-25T12:40:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "792"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297609\t24-03-2015\tDebt collection\tCont'd attempts collect debt not owed\tDebt was discharged in bankruptcy\t\"I filed ChapterXXXX bankruptcy on my accounts in 2005  which I 'm NOT of proud ; but during this BAD TIME I lost a high paying job and got divorced  which left me no other choice but to file!!! Then 9.5 years later after I am finally getting my life back on track a collection company sends me a THREAT letter that I need to pay on an account included in my bankruptcy  and I have PROOF of this. I called them and they say they will clear this up  but since they did n't ask for PROOF even though I offered CASE # and Amount paid just to prove myside  but got worried that I offered more than they asked for. I want to make sure I 'm NOT BRING SCAMMED - Thank You for your help!! _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1290543.nif#char=0,239>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-19T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-19T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "239"^^xsd:nonNegativeInteger ;
+        nif:isString          "1290543\t19-03-2015\tMortgage\t\"Application\t originator\t mortgage broker\"  \"I am very disappointed that the CFPB did not help to resolve this fraudulant loan. # XXXX between XXXX XXXX and XXXX  FF ( AKA ) One West. Case # XXXX with CFPB. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=1125,1128>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "1125"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1128"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=107,115>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "107"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "115"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1290545.nif#char=0,722>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-19T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-19T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "722"^^xsd:nonNegativeInteger ;
+        nif:isString          "1290545\t19-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"I am a Successor - in -interest to a property located in XXXX XXXX California XXXX The mortgage on this property is currently in default primarily because of the lender 's inability to renegotiate with me. I have received notification that there is going to be a foreclosure on it. I have since been contacting the Lender to reinstate the delinquent lien  but or no one wants to talk with me. I will be put on hold for a long time  and when someone eventually comes to talk  it is the same  they will find a reason not to work anything out with me. It is frustrating and I think that they want to find a way to sell this property from under me. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297327.nif#char=104,107>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "4.5"^^xsd:string ;
+        nif:beginIndex         "104"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "107"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-05-05T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-05-04T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=101,129>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX Mortgage Service Center"^^xsd:string ;
+        nif:beginIndex        "101"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "129"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1299120.nif#char=0,882>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "882"^^xsd:nonNegativeInteger ;
+        nif:isString          "1299120\t24-03-2015\tPayday loan\tReceived a loan I didn't apply for\tReceived a loan I didn't apply for\t\"I received a call from a woman stating that they have a \"\" pending claim '' against my XXXX checking account ; some sort of \"\" bad checking ''. No name of the lender or anything is given. She states that I have some charges pending against me as to what they do not give. These people have called my dad as well as my sister under the business name of Integrated Services at XXXX. I looked up this number on another web source and other consumers have had the same issues with these people ; they harass  can be rude  and have multiple numbers in which they have used. I believe they are attempting to fraudulently collect monies from me and/or my bank through old payday loan information they obtained. _\" Company believes it acted appropriately as authorized by contract or law\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=0,1103>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-29T11:40:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-25T11:40:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1103"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297676\t24-03-2015\tBank account or service\t\"Account opening\t closing\t or management\"  \"After banking with Citibank for over 3 years  I discovered this evening that I could not use my debit card despite having a Citibank verified balance of {$900.00}. When I called Citibank  I was informed that the Texas branches had been bought by XXXX XXXX XXXX and as such  they  Citibank  could not allow access to my account. I was told I was notified of this via mail  though no certified letter or any correspondence showing I had received notification could be provided. Upon speaking to a supervisor  no remedy was available other than talk to the new bank tomorrow. I do n't feel I am overstating to say that this \"\" customer service '' is tantamount to theft. Citibank allowed me to deposit my entire paycheck into my account 3 days ago on Friday  and on Monday denied me any access to my money! Like many Americans  I pay for most everything by debit card and rarely carry cash. How can a bank hold a persons money hostage  with no explanation other than I 'm sorry but we sent out letters? Ridiculous! _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=114,118>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX"^^xsd:string ;
+        nif:beginIndex        "114"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "118"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/XXXX> .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=1761,1771>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Nationstar"^^xsd:string ;
+        nif:beginIndex        "1761"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1771"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1292139.nif#char=0,2057> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Nationstar_Mortgage> .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=594,598>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "citi"^^xsd:string ;
+        nif:beginIndex        "594"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "598"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1296831.nif#char=108,112>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "108"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "112"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=231,235>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX"^^xsd:string ;
+        nif:beginIndex        "231"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "235"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/XXXX> .
+
+<http://dkt.dfki.de/documents/1295056.nif#char=0,372>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-23T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-23T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "372"^^xsd:nonNegativeInteger ;
+        nif:isString          "1295056\t23-03-2015\tCredit card\tOther\t\t\"I attempted to apply for a Discover Card Online. The system did a hard credit pull and then disconnected me from the application process. I called in and was told that another hard pull would need to be done to complete the application. I never agreed to any hard credit pulls in the process and called and advised them of that. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1290543.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "19-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-20T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-19T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=536,540>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "1000"^^xsd:string ;
+        nif:beginIndex         "536"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "540"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "1001-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "1000-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=1476,1486>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Nationstar"^^xsd:string ;
+        nif:beginIndex        "1476"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1486"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1292139.nif#char=0,2057> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Nationstar_Mortgage> .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=0,1874>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1874"^^xsd:nonNegativeInteger ;
+        nif:isString          "1299216\t24-03-2015\tCredit card\tCredit line increase/decrease\t\t\"XXXX i receive an email from citibank regarding my XXXX credit card. It was an offer to request a credit increase and it clearly stated that there would be NO Credit bureau inquiry made. I clicked on the link in the email and entered the requested information. a couple of days later I received an alert from my credit bureau monitoring service that a hard inquiry was done. Upon looking at the report it showed Citibank credit cards making a hard credit inquiry  which was completely opposite of what their email stated. I called citi and they confimred that the email stated there would be no creidt inquiry done however they said that the request was made on a different citibank credit card which is why the hard inquiry was made. I explained to the rep I clicked on the link they provided and if was for a different account of mine it was not my issue but theirs and they need to remove the inquiry. They told me to send a letter to their credit dispute department explaining it. I sent the letter after waiting more than a month I received a blunt statement stating the it was a valid credit request and they will not remove the inquiry from my credit bureau. Citi performed bait and switch by offering a no inquiry credit request and then doing a hard inquiry which has negatively affected my credit score. I asked to remove it and received a generic letter stating they would not with no number to contact the department that sent the letter when i called the main customer service number they said that department dosent talk to customers and there was nothing else they can do. _This has negatively affected my credit score and will remain on my credit report for 2 years because citi 's False advertising. and then their lack of fixing their error _\" Company chooses not to provide a public response\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=273,277>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "273"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "277"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=568,572>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX"^^xsd:string ;
+        nif:beginIndex        "568"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "572"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/XXXX> .
+
+<http://dkt.dfki.de/documents/1290514.nif#char=0,3170>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-07-15T19:40:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-05-10T19:40:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "3170"^^xsd:nonNegativeInteger ;
+        nif:isString          "1290514\t19-03-2015\tCredit card\tLate fee\t\t\"I opened a credit card account with Macys in XX/XX/XXXX. The sales associate put my old mailing address from my license which I did not notice at that time because he did not ask this question of my current mailing address. I wait for my card to arrive in the mail for a month but I do n't get one. So I decided to give a call to their customer service number. I mentioned to the representative that I do n't have the card with me  but I like to make the payment and I confirmed my identity as was asked by the representative. she insisted that she ca n't take the payment till I have the card with me  so I reasoned that since I do n't have the card and I do n't know my payment due date  I will be late on making payment and then you guys will charge me late fee. she was not willing to tell me my due date  but agreed to take the payment after talking to some other person. after while she says the payment processing system is down and I should call back to make the payment. I call back in a couple of days again to make the payment and I am told that it is late now. I told them that the other day another representative was n't willing to take my payment and was n't willing to tell my due date  so how can I make the payment on time? After another month  I call back to make another payment and I repeat the same thing that I still have not received my card yet  but would like to make a payment and not sure if I am late on making payment. This time the representative tells me that I have missed the due date. She offers to verify my mailing address and then I tell her if my old address is on record. she tells me that this is the case of old address on record. she tells me that she will go ahead and update mailing address and send me a new card to that address and also wave the late fee because it was n't my fault. She told me not to worry about late fee being charged. I receive my card this month and I log into my account to find out that I am charged late fee in the last two months  so I decide to give them call again. This time the representative tells me that what do I want him to do even after explaining all the situation. when I ask him to reimburse my late fees because it was not my fault and I did my part to reach out every time. he says everything is being documented  but he can only reimburse {$18.00}. I said how is that possible since I was not at fault and I was assured of not being charged late fee. And when I tried to make the payment on time  the representative tells that their system is down. so I feel that they are using the deceptive practices of charging customers late fees under the pretext wrong policy of not sharing the due date even after verifying their identity and not taking the payment before due date so they can put the blame on the customers after the due date is passed. I am sure I will be vindicated if their recorded calls record is asked for as they will not share that with me. All I asking for is to wave those late fees as I was not at fault at all. Please guide me for the right remedy for this problem. _\" Company chooses not to provide a public response\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297758.nif#char=0,657>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "657"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297758\t24-03-2015\tDebt collection\tCommunication tactics\tFrequent or repeated calls\t\"This gentleman called me and asked for personal information without disclosing who he is or what it is he wants. Did not tell me which company he was calling from or who he was representing and would not say so until I gave him my personal information. __The reason I know the name of the company and what they do is because I got their number and returned the phone call where they said the name of their business on answering the phone and then looked them up on the internet. _\" Company believes it acted appropriately as authorized by contract or law \"Client Services\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296890.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297589.nif#char=673,677>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "673"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "677"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296773.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296773.nif#char=0,533>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-23T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-23T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "533"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296773\t23-03-2015\tStudent loan\tDealing with my lender or servicer\tHaving problems with customer service\t\"Was not contacted 4 years later about some private loan I supposedly took out and they are trying to collect it. I keep trying to call XXXX college but they keep giving me bogus numbers where nobody answers. I called the collection agency to get some information and they will not give me any info at all. They said call XXXX college but again this gets me nowhere with bogus numbers where noone answers or hangs up on me. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296890.nif#char=1531,1534>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "1531"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1534"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1290514.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "19-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-20T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-19T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296727.nif#char=402,405>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "402"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "405"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1295056.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296774.nif#char=0,1776>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-23T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-23T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1776"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296774\t23-03-2015\tDebt collection\tCont'd attempts collect debt not owed\tDebt was paid\t\"Collection Consultants is reporting a collection account on all XXXX credit bureaus illegally. I had a medical bill with a hospital. I had a payment plan with the hospital while I was investigating the charges. I had NEVER gotten a bill that I demanded. I do not believe I owe this. I disagree that I received some services or goods at the hospital. Neither did my insurance company. Nobody ( not the hospital or Collection Consultants ) has been able to provide to me an itemization of the total bill. When I questioned this the hospital sent the bill to Collection Consultants even though I was paying them. They just stopped sending bills then Collection Consultants sent me a letter demanding the payment in full. I called. I told them I was investigating the charges and that I needed them to send me a copy of their HIPPA compliant agreement with the hospital  a copy of their assignment  and an itemization of the bill including anything that I authorized. They never provided this information. They never validated the debt in accordance with the Fair Debt Collection Practices Act. I did pay them only because I did NOT want it to go on my credit and I was assured it would be removed. The representative said at the end of my XXXX payment plan it would be removed from my credit. This did not happen. They deceived me and did not validate it. They have XXXX things I have issue with. 1- I do not believe they followed HIPPA laws. 2- They have reported this to the bureaus when they did not have a legal right do so because they did not validate their legal right to when requested  3- they used deceptive practices to collect the debt. They promised me it would be removed. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297773.nif#char=0,3051>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T00:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2014-12-02T00:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "3051"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297773\t24-03-2015\tBank account or service\tDeposits and withdrawals\t\t\"On XXXX XXXX I went to the Citizens Bank on XXXX XXXX  in XXXX  MA and gave my son 's bank information in XXXX and wired {$200000.00} to XXXX do XXXX  where my son has a checking account. ( My son lives in XXXX ) On XXXX XXXX  I 've realized there was a mistype in the XXXX he gave to me. I called the Citizens Bank Wire Department and was able to fix the number and they told me the money would be available in XXXX on XXXX XXXX. _Until XXXX XXXX XXXX  the money has not arrived in my son 's checking account in XXXX  but left my account on XXXX XXXX. _I 've called Citizens Wire Department many times and they told me the money was transferred to XXXX XXXX XXXX and that XXXX XXXX XXXX would be responsible for that wire transfer. _I 've asked if they could trace the money since it 's been more than 2 weeks  they ca n't. XXXX XXXX XXXX is the bank responsible for that and if XXXX XXXX XXXX has not called them to say something went wrong  they do n't communicate with XXXX XXXX XXXX  they assume everything went well. Although I 've been calling to let them know it has not. _They also told me I could start a process to get my money back in my checking account with Citizens but I would lose the fees I 've paid for the wire transfer to be made. _I just want to find out what happened to the money. Even if there was something wrong I should have gotten a phone call or something.. This is not the way a Bank should treat a client/customer who trusted the Bank. This is disrespectful! _Another thing  they should clear state to the customers they are NOT allowed to do International Transactions and that their money is going to be transferred to another Bank for the transaction to be complete. _I 've got all the dates and time I 've called the Wire Department at XXXX XXXX - XXXX ( XXXX XXXX XXXX XXXX minutes on the phoneXXXX XXXX - XXXX USA - XXXX minutes on the phoneMarch XXXX - Director of Bank - XXXX minutes on the phoneMarch XXXX - XXXX - XXXX minutes on the phoneXXXX XXXX - XXXX ( that day finally the lady told me they 've started a trace and someone would give me a call ) XXXX XXXX - One of their employees finally called ( XXXX XXXX ) but until that day they did n't know what happened to my money. _I just want Citizens Bank to be responsible for the deal I 've lost in my country - that money was supposed to buy a condo and  of course  I lost the deal! _I want Citizens Bank to trace all my phone calls ( They 've been recorded ) and try to figure out WHY their employees did n't take an action on XXXX/XXXX/15 when I made the XXXX phone call to complain about a delay ... They should know better. _I used to work for the XXXX XXXX XXXX XXXX and they call their customers because a {$1.00} coffee. What about Citizens? what do they do for their costumers? _I would appreciate someone to please investigate this case and force Citizens Bank to improve the way they treat their costumers and solve situation. __Sincerely  XXXX _\"  \"Citizens Financial Group\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=1651,1655>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "5.00"^^xsd:string ;
+        nif:beginIndex         "1651"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1655"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2014-12-06T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2014-12-05T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=2967,2974>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "NOTHING"^^xsd:string ;
+        nif:beginIndex        "2967"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "2974"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297939.nif#char=0,4180> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=2123,2132>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "right now"^^xsd:string ;
+        nif:beginIndex         "2123"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2132"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296693.nif#char=3093,3097>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "3093"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "3097"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=0,2057>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2118-01-06T17:50:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "1397-12-07T17:50:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "2057"^^xsd:nonNegativeInteger ;
+        nif:isString          "1292139\t19-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"We fell behind in our payments back in 2014 following a really unreasonable modification. The modification was over {$1300.00} and placed our loan into 40 years. At XXXX years old we will never live to pay this off. A few months after the modification the payment went down to {$1200.00} a month. We fell behind XX/XX/XXXX due to the fact I am having health problems and my medical condition is on going at this time. We also lost about {$400.00} a month in income due to family members moved out of the home  in which they where contributing to the household at the time. We received a notice from the mortgage company Nationstar that we had to have in a payment just over {$2000.00} by a date in the letter in XX/XX/XXXX. We contacted our point of contact person XXXX XXXX and informed her we where having difficulty and that we needed more time. Again we contacted our mortgage company and the man that answered the phone told us we had to have in over {$4000.00}. We informed them we did not have that much but could make a payment and where awaiting our tax return. Within a week the amount went up to over {$7000.00} and they turned the account over to a lawyer for collection and foreclosue precedings. We have attempted since XX/XX/XXXX to make a payment in order to get caught up but they will not take any payment  in order to help us out. Now we can not even get a response from XXXX XXXX at Nationstar or the law office they sent the account to for collection. In the meantime we are just getting further and further behind. We where not looking for another modification just a forbearance to get us time to get our finances back on track. We did get a letter from someone at Nationstar that handles compliants but that only puts the side of the story out that tells how we are behind. How they says they are out to help us and wo n't even return our calls or talk with us. Feeling stressed out due to we have a son with a XXXX and fear we will be out on the streets. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=1753,1757>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "citi"^^xsd:string ;
+        nif:beginIndex        "1753"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1757"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1297939.nif#char=3398,3401>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "Now"^^xsd:string ;
+        nif:beginIndex         "3398"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "3401"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297316.nif#char=0,345>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "345"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297316\t24-03-2015\tDebt collection\tFalse statements or representation\tAttempted to collect wrong amount\t\"I am a victim of a parked debt bought by a debt collection company. The problem is the company is reporting the debt as open recently  it 's not. This is illegal and that 's the reason for my complaint. _\"  \"Accelerated Financial Solutions\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297644.nif#char=152,156>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "152"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "156"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=436,444>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "436"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "444"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1297629.nif#char=237,245>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "SunTrust"^^xsd:string ;
+        nif:beginIndex        "237"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "245"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/SunTrust> , <http://dbpedia.org/page/SunTrust_Banks> .
+
+<http://dkt.dfki.de/documents/1296593.nif#char=0,436>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-23T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-23T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "436"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296593\t23-03-2015\tDebt collection\t health club\t etc.)\"\tImproper contact or sharing of info Contacted me after I asked not to \"I do n't know how they got my cell number. I told them would deal onlybwith the original company and to stop harassing me. They called again after sending the do not contact messsage and told them I would report them. They have contacted people whose is of no concern my business. _\"  \"CCS Financial Services\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297327.nif#char=0,1108>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-05-03T00:30:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-26T00:30:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1108"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297327\t24-03-2015\tCredit card\tIdentity theft / Fraud / Embezzlement\t\t\"I have been a XXXX XXXX XXXX for 4.5 years and my identity was stolen last year. The thieves obtained a credit card from Barclay which they used to rent and steal cars XXXX miles away in XXXX California. I have provided tips to law enforcement  leading to seizures of some of the thieves ' equipment  and the police have video surveillance and XXXX suspects in custody  caught in a stolen vehicle with many fraudulent IDs  including some for me. I have provided this information and the police report to Barclay and XXXX in multiple disputes since XXXX. I recently mailed a dispute to Barclay and requested all documents relating to this account  including a list of all charges and payments made  all investigative findings  when they contacted the law enforcement contacts I provided  and how and when they verified any and all information  as is my right under the FCRA. However  they have refused to provide me this information and are thus in willful noncompliance with the FCRA. _\" Company chooses not to provide a public response\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1292139.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "19-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-20T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-19T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296777.nif#char=355,365>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "California"^^xsd:string ;
+        nif:beginIndex        "355"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "365"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1296777.nif#char=0,454> ;
+        geo:lat               "35.458606"^^xsd:double ;
+        geo:long              "-119.355165"^^xsd:double ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Location> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/California> .
+
+<http://dkt.dfki.de/documents/1297377.nif#char=0,1503>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-08-26T03:20:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-06-13T03:20:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1503"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297377\t24-03-2015\tDebt collection\tCommunication tactics\tFrequent or repeated calls\t\"I 've been receiving numerous robocalls  hang-ups and a few calls where caller does n't ID themselves  where they 're calling from  who they are and the nature of their call. These calls are fro Amex  XXXX  XXXX XXXX. I 've been saving the calls on my cell phone. I finally sent out cease and desist letters but now XXXX XXXX XXXX has begun calling. I 'll be sending them a letter as well tomorrow -- certified/return receipt requested. __American Express XXXX XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX. XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX. _XXXX XXXX XXXX at XXXX XXXX did n't ID where calling from  XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX & XXXX XXXX did n't ID where calling from. _XXXX XXXX XXXX XXXX XXXX at XXXX XXXX & XXXX XXXX  XXXX XXXX at XXXX XXXX & XXXX XXXX  XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XX/XX/XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX. _XXXX XXXX XXXX XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX  XXXX XXXX at XXXX XXXX & XXXX XXXX & XXXX XXXX  XXXX XXXX XXXX & XXXX XXXX & XXXX XXXX  XXXX XXXX at XXXX XXXX & XXXX XXXX  XXXX XXXX at XXXX XXXX & XXXX XXXX. __These are just the calls that I kept track of. Most are robocalls and since this is a cell phone under the XXXX government cell phone plan  I do not appreciate it. I am filing for bankruptcy and these people call 3-4 times a day? _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296693.nif#char=1923,1927>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2015"^^xsd:string ;
+        nif:beginIndex         "1923"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "1927"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297500.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297609.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299216.nif#char=63,67>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX"^^xsd:string ;
+        nif:beginIndex        "63"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "67"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/XXXX> .
+
+<http://dkt.dfki.de/documents/1297594.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297850.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297676.nif#char=367,375>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Citibank"^^xsd:string ;
+        nif:beginIndex        "367"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "375"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297676.nif#char=0,1103> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Citibank> .
+
+<http://dkt.dfki.de/documents/1296774.nif#char=910,915>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "HIPPA"^^xsd:string ;
+        nif:beginIndex        "910"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "915"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1296774.nif#char=0,1776> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/HIPPA> .
+
+<http://dkt.dfki.de/documents/1292137.nif#char=0,1592>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2016-08-29T23:30:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-20T23:30:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1592"^^xsd:nonNegativeInteger ;
+        nif:isString          "1292137\t19-03-2015\tMortgage\tCredit decision / Underwriting\t\t\"XXXX was submitted XX/XX/XXXX. At the time I submitted this complaint  I had dealt with Rushmore Mortgage directly endeavoring to get them to stop the continuous daily calls I was receiving trying to collect on a mortgage for which I was not responsible due to bankruptcy. They denied having knowledge of the bankruptcy  even though I had spoken with them about it repeatedly and had written them repeatedly referencing the bankruptcy requesting them to cease the pursuit  they continued to do so. When they were unable to trick me into paying  force me into paying in retaliation they placed reported to my credit bureaus a past due mortgage amount that had been discharged in Federal Court. On XX/XX/XXXX Rushmore responded the referenced complaint indicating that they would remove the reporting from my bureau  yet it is still there now in XX/XX/XXXX. I would like them to remove it immediately and send me a letter indicating that it should not have been there in the first place and they are going to remove it from all my bureaus. Rushmore  when speaking to me  represented themselves as the new note holder  but when CFPB was involved  they identified themselves as the servicing agency for XXXX XXXX XXXX. This credit bullying and racial discrimination practices is damaging to anyone who is exposed to these tactics and this needs to stop. Them denying their intent and then walking away with no penalties of any kind is one of the reasons it continues. Please assist me in procuring the resolution once and for all. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1299207.nif#char=1568,1572>
+        a                     nif:RFC5147String , nif:String ;
+        nif:anchorOf          "XXXX"^^xsd:string ;
+        nif:beginIndex        "1568"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "1572"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/resource/XXXX> .
+
+<http://dkt.dfki.de/documents/1290516.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "19-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-20T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-19T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297784.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1295146.nif#char=0,717>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-04-02T00:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2010-06-23T00:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "717"^^xsd:nonNegativeInteger ;
+        nif:isString          "1295146\t23-03-2015\tDebt collection\tCommunication tactics\tThreatened to take legal action\t\"Going through a divorce  my ex and I were unable to pay the mortgage for a few months. The house was sold in XXXX 2010 ( NOT A SHORT SALE ) and the mortgage was paid to Citimortgage PAID IN FULL. After the sale of the house  the law firm handling this case reported the pre-forclosure to the credit bureaus and do n't understand how a mortgage that was paid in full can go to foreclosure. I did not own this house at the time of the filing. CitiMortgage had an moral obligation to discuss the lawyer which they did not. In addition  Citi was part of a class action suit at this time regarding DEFICIENT MORTGAGE SERVICING. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297644.nif#char=0,230>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-11-01T05:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2014-12-26T05:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "230"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297644\t24-03-2015\tMortgage\t\"Loan servicing\t payments\t escrow account\"  \"My mortgage servicer  Wells Fargo  did not give me a monthly statement in XXXX 2015 nor thus far in XXXX 2015. I never received a coupon booklet either. _\" \n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297507.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "24-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-25T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-24T00:00:00"^^xsd:dateTime .
+
+<fronteoCollection>  a  nif:ContextCollection ;
+        nif:hasContext  <http://dkt.dfki.de/documents/1295409.nif#char=0,801> , <http://dkt.dfki.de/documents/1297644.nif#char=0,230> , <http://dkt.dfki.de/documents/1297609.nif#char=0,792> , <http://dkt.dfki.de/documents/1297662.nif#char=0,382> , <http://dkt.dfki.de/documents/1295146.nif#char=0,717> , <http://dkt.dfki.de/documents/1297377.nif#char=0,1503> , <http://dkt.dfki.de/documents/1297758.nif#char=0,657> , <http://dkt.dfki.de/documents/1296773.nif#char=0,533> , <http://dkt.dfki.de/documents/1297500.nif#char=0,1723> , <http://dkt.dfki.de/documents/1297316.nif#char=0,345> , <http://dkt.dfki.de/documents/1296727.nif#char=0,788> , <http://dkt.dfki.de/documents/1296823.nif#char=0,1804> , <http://dkt.dfki.de/documents/1297784.nif#char=0,631> , <http://dkt.dfki.de/documents/1297594.nif#char=0,366> , <http://dkt.dfki.de/documents/1299120.nif#char=0,882> , <http://dkt.dfki.de/documents/1292065.nif#char=0,3908> , <http://dkt.dfki.de/documents/1297783.nif#char=0,631> , <http://dkt.dfki.de/documents/1297939.nif#char=0,4180> , <http://dkt.dfki.de/documents/1297874.nif#char=0,764> , <http://dkt.dfki.de/documents/1297676.nif#char=0,1103> , <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> , <http://dkt.dfki.de/documents/1296693.nif#char=0,3767> , <http://dkt.dfki.de/documents/1292139.nif#char=0,2057> , <http://dkt.dfki.de/documents/1295228.nif#char=0,599> , <http://dkt.dfki.de/documents/1297626.nif#char=0,840> , <http://dkt.dfki.de/documents/1296831.nif#char=0,2579> , <http://dkt.dfki.de/documents/1292137.nif#char=0,1592> , <http://dkt.dfki.de/documents/1290545.nif#char=0,722> , <http://dkt.dfki.de/documents/1290514.nif#char=0,3170> , <http://dkt.dfki.de/documents/1296774.nif#char=0,1776> , <http://dkt.dfki.de/documents/1297850.nif#char=0,775> , <http://dkt.dfki.de/documents/1297589.nif#char=0,3075> , <http://dkt.dfki.de/documents/1296785.nif#char=0,1346> , <http://dkt.dfki.de/documents/1296880.nif#char=0,803> , <http://dkt.dfki.de/documents/1296955.nif#char=0,623> , <http://dkt.dfki.de/documents/1297629.nif#char=0,1685> , <http://dkt.dfki.de/documents/1297507.nif#char=0,833> , <http://dkt.dfki.de/documents/1299216.nif#char=0,1874> , <http://dkt.dfki.de/documents/1297371.nif#char=0,760> , <http://dkt.dfki.de/documents/1296593.nif#char=0,436> , <http://dkt.dfki.de/documents/1295056.nif#char=0,372> , <http://dkt.dfki.de/documents/1299258.nif#char=0,3219> , <http://dkt.dfki.de/documents/1299207.nif#char=0,1689> , <http://dkt.dfki.de/documents/1290543.nif#char=0,239> , <http://dkt.dfki.de/documents/1290516.nif#char=0,436> , <http://dkt.dfki.de/documents/1296890.nif#char=0,1924> , <http://dkt.dfki.de/documents/1296777.nif#char=0,454> , <http://dkt.dfki.de/documents/1297685.nif#char=0,1139> , <http://dkt.dfki.de/documents/1297327.nif#char=0,1108> , <http://dkt.dfki.de/documents/1297773.nif#char=0,3051> .
+
+<http://dkt.dfki.de/documents/1296727.nif#char=545,548>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "Now"^^xsd:string ;
+        nif:beginIndex         "545"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "548"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297382.nif#char=2116,2126>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "TransUnion"^^xsd:string ;
+        nif:beginIndex        "2116"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "2126"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297382.nif#char=0,2149> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/TransUnion> .
+
+<http://dkt.dfki.de/documents/1295146.nif#char=8,18>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "23-03-2015"^^xsd:string ;
+        nif:beginIndex         "8"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "18"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2015-03-24T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2015-03-23T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1296693.nif#char=0,3767>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-11-26T08:12:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2014-12-27T08:12:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "3767"^^xsd:nonNegativeInteger ;
+        nif:isString          "1296693\t23-03-2015\tCredit card\tRewards\t\t\"I 'm a longtime member of Charter One Bank/RBS Citizens Bank. When my mother ; XXXX XXXX became elderly  I assisted her in opening an account with Charter One at their branch office located on XXXX XXXX XXXX of XXXX in XXXX  Michigan and I was placed on her account as co-account owner. As my mother 's XXXX  it became necessary for me to obtain a \"\" Durable Power of Attorney '' to handle both her Financial and Medical needs. Some years ago  with my mother present  I presented the original ( stamped with seal ) \"\" Durable Power of Attorney '' at the Charter One branch office located on XXXX in XXXX  Michigan for their record file. When presented  it was my understanding I would be placed on all of my mother 's account. Furthermore  when I needed to transact her business I would be welcomed as though \"\" I '' were \"\" She. '' On XXXX XXXX  2015  I was contacted by Charter One Master Card someone had made fraudulent charges on my mother 's credit card account. The caller stated she would immediately close my mother 's Master Credit Card account and open a new account and send another Master Card the next day. Upon receiving my mother 's new credit card I realized she was entitled to \"\" XXXX '' bonus points. I telephoned the bank to redeem her \"\" XXXX XXXX '' bonus points and I was informed my name was not on my mother 's credit card account. I informed them  I had taken the original \"\" Durable Power of Attorney '' into the branch office and it should be on file. The representative indicated there was a \"\" Durable Power of Attorney '' on file with Charter One Bank but Master Card is a separate entity from the bank and would require another \"\" Durable Power of Attorney. '' I replied why ca n't Charter One forward a copy of the \"\" Durable Power of Attorney '' to Master Card. I was told to go into a local branch and they could resolve the issue. On XXXX XXXX  2015  I went into the Charter One Bank located ; XXXX XXXX XXXX XXXX XXXX  in XXXX  Michigan  XXXX. I was told no branch manager was available - the bank teller made copies of \"\" Durable Power of Attorney '' and stated she would forward the document to the branch manager the following day to resolve the issue. On XXXX XXXX  2015  I telephoned the XXXX branch for the results of their investigation and was told by an individual who identified himself as : XXXX  there were no branch managers available  but he had talked to representatives at banking headquarters and I would have to telephone \"\" customer service '' along with my mother on the telephone to resolve the issue. I informed him my mother is XXXX ( XXXX ) years old and suffers from \"\" XXXX XXXX XXXX '' and is XXXX of the issues involved. He offered a XXXX suggestion was to take the original \"\" Durable Power of Attorney '' into a local branch office for recording and to be placed on file. I indicated to him I had already done that years ago at the XXXX branch. XXXX indicated he was unable to resolve the matter at his level. In an effort to resolve the issue without further problems  on XXXX XXXX  2015  I went to the branch office ; XXXX XXXX XXXX  XXXX  Michigan  XXXX and talked to XXXX XXXX. She indicated there was \"\" no '' branch manager available but she would assist me. She telephoned bank headquarters who told her there was \"\" no '' \"\" Durable Power of Attorney '' on file on my mother 's account. There are inconsistencies in the responses I received while trying to resolve this issue with Charter One Bank. I know I took the original \"\" Durable Power of Attorney '' to the Charter One Bank in XXXX  Michigan XXXX years ago to be placed on file for my mother 's banking accounts. This level of \"\" customer service '' is abysmal. _\"  \"Citizens Financial Group\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1297327.nif#char=192,199>
+        a                     nif:String , nif:RFC5147String ;
+        nif:anchorOf          "Barclay"^^xsd:string ;
+        nif:beginIndex        "192"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "199"^^xsd:nonNegativeInteger ;
+        nif:referenceContext  <http://dkt.dfki.de/documents/1297327.nif#char=0,1108> ;
+        itsrdf:taClassRef     <http://dbpedia.org/ontology/Organisation> ;
+        itsrdf:taIdentRef     <http://dbpedia.org/page/Barclays> .
+
+<http://dkt.dfki.de/documents/1297507.nif#char=0,833>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "833"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297507\t24-03-2015\tDebt collection\tFalse statements or representation\tImpersonated an attorney or official\t\"A man named XXXX said that he was a legal courier for XXXX and XXXX XXXX and he was going to attempt to deliver legal papers to my door and place of employment he left me a number to call to stop this effort XXXX when I called that number I spoke to a man name was undisclosed he had the last XXXX of my social security number he did not read me the mini Miranda when I asked him if the call was recorded he said we do not record our calls mop also informed me that I am not being sued and his company 's name is ADR processing I told him that I will not be paying this debt because I have not had any contact via mail and to many scam agencies out there _\" Company believes the complaint is the result of a misunderstanding\n"^^xsd:string .
+
+<http://dkt.dfki.de/documents/1296785.nif#char=125,129>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "2007"^^xsd:string ;
+        nif:beginIndex         "125"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "129"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2008-01-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2007-01-01T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1299258.nif#char=2362,2365>
+        a                      nif:RFC5147String , nif:String ;
+        nif:anchorOf           "now"^^xsd:string ;
+        nif:beginIndex         "2362"^^xsd:nonNegativeInteger ;
+        nif:endIndex           "2365"^^xsd:nonNegativeInteger ;
+        itsrdf:taClassRef      time:TemporalEntity ;
+        time:intervalFinishes  "2016-09-01T00:00:00"^^xsd:dateTime ;
+        time:intervalStarts    "2016-08-31T00:00:00"^^xsd:dateTime .
+
+<http://dkt.dfki.de/documents/1297783.nif#char=0,631>
+        a                     nif:RFC5147String , nif:String , nif:Context ;
+        dktnif:meanDateEnd    "2015-03-24T12:00:00"^^xsd:dateTime ;
+        dktnif:meanDateStart  "2015-03-24T12:00:00"^^xsd:dateTime ;
+        nif:beginIndex        "0"^^xsd:nonNegativeInteger ;
+        nif:endIndex          "631"^^xsd:nonNegativeInteger ;
+        nif:isString          "1297783\t24-03-2015\tDebt collection\tCont'd attempts collect debt not owed\tDebt is not mine\t\"This company continues to report on my credit report after I sent them a letter telling them that this account was not mine and I have no idea what it is or who it belongs to! __I asked for proof of a signed contract  I asked for a license to collect in my state  I asked for copies of all information referenced for this debt and still to date  I have not received anything but harassment from this company! __THIS IS NOT MY DEBT! __I WANT THIS ACCOUNT REMOVED FROM MY CREDIT REPORT AND THIS COMPANY TO STOP CONTACTING ME IMMEDIATELY! _\" \n"^^xsd:string .

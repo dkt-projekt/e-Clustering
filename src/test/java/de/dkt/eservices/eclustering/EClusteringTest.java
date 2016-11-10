@@ -20,6 +20,7 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.context.ApplicationContext;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mashape.unirest.http.HttpResponse;
@@ -348,8 +349,9 @@ public class EClusteringTest {
 	@Test
 	public void test_99_collectionTest() throws UnirestException, IOException,
 			Exception {
-		String filePath = "/Users/jumo04/Documents/DFKI/DKT/testForNIFManagement/fronteoCollection.nif";
-		String content = IOUtils.toString(new FileInputStream(filePath), "utf-8");
+		String filePath = "tmpFiles/exampleCollection.nif";
+		ClassPathResource cpr = new ClassPathResource(filePath);
+		String content = IOUtils.toString(new FileInputStream(cpr.getFile()), "utf-8");
 		
 		HttpResponse<String> response2 = clusteringCollectionRequest()
 				//.header("Content-Type", "text/plain; encoding=utf8")
