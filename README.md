@@ -2,7 +2,7 @@
 
 This service contains endpoints for classification, topic modeling and clustering.
 
-## Cluster a NIF Collection od Documents
+## Cluster a NIF Collection of Documents
 This endpoint generates a set of clusters from a given set of documents (in NIF collection format). 
 
 ### Endpoint
