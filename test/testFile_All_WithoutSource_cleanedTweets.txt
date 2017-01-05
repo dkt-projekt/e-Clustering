@@ -1,0 +1,256 @@
+2068 comment 
+2069 comment “ Germanwings Airbus A320 crashes in French Alps near Digne another plane crash.. Oh God.
+2070 support “ Germanwings Airbus A320 crashes in French Alps near Digne
+2071 deny “ Germanwings Airbus A320 crashes in French Alps near Digne flying today and THIS is not what I see :/
+2072 support Germanwings Airbus A320 crashes in French Alps near Digne
+2073 support Germanwings Airbus A320 crashes in French Alps near Digne
+2074 support Germanwings Airbus A320 crashes in French Alps near Digne \n#jwave #radiko
+2075 comment I’m getting more skeptical of flying.  Germanwings Airbus A320 crashes in French Alps near Digne
+2076 support “ Germanwings Airbus A320 crashes in French Alps near Digne 💔
+2077 comment awful news :-(
+2078 support “ Germanwings Airbus A320 crashes in French Alps near Digne
+2079 support Germanwings Airbus A320 crashes in French Alps near Digne
+2080 support “ Germanwings Airbus A320 crashes in French Alps near Digne \n\nOh Jeez, no!!!
+2081 support : Germanwings Airbus A320 crashes in French Alps near Digne
+2082 support “ Germanwings Airbus A320 crashes in French Alps near Digne
+2083 support #BreakingNews “ Germanwings Airbus A320 crashes in French Alps near Digne #BREAKING #planecrash
+2084 support Yikes :(  Germanwings Airbus A320 crashes in French Alps near Digne
+2085 support omg
+2086 support #BBC says 142 passengers &amp; 6 crew  Germanwings Airbus A320 crashes in French Alps near Digne
+2087 comment millions of flights happen everyday. This is only one.
+2088 support I do know that!
+2089 comment then don't panic. You can always sail if you like ;)
+2090 comment Not to Amsterdam! Itl take too long.
+2091 comment 😱😥 Horrible news.
+2092 comment The worst :(
+2093 comment 😢 that's terrible
+2094 comment .  Just heard: No survivors 😥
+2095 comment my heart is with the loved ones 😞
+2096 comment Yes, it is. 😰 Sounds like there are no survivors.
+2097 comment «--thousands, not millions, of planes daily/globally; -- millions of daily flyers/passengers, yes).
+2098 comment I didn't mean millions literally ;) figure of speech
+2099 comment «ok,Good.:);)
+2100 comment BREAKING: 148 passengers were on board #GermanWings Airbus A320 which has crashed in the southern French Alps -
+2101 comment “ BREAKING: 148 passengers were on board #GermanWings Airbus A320, crashed in the southern French Alps - 😰
+2102 comment Terrible!
+2103 comment UPDATE: Plane crash in south of France had 142 passengers, 2 pilots and 4 crew.
+2104 comment Prayers going up. How sad.
+2105 support “ 148 passengers were on board #GermanWings Airbus A320 which has crashed in the southern French Alps
+2106 query No crew???? Those passengers were all on their own? Wtf!
+2107 comment 150 souls on board they say now. RIP to all of them
+2108 query what happened
+2109 support Accident aircraft looks to be Germanwings (Airline code 4U or GWI) flight 9525, Barcelona to Dusseldorf. #4U9525
+2110 comment terrible news.
+2111 comment the 1st and only tweet I've seen referencing the ICAO identifier
+2112 comment we are just "crew" to you??? Four flight attendants &amp; two pilots all with families &amp; friends. WE COUNT, TOO!
+2113 support yes indeed :-(.
+2114 comment was the co-pilot Christian - since no ones calling this a terrorist act!
+2115 comment “ JUST IN: Germanwings plane crashes in southern France, up to 150 feared dead sigh airbus.
+2116 comment 😫 “ JUST IN: Germanwings plane crashes in southern France, up to 150 feared dead
+2117 comment “ JUST IN: Germanwings plane crashes in southern France, up to 150 feared dead 😟
+2118 query any idea why it'd flight so high? It's a short flight, usually planes go at ~ 33,000 feet
+2119 query But no emergency call made? Or emergency squawk?
+2120 comment #A320 #4U9525 initially climbed to 38k ft before starting to descend and lost signal at 6.8k ft
+2121 comment Sounds like a decent of 2900fpm
+2122 query Any ATC available? Strange.....
+2123 query isn’t 38,000ft unusually high?
+2124 comment Sent Mayday through radio. I suppose he had other things to do than adjust the Squawk
+2125 comment yes and no depends on other traffic, turbulence... they were 25 mins late so going higher = going quicker
+2126 comment Only takes a second to set the squawk code,
+2127 query What's the use when you're crashing?
+2128 comment yes but every second not spent trying to save everyone.....
+2129 comment It turns out there was no distress call made. I'm almost certain this was a hi-jacking now.
+2130 comment Unless they became rapidly unconcious
+2131 comment It looks like someone was flying it manually, all the way into the ground.
+2132 comment Anyway. Have to wait and see now.
+2133 comment For sure not, it was following exactly the same flight path as day before
+2134 comment No, somebody had just initiated the descent, and might have been unconcious or dead just after that.
+2135 comment If someone set the autopilot to fly it into the ground, the descent rate would have been constant.
+2136 comment which seems to be the case.Constant descent, wind variations set aside..
+2137 comment Yep, it's follow exactly the route going down, that seems to suggest unconscious pilots.
+2138 comment What I'm saying is, I believe it was deliberately crashed. Being controlled all the way into the ground
+2139 comment They're saying what I said, the crash was a deliberate act. Controlled flight all the way down.
+2140 comment Or autopilot. But sure deliberately set.
+2141 comment I don't think the autopilot was engaged.
+2142 comment They're now saying the co-pilot deliberately crashed the plane.
+2143 comment That's what they say.
+2144 comment The data from the transponder made it obvious.
+2145 comment Would be good to get the data from the Flight Data Recorder though.
+2146 deny The transponder did not say anything. No sqwak 7700.
+2147 comment It was obvious it was being manually controlled by the changes in descent rate. Also no
+2148 comment distress call. I thought it was hi-jacked and being flown by then. If it's true that the co-pilot did
+2149 comment crash it deliberately, the whole industry needs a shake-up.
+2150 comment It only takes a moment to enter 7700 into the transponder. I've worked on these systems before.
+2151 comment Autopilot was manually changed from 38,000 to 100 ft at 09:30:55 (Flightradar24 says)
+2152 support The autopilot wasn't set to 100 feet. It was flown manually. FlightRadar24 has made that up.
+2153 comment Have you operated a flight mqnagement computer before? I used to test them. What FlightRadar24 is ahowing is changes made
+2154 comment the flight profile. That doesn't indicate that the autopilot was set to 100 feet. I've worked on these systems, tested them
+2155 comment and have operated them in sumulators. Also on actual flights when I've been in the flight deck.
+2156 comment Look at the time on each line. The altitudes are requested not achieved.
+2157 comment But that's the FMC, doesn't mean autopilot was engaged.
+2158 comment what's the use of changing FMC if autopilot not engaged?
+2159 comment It changes the flight profile and cuts out the warnings and some of the protection.
+2160 comment Lets wait for NTSB to tell us why it happened. I hope its not terrorism.
+2161 comment difficult times for the families involved what a loss
+2162 support A tragedy for the families and friends of the plane travelers and workers! Despite news, may at least some of them could survive?
+2163 comment my support for families :-(
+2164 comment I recorded this today thinking about all those lost spirits May they Rest Easy -
+2165 comment :thank you for putting me on the TB list.
+2166 comment Hope we will not to hear this kind of news once again!
+2167 comment So sad to know that it was a deliberate suicide
+2168 query how many 'nazis' did leebowitz kill ?
+2169 comment A White European terrorist did a white wing suicide terrorist attack
+2170 query what are the implications of this?
+2171 comment They made that call in French?
+2172 comment Mayday is a call for urgent assistance. (M'aidez). Not a lot of help for a plane hurtling towards the floor.
+2173 query why would they say urgence in lieu of mayday which is standard ?
+2174 comment mayday is French!
+2175 comment Lots of radio protocol is French... Mayday is M'aidez. Urgence, pan-pan, "see-lonce" etc.
+2176 comment Roger. Just seems odd given most comms are in English. Doesn't make it wrong, of course.
+2177 query is that unusual?
+2178 comment Just historic. Also hard to confuse with other words, so clear for the listener.
+2179 support Is that roughly equivalent to our 'Pan Pan' call it priority I assume?
+2180 comment No 'Pan Pan' call is universal
+2181 comment Ahh.. I was always taught it was a UK only thing; and having done only limited flying abroad never tested that!
+2182 comment Only entered FL380 for a few mins prior too. So sad.
+2183 comment but at a controlled speed (unless readings were out), which makes it even more bizarre. I hope they find the real answers soon
+2184 comment descent rate is not that unusual.
+2185 support Im thinking structurql failure - qnd then depressure etc cockpit window etc ? Trqgique
+2186 support And apperently no turn to avoid terrain. Straight ahead into the mountains.
+2187 comment pilots may have been suffering a Hypoxie
+2188 comment would point to a cabin depressurisation
+2189 support my thoughts exactly. rate is not unusual but surely crew were aware of where they were &amp; terrain... this'll be interesting.
+2190 comment EMERG DESC, set FL68, started descent and lost consciousness before able to set higher ALT? Seems likely...
+2191 support 
+2192 comment “ #Germanwings: \n- #Airbus A320 crashes in French Alps\n- Barcelona-to-Dusseldorf flight\n- 142 passengers &amp; 6 crew” #heartbreak
+2193 comment 
+2194 comment terrifying news .pray for their relatives
+2195 comment Tragic Not sure how can be so sure no survivor's though #germanwings #Lufthansa
+2196 comment 
+2197 comment smh some people just don't think before they speak
+2198 comment so sad, what made it.
+2199 comment very socked news for passengers &amp; crew members family.
+2200 comment 
+2201 comment #Germanwings #Airbus I wish we hear the best from this sad incidence. Are prayers are with the victims their families.
+2202 support Debris from #Germanwings crash located in Barcelonette area of the Alps, France's Interior Ministry says
+2203 comment RIP
+2204 comment heavy
+2205 comment Heart
+2206 comment 🙏🙏🙏 oh god 😢
+2207 comment Airtravel no more safe! Repetitive incidents.
+2208 support Debris from #Germanwings crash located in Barcelonette area of the Alps |
+2209 comment On a positive note there is a runway in Barcelonette.
+2210 comment so called experts say no time for distress call but flight radar shows gradual descent over 10 minutes# plane crash
+2211 comment My prayers to the families 🙏
+2212 comment told u 😲
+2213 comment our hearts in nigeria goes to the victims families, the LORD shall console them..
+2214 comment How ironic that it originated in Barcelona and crashed in Barcelonette
+2215 support BREAKING - Germanwings plane crashes in France, up to 150 believed dead
+2216 comment I am flying with in 2 weeks!!! SO FUCKING SCARED“ survivors in the #Germanwings #A320 crash.
+2217 support condolences to the families! My prayers are with them!
+2218 deny Signalled 911? Called 'Mayday' would be more appropriate, factual reporting...
+2219 query signaled 911?
+2220 query . What does that even mean? Why would European pilots say 911 - an American emergency phone number? Nothing in article about that.
+2221 comment you might want to change the use of 911 in this context.
+2222 deny “ Latest on #Germanwings crash: Pilots signaled 911 before dropping out of midair” dropping out of...no...irresponsible reporting.
+2223 query #germanwings really? pilots signalled 911? So they got on a satellite phone and called a US emergency line?
+2224 comment yessss!!
+2225 query Did you mean "mayday" here or "..for emergency"?
+2226 comment didn't find "911" in all stories and updates, international and local german. Please don't speculate and spread lies
+2227 deny makes reference to 911 RE #Germanwings NOTHING BUT LIES at the cost of LIVES, BOYCOT website
+2228 comment the man behind the lies
+2229 comment His Facebook, Address coming shortly
+2230 comment on #Germanwings crash:Pilots signalled 911 b4dropping out of midair;airlineCEO calls this a"dark day"
+2231 comment damn, thats the airlines i normally use when going Germany bro.
+2232 support Ohhh man, terrible news for all the victims' families!
+2233 comment Praying for the families and friends of those involved in crash. I'm so sorry for your loss.
+2234 comment terrible situation...Let's pray to God to take control!
+2235 comment #Breaking  #Germanwings passenger plane crashes in French Alps with 148 onboard
+2236 comment “ #Germanwings passenger plane crashes in French Alps with 148 onboard
+2237 comment #Germanwings passenger plane crashes in French Alps with 148 onboard
+2238 comment “ #Germanwings passenger plane crashes in French Alps with 148 onboard  sad sad day
+2239 comment Tragedy strikes again “ #Germanwings passenger plane crashes in French Alps with 148 onboard
+2240 query As long as plane stayed in air w/only one emergency call &amp; the wide spread debris no mention of possible terrorists on board?
+2241 query ok so.. There is no other news ? For an hour this is what we hear about ??
+2242 comment is there any other news in the world today. 2 hours of non stop plane crash. My condolences, but come on.
+2243 support please don't spend all day on this!!! We all know who what when where ... Quit speculating on How or Why
+2244 support Nothing New just rumors at this moment.
+2245 comment 15:00 CET #Germanwings Press Conference.
+2246 comment 144 Passengers and 6 Crewmembers. #Germanwings
+2247 query This is a tragedy but why does a foreign airline in a foreign country have to totally co-opt all news?
+2248 comment Thats should be the extent of the coverage until further infor is obtained. The coverage is ridiculous and speculative enough
+2249 support “ BREAKING: 148 feared dead in crashed #Germanwings flight tragic!! #Airbus320 #GermanWingsCrash
+2250 comment another great tragedy
+2251 comment rest in peace to families and friends .
+2252 query What was the mayday call, terror in the sky?
+2253 support funny watching Doocy struggle to pronounce "Digny les bains"
+2254 support Douchey it's Douchey.
+2255 comment children may not understand. Its the parents that are disrespectful. They should know better. #Patriots
+2256 comment this may be the plain in control. Are in this case out of control. They fly themselves #prayforfamily's
+2257 comment May they RIP.. So many planes crashing! What's going on??
+2258 comment Sad news " #Germanwings "sorry to confirm" 144 passengers &amp; 6 crew on board #4U9525 when it crashed
+2259 query Have mercy My heart breaks  #Germanwings confirm 144 ppl &amp; 6 crew on FLT #4U9525 crash in French Alps
+2260 support Victims of #Germanwings crash were most likely from Spain, Germany &amp; Turkey, says French President Hollande
+2261 comment Victims of #Germanwings crash were most likely from Spain, Germany &amp; Turkey, says President Hollande
+2262 comment King Felipe VI of Spain cancels state visit to France after #Germanwings crash
+2263 comment It's been a rotten year for France so far...
+2264 comment victims from Catalonia, Spain and Germany please correct your information.
+2265 comment What he couldn't be driven?
+2266 comment King Felipe VI of Spain cancels state visit to France after #Germanwings crash  |
+2267 comment “ King Felipe VI of Spain cancels state visit to France after #Germanwings crash
+2268 comment In this case for Germany and Spain as well...:-(
+2269 comment I know I know.. :'( I had added 'and Europe', but then deleted it. Didn't want to sound too doomed.....
+2270 comment 
+2271 support MT “ #Germanwings: 144 passengers &amp; 6 crew on board flight #4U9525 when it crashed in French Alps
+2272 support This is sadly true...Support Israel, the apple of God's eye. #PJNET #CCOT #wakeupnow WORLD! #WakeUpAmerica John 3:16-17
+2273 query Pray for the grieving families. 🙏❤️
+2274 comment All I can say is that we MUST support Israel &amp; the Jews.
+2275 comment What Does He Know That We Don't?
+2276 comment OF COURSE OBAMA LUCKS OUT AGAIN. PLANE CRASH TAKES FOCUS OFF IRAN DEADLINE TODAY.
+2277 comment assholes
+2278 deny .  Please take Hashtag #4U9525 for #Germanwings Plane crash. Thank you
+2279 support Safety record is not perfect.
+2280 query at what point during those 8 min did distress call go out?
+2281 comment Just over 4500 fpm average rate of descent...completely normal and would seem controlled...
+2282 comment Suicide mission? That's crazy stuff.
+2283 support doesn't mention if it's the co-pilot in the report.
+2284 comment that's suspicious!
+2285 support This sounds like pilot suicide.
+2286 comment My thought too! Question is then if his motives where his own or something else?
+2287 comment Andreas Lubitz FB profile removed
+2288 query Source of info?
+2289 query where did you hear that?
+2290 comment 
+2291 query Have they named the pilot?
+2292 comment Can any Muslim be trusted. The Obama administration is full of them.
+2293 comment NOOOO
+2294 comment If TRUE, then we are late in taking conscience of the magnitude of evil brooding upon the civilised world.
+2295 comment Yup. I'm not trying tobe Islamophobic, but would anyone put their kid on a plane with a muslim pilot?
+2296 comment no, nor a two men one.
+2297 support I wouldn't put anyone on a bus with a muslim driver much less a plane.
+2298 deny a muslim convert? You start these lies.I hope he rots in his hell and you in a prison one if lying
+2299 comment The question should be," Should any country other than muslim countries hire muslim pilots?"
+2300 deny GERMAN NEWS: Co-Pilot of Germanwings Airbus Was MUSLIM CONVE …’Hero of Islamic State’?
+2301 comment "recent Muslim convert". Like ComDem "true believer". Headshake. God Help US all my friend.
+2302 deny How would you know the pilot was Muslim?
+2303 comment Dont u have anything better to do? What a laughing stock
+2304 comment that pilot attended mosques in Germany - religion of peace strikes again
+2305 comment . Maybe it will be referred to as "workplace violence" since he was at work when he did it.
+2306 support It took long enough to admit this. Who was holding it back?
+2307 query how do you know?
+2308 comment Col military like you &amp; Gens J Keane have to say to Obama: "You have to bomb the Iran's nuclear facilities."
+2309 query Him and millions of others no doubt but WHAT tipped him six years later to commit such an atrocious act??
+2310 comment best follow I ever did
+2311 comment #AndreasLubitz #GermanWings #A320 #DrEd #splitup with #girlfriend one day before crash
+2312 comment #A320 #PilotsNoFlyNoseDoors #OffCourse #Barcelona2Dusseldorf #DrEd
+2313 deny all rumors.not confirmed at all
+2314 comment My 2nd source is confirm 4 me French media is reporting 2fer Unverified #DrEd
+2315 comment #F4Phantom #crash #500mph #hit #ConcreteWall #DrEd From
+2316 comment ers a link to prove intentionally set out to kill
+2317 comment Sure #GermanWings CoPilot #AndreasLubitz #NewMotive #DeadVisitorWalking #DrEd
+2318 support i knew that scarf he was wearing in that photo meant trouble!
+2319 comment I knew it! Those crazy bastards are the only ones evil enough to do shit like that!
+2320 support Hmmm.Doesn't pundit mean joke? I haven't seen this on news.
+2321 query Isn't Islam a wonderfully peaceful religion? I wonder how Iran will do with all of the peaceful centrifuges O gave?
+2322 comment this is not a surprise.
+2323 support MSM refuses to say muslim. Just a mental case. As are all muslim/jihads.
