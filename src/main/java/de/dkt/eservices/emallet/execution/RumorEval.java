@@ -12,10 +12,10 @@ import de.dkt.eservices.emallet.modules.DocumentClassification;
 public class RumorEval {
 	
 	public static void main(String[] args) throws Exception {
-		String testName = "File_All_WithSource_cleanedTweets_addingUrlText";
+//		String testName = "File_All_WithSource_cleanedTweets_addingUrlText";
 //		String testName = "File_All_WithoutSource_cleanedTweets";
 //		String testName = "File_All_WithSource";
-//		String testName = "File_All_WithoutSource";
+		String testName = "File_All_WithoutSource";
 //		String testName = "File_1_WithSource";
 		
 		String trainingDataPath = "test/training"+testName+".txt";
@@ -30,10 +30,10 @@ public class RumorEval {
 //		String[] algorithms = {"maxent"};
 ////		String[] algorithms = {"maxentge"};
 ////		String[] algorithms = {"maxentpr"};
-		String[] algorithms = {"mcmaxent"};
+//		String[] algorithms = {"mcmaxent"};
 //		String[] algorithms = {"bayes"};
 //		String[] algorithms = {"c45"};
-//		String[] algorithms = {"winnow"};
+		String[] algorithms = {"winnow"};
 
 //		String[] algorithms = {"c45","maxent","bayes","winnow"};
 
@@ -58,7 +58,36 @@ public class RumorEval {
 				String id = line.substring(0, firstWhite);
 				String expectedLabel = line.substring(firstWhite+1, secondWhite);
 				String text = line.substring(secondWhite+1);
-				String label = DocumentClassification.classifyString(text, null, "rumoreval_1_"+alg, "en");
+//				String label = DocumentClassification.classifyString(text, null, "rumoreval_1_"+alg, "en");
+				
+				String label = "comment";
+				text = text.toLowerCase();
+				if( text.contains("?") ){
+					label = "query";
+				}
+				if( (text.contains("where")||text.contains("what")||text.contains("who")||text.contains("how")||
+						text.contains("when")) /*&& text.contains("?")*/){
+					label = "query";
+				}
+				else if( text.contains("?") ){
+					label = "query";
+				}
+//				else if( (text.contains("deny")||text.contains("denied")||text.contains("negate")||text.contains("NO")||
+//						text.contains("no")) ){
+//					label = "deny";
+//				}
+//				else if( (text.contains("deny")||text.contains("denied")||text.contains("negate") ) && (text.contains("NO")||
+//						text.contains("no")) ){
+//					label = "support";
+//				}
+//				else if( (text.contains("true") && text.contains("is")) || ( (text.contains("no")||text.contains("don't")) &&
+//						(text.contains("support")||text.contains("confirm")) ) ){
+//					label = "deny";
+//				}
+//				else if( (text.contains("true")||text.contains("yes")||text.contains("YES")||text.contains("confirm")||
+//						text.contains("support")) ){
+//					label = "support";
+//				}
 				System.out.println("\t" + expectedLabel + "-->" + label);
 				
 				int index1 = -1;

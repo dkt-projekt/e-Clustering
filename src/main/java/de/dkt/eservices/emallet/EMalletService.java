@@ -86,10 +86,10 @@ public class EMalletService {
     	}
     }
 
-    public String trainModelClassification(String trainDataFile, String modelPath, String modelName, String language)
+    public String trainModelClassification(String trainDataFile, String modelPath, String modelName, String language, String algorithm)
             throws ExternalServiceFailedException, BadRequestException {
         try {
-        	DocumentClassification.trainClassifier(trainDataFile, modelPath, modelName, language);
+        	DocumentClassification.trainClassifier(trainDataFile, modelPath, modelName, language, algorithm);
         	HttpHeaders responseHeaders = new HttpHeaders();
         	responseHeaders.add("Content-Type", "text/plain");
         	String body = "Text Classification Model ["+language+"-"+modelName+".EXT"+"] successfully trained!!!";

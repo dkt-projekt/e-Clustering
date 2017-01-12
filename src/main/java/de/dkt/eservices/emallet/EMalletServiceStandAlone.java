@@ -67,6 +67,7 @@ public class EMalletServiceStandAlone extends BaseRestController{
 			@RequestParam(value = "modelName", required = false) String modelName,
 			@RequestParam(value = "modelPath", required = false) String modelPath,
 			@RequestParam(value = "analysis", required = false) String analysis,
+			@RequestParam(value = "algorithm", required = false) String algorithm,
 			@RequestBody(required = false) String postBody) throws Exception {
 		try {
 //			ParameterChecker.checkNotNullOrEmpty(trainDataFile, "trainDataFile");
@@ -139,7 +140,7 @@ public class EMalletServiceStandAlone extends BaseRestController{
 				outString = service.trainModelTopic(trainDataFile, modelPath, modelName, language);
 			}
 			else if(analysis.equalsIgnoreCase("classification")){
-				outString = service.trainModelClassification(trainDataFile, modelPath, modelName, language);
+				outString = service.trainModelClassification(trainDataFile, modelPath, modelName, language, algorithm);
 			}
 			else{
     			String msg = "The input analysis ["+analysis+"] is not supported. Only topicmodelling/classification are available.";

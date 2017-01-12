@@ -296,6 +296,23 @@ public class EClusteringTest {
 + "	CondatTest6_4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0\n";
 		
 		
+		String input3 = "@RELATION documents\n" + 
+		"@ATTRIBUTE DOCUMENT_NAME  STRING\n" +
+		"@ATTRIBUTE Washington  NUMERIC\n" +
+		"@ATTRIBUTE Jonathan_Pollard  NUMERIC\n" +
+		"@ATTRIBUTE Suchstichwörter  NUMERIC\n" +
+		"@ATTRIBUTE Alistair_Baskey  NUMERIC\n" +
+		"@ATTRIBUTE Kerry  NUMERIC\n" +
+		"@DATA\n" +
+		"Doc1,1,3,0,2,0\n" +
+		"Doc2,0,0,0,0,2\n" +
+		"Doc3,1,1,0,0,0\n" +
+		"Doc4,2,1,1,0,0\n" +
+		"Doc5,1,0,0,0,1\n" +
+		"Doc6,0,0,1,1,0\n" +
+		"Doc7,3,3,2,0,2\n";
+
+		System.out.println(input);
 //		byte[] bb = input.getBytes();
 //		String input2 = new String(bb, "utf-8");
 //		System.out.println("INPUT2: "+input2);
@@ -353,7 +370,8 @@ public class EClusteringTest {
 		ClassPathResource cpr = new ClassPathResource(filePath);
 		String content = IOUtils.toString(new FileInputStream(cpr.getFile()), "utf-8");
 		
-		HttpResponse<String> response2 = clusteringCollectionRequest()
+//		HttpResponse<String> response2 = clusteringCollectionRequest()
+		HttpResponse<String> response2 = Unirest.post("https://dev.digitale-kuratierung.de/api/e-clustering/clusterCollection")
 				//.header("Content-Type", "text/plain; encoding=utf8")
 				.queryString("informat", "turtle")
 				.queryString("outformat", "turtle")
@@ -366,6 +384,8 @@ public class EClusteringTest {
 				.body(content)
 				.asString();
 				
+		
+		System.out.println("We come here before finishing the whole thing.");
 //		System.out.println("DEBUGGING output Collection:" + response2.getBody());
 		
 	}

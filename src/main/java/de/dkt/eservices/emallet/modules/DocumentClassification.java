@@ -126,8 +126,7 @@ public class DocumentClassification {
 	 * @param modelName Name to be assigned to the model
 	 * @return true if the model has been successfully trained
 	 */
-	public static String trainClassifier (String inputTrainFile, String modelPath, String modelName, String language) throws BadRequestException, ExternalServiceFailedException {
-
+	public static String trainClassifier (String inputTrainFile, String modelPath, String modelName, String language, String algorithm) throws BadRequestException, ExternalServiceFailedException {
 		if(modelPath!=null){
 			if(modelPath.endsWith(File.separator)){
 				modelsDirectory = modelPath;
@@ -137,19 +136,19 @@ public class DocumentClassification {
 			}
 		}
 		try{
-			
 			ImportData id = new ImportData(language);
 			File trainingFile = FileFactory.generateFileInstance(inputTrainFile);
 			InstanceList instances = id.readFile(trainingFile);
 
 			//Train the model with the training instances
-			ClassifierTrainer trainer = new MaxEntTrainer();
+			ClassifierTrainer trainer = ClassificationTrainerFactory.generateTrainer(algorithm);
 			Classifier classifier;
 			try{
 				classifier = trainer.train(instances);
 			}
 			catch(Exception e){
-				throw new ExternalServiceFailedException("Fail at training the model: it is possible that you need to use a bigger amount of Data.");
+				throw e;
+//				throw new ExternalServiceFailedException("Fail at training the model: it is possible that you need to use a bigger amount of Data.");
 			}
 			
 			//Save the generated classifier
