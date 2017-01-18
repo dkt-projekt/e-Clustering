@@ -113,15 +113,6 @@
 		</repository> -->
 		  <repository>
 <!-- 		    <id>releases</id> -->
-			<id>maven-new-server</id>
-<!-- 			<url>http://v35731.1blu.de:8081/nexus/content/repositories/releases</url> -->
-			<url>https://dev.digitale-kuratierung.de/nexus/repository/maven-central/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		  </repository>
-		  <repository>
-<!-- 		    <id>releases</id> -->
 			<id>maven-new-server-release</id>
 <!-- 			<url>http://v35731.1blu.de:8081/nexus/content/repositories/releases</url> -->
 			<url>https://dev.digitale-kuratierung.de/nexus/repository/maven-releases/</url>
