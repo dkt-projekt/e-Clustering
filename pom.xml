@@ -24,6 +24,7 @@
   </build>
 
 	<dependencies>
+	
 	  	<dependency>
 	  		<groupId>eu.freme-project.bservices</groupId>
 	  		<artifactId>test-helper</artifactId>
@@ -46,7 +47,7 @@
 		<dependency>
 			<groupId>de.dkt</groupId>
 			<artifactId>DKTCommon</artifactId>
-			<version>0.5</version>
+			<version>0.6-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.freme-project.bservices.filters</groupId>

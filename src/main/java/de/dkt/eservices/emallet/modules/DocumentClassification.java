@@ -2,6 +2,7 @@ package de.dkt.eservices.emallet.modules;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,38 +13,30 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 import org.apache.log4j.Logger;
 
 import cc.mallet.classify.Classification;
 import cc.mallet.classify.Classifier;
 import cc.mallet.classify.ClassifierTrainer;
-import cc.mallet.classify.MaxEntTrainer;
 import cc.mallet.classify.Trial;
 import cc.mallet.pipe.iterator.CsvIterator;
 import cc.mallet.types.Alphabet;
-import cc.mallet.types.InfoGain;
+import cc.mallet.types.FeatureVector;
 import cc.mallet.types.Instance;
 import cc.mallet.types.InstanceList;
-import cc.mallet.types.Label;
 import cc.mallet.types.LabelAlphabet;
 import cc.mallet.types.Labeling;
 import cc.mallet.types.PerLabelInfoGain;
 import de.dkt.common.filemanagement.FileFactory;
-import de.dkt.eservices.erattlesnakenlp.linguistic.TweetCleaner;
 import eu.freme.common.exception.BadRequestException;
 import eu.freme.common.exception.ExternalServiceFailedException;
 
@@ -178,12 +171,20 @@ public class DocumentClassification {
 			
 			//Save the generated classifier
 			String modelOutputFile = modelsDirectory + language + "-" + modelName + ".EXT";
-//			File outputFile = new File(modelOutputFile);
 			File outputFile = FileFactory.generateOrCreateFileInstance(modelOutputFile);
 			System.out.println(outputFile.getAbsolutePath());
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream (outputFile));
 			oos.writeObject (classifier);
 			oos.close();
+
+			// and also the alphabet
+	        Alphabet dataAlphabet = instances.getDataAlphabet();
+	        File outputAlphabetFile = FileFactory.generateOrCreateFileInstance(modelsDirectory+language+"-"+modelName+"_Alphabet.EXT");
+			ObjectOutputStream oos2 = new ObjectOutputStream(new FileOutputStream (outputAlphabetFile));
+			oos2.writeObject (dataAlphabet);
+			oos2.close();
+			
+			
 			
 			return modelOutputFile;
 		}
@@ -198,10 +199,13 @@ public class DocumentClassification {
         InstanceList testInstances = new InstanceList(classifier.getInstancePipe());
         CsvIterator reader =
             new CsvIterator(new FileReader(file),
-                            "(\\w+)\\s+(\\w+)\\s+(.*)",
+                            "(\\w+)\\s+(\\S+)\\s+(.*)",
                             3, 2, 1);  // (data, label, name) field indices               
 
         testInstances.addThruPipe(reader);
+        
+//        classifier.
+        
         Trial trial = new Trial(classifier, testInstances);
 
         // why does java not allow returning multiple values? :P
@@ -232,127 +236,6 @@ public class DocumentClassification {
     }
 	
 	
-//	public static double classifyAndEvaluateFile(String testFilePath, String modelPath, String modelName, String language, PrintWriter debugout){
-//		
-//		double score = 0;
-//		try {
-//			Set<String> allClasses = new HashSet<String>();
-//			allClasses.add("racism");
-//			allClasses.add("sexism");
-//			allClasses.add("none");
-//			Path filePath = new File(testFilePath).toPath();
-//			List<String> testLines = Files.readAllLines(filePath, StandardCharsets.UTF_8);
-//			HashMap<Integer, String> id2class = new HashMap<Integer, String>();
-//			HashMap<Integer, String> id2content = new HashMap<Integer, String>();
-//			for (String line : testLines){
-//				String[] parts = line.split(" ");
-//				int id = Integer.parseInt(parts[0]);
-//				String cl = parts[1];
-//				//allClasses.add(cl);
-//				String content = "";
-//				for (int i = 2; i < parts.length; i++){
-//					content += " " + parts[i];
-//				}
-//				id2class.put(id, cl);
-//				id2content.put(id,  content);
-//			}
-//			
-//			double correct = 0;
-//			HashMap<String, Double> truePosMap = new HashMap<String, Double>();
-//			HashMap<String, Double> falsePosMap = new HashMap<String, Double>();
-//			HashMap<String, Double> falseNegMap = new HashMap<String, Double>();
-//			
-//			for (int id : id2class.keySet()){
-//				String realClass = id2class.get(id);
-//				String content = id2content.get(id);
-//				String cl = classifyString(content, modelPath, modelName, language);
-//				
-//				// CORRECT (either true positive or true negative
-//				if (cl.equalsIgnoreCase(realClass)){
-//					// true negative
-////					if (cl.equalsIgnoreCase("none")){
-////						//pass
-////					}
-////					// true positive
-////					else{
-//						double tp = (truePosMap.containsKey(cl) ? truePosMap.get(cl) + 1 : 1);
-//						truePosMap.put(cl, tp);
-////					}
-//				}
-//				// FALSE
-//				else {
-//					// false positive
-//					if (realClass.equalsIgnoreCase("none")){
-//						double fp = (falsePosMap.containsKey(cl) ? falsePosMap.get(cl) + 1 : 1);
-//						falsePosMap.put(cl, fp);
-//					}
-//					// false negative
-//					else {
-//						double fn = (falseNegMap.containsKey(cl) ? falseNegMap.get(cl) + 1 : 1);
-//						falseNegMap.put(cl, fn);
-//					}
-//				}
-//				
-//				
-//				
-////				if (realClass.equalsIgnoreCase(cl)){
-////					correct += 1;
-////				}
-//				
-//			}
-//			
-//			HashMap<String, Double> precisionMap = new HashMap<String, Double>();
-//			HashMap<String, Double> recallMap = new HashMap<String, Double>();
-//			
-//			for (String c : allClasses){
-//				debugout.println("Class:" + c);
-//				debugout.println("tp:" + (truePosMap.containsKey(c) ? truePosMap.get(c) : "ZERO"));
-//				debugout.println("fp:" + (falsePosMap.containsKey(c) ? falsePosMap.get(c) : "ZERO"));
-//				debugout.println("fn:" + (falseNegMap.containsKey(c) ? falseNegMap.get(c) : "ZERO"));
-//				debugout.println("\n");
-//			}
-//			
-//			// p = tp / (tp + fp)
-//			// r = tp / (tp + fn)
-//			for (String c : allClasses){
-//				double p = (truePosMap.get(c) / (truePosMap.get(c) + (falsePosMap.containsKey(c) ? falsePosMap.get(c) : 0)));
-//				debugout.println("p for c:" + p + "|" + c);
-//				precisionMap.put(c,  p);
-//				double r = (truePosMap.get(c) / (truePosMap.get(c) + (falseNegMap.containsKey(c) ? falseNegMap.get(c) : 0)));
-//				debugout.println("r for c:" + r + "|" + c);
-//				recallMap.put(c, r);
-//			}
-//			
-//			double pt = 0;
-//			for (String c : precisionMap.keySet()){
-//				pt += precisionMap.get(c);
-//			}
-//			double averagePrecision = pt / precisionMap.keySet().size();
-//			
-//			double rt = 0;
-//			for (String c : recallMap.keySet()){
-//				rt += recallMap.get(c);
-//			}
-//			double averageRecall = rt / recallMap.keySet().size();
-//			// f = 2 * ((p * r) / (p + r))
-//			double f = 2 * ((averagePrecision * averageRecall) / (averagePrecision + averageRecall));
-//			score = f;
-//			debugout.println("p:" + averagePrecision);
-//			debugout.println("r:" + averageRecall);
-//			debugout.println("f:" + f);
-//			debugout.println("\n+++++++++++++++++++++++++++++++++++++++++++++++++\n");
-////			score = correct / (double)id2class.size();
-//			
-//			
-//			
-//			
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return score;
-//		
-//	}
 	
 	public static ArrayList<String> cleanData(String filePath){
 		
@@ -371,7 +254,7 @@ public class DocumentClassification {
 				if (content.matches("^\\s+\\w+\t.*")){
 					//System.out.println("Old content:" + content);
 					content = content.replaceAll("^\\s+\\w+\t", "");
-					content = TweetCleaner.clean(content);
+					//content = TweetCleaner.clean(content); (de.dkt.erattlesnake.linguistic or something)
 					
 					//System.out.println("New content:" + content);
 				}
@@ -439,6 +322,152 @@ public class DocumentClassification {
 	    return result;
 	}
 	
+	public static double findDeviation(ArrayList<Double> nums) {
+		double mean = findMean(nums);
+		double squareSum = 0;
+		for (int i = 0; i < nums.size(); i++) {
+			squareSum += Math.pow(nums.get(i) - mean, 2);
+		}
+		return Math.sqrt((squareSum) / (nums.size() - 1));
+
+	}
+	
+	public static double findMean(ArrayList<Double> nums) {
+		double sum = 0;
+		for (int i = 0; i < nums.size(); i++) {
+			sum += nums.get(i);
+		}
+		return sum / nums.size();
+	}
+
+
+	
+	private static double entropy (double pc, double pnc)
+	{
+		float log2 = (float)Math.log(2);
+		assert (Math.abs((pc+pnc)-1) < 0.0001) : "pc="+pc+" pnc="+pnc;
+		if (pc == 0 || pnc == 0)
+			return (float) 0;
+		else {
+			float ret = (float) (- pc*Math.log(pc)/log2 - pnc*Math.log(pnc)/log2);
+			assert (ret >= 0) : "pc="+pc+" pnc="+pnc;
+			return ret;
+		}
+	}
+
+	public static double[][] calcPerLabelInfoGains (InstanceList ilist) throws FileNotFoundException
+	{
+		//assert (binary);
+		double[][] classFeatureCounts;
+		int[] featureCounts;
+		int[] classCounts;
+		int numClasses = ilist.getTargetAlphabet().size();
+		int numFeatures = ilist.getDataAlphabet().size();
+		int numInstances = ilist.size();
+
+		// Fill in the classFeatureCounts
+		classFeatureCounts = new double[numClasses][numFeatures];
+		featureCounts = new int[numFeatures];
+		classCounts = new int[numClasses];
+		/*
+		for (int fi = 0; fi < numFeatures; fi++)
+			featureCounts[fi] = 0;
+		for (int ci = 0; ci < numClasses; ci++) {
+			classCounts[ci] = 0;
+			for (int fi = 0; fi < numFeatures; fi++)
+				classFeatureCounts[ci][fi] = 0;
+		}
+		*/
+		for (int i = 0; i < ilist.size(); i++) {
+			Instance instance = ilist.get(i);
+			FeatureVector fv = (FeatureVector) instance.getData();
+			// xxx Note that this ignores uncertainly-labeled instances!
+			int classIndex = instance.getLabeling().getBestIndex();
+			classCounts[classIndex]++;
+			for (int fvi = 0; fvi < fv.numLocations(); fvi++) {
+				int featureIndex = fv.indexAtLocation(fvi);
+				classFeatureCounts[classIndex][featureIndex]++;
+				featureCounts[featureIndex]++;
+				//System.out.println ("fi="+featureIndex+" ni="+numInstances+" fc="+featureCounts[featureIndex]+" i="+i);
+				assert (featureCounts[featureIndex] <= numInstances)
+					: "fi="+featureIndex+"ni="+numInstances+" fc="+featureCounts[featureIndex]+" i="+i;
+			}
+		}
+
+		Alphabet v = ilist.getDataAlphabet();
+//		if (print)
+//			for (int ci = 0; ci < numClasses; ci++)
+//				System.out.println (ilist.getTargetAlphabet().lookupObject(ci).toString()+"="+ci);
+
+		// Let C_i be a random variable on {c_i, !c_i}
+		// per-class entropy of feature f_j = H(C_i|f_j)
+		// H(C_i|f_j) = - P(c_i|f_j) log(P(c_i|f_j) - P(!c_i|f_j) log(P(!c_i|f_j)
+
+		// First calculate the per-class entropy, not conditioned on any feature
+		// and store it in classCounts[]
+		double[] classEntropies = new double[numClasses];
+		for (int ci = 0; ci < numClasses; ci++) {
+			double pc, pnc;
+			pc = ((double)classCounts[ci])/numInstances;
+			pnc = ((double)numInstances-classCounts[ci])/numInstances;
+			classEntropies[ci] = entropy (pc, pnc);
+		}
+
+		// Calculate per-class infogain of each feature, and store it in classFeatureCounts[]
+		for (int fi = 0; fi < numFeatures; fi++) {
+			double pf = ((double)featureCounts[fi])/numInstances;
+			double pnf = ((double)numInstances-featureCounts[fi])/numInstances;
+			assert (pf >= 0);
+			assert (pnf >= 0);
+//			if (print && fi < 10000) {
+//				System.out.print (v.lookupObject(fi).toString());
+//				for (int ci = 0; ci < numClasses; ci++) {
+//					System.out.print (" "+classFeatureCounts[ci][fi]);
+//				}
+//				System.out.println ("");
+//			}
+			//assert (sum == featureCounts[fi]);
+			for (int ci = 0; ci < numClasses; ci++) {
+				if (featureCounts[fi] == 0) {
+					classFeatureCounts[ci][fi] = 0;
+					continue;
+				}
+				double pc, pnc, ef;
+				// Calculate the {ci,!ci}-entropy given that the feature does occur
+				pc = ((double)classFeatureCounts[ci][fi]) / featureCounts[fi];
+				pnc = ((double)featureCounts[fi]-classFeatureCounts[ci][fi]) / featureCounts[fi];
+				ef = entropy (pc, pnc);
+				// Calculate the {ci,!ci}-entropy given that the feature does not occur
+				pc = ((double)classCounts[ci]-classFeatureCounts[ci][fi]) / (numInstances-featureCounts[fi]);
+				pnc = ((double)(numInstances-featureCounts[fi])-(classCounts[ci]-classFeatureCounts[ci][fi])) / (numInstances-featureCounts[fi]);
+				double enf = entropy(pc, pnc);
+				classFeatureCounts[ci][fi] = classEntropies[ci] - (pf*ef + pnf*enf);
+//				if (print && fi < 10000)
+//					System.out.println ("pf="+pf+" ef="+ef+" pnf="+pnf+" enf="+enf+" e="+classEntropies[ci]+" cig="+classFeatureCounts[ci][fi]);
+			}
+		}
+
+		// Print selected features
+		if (1 == 1) {
+			PrintWriter pwDebug = new PrintWriter(new File("C:\\Users\\pebo01\\Desktop\\debug3.txt"));
+			for (int fi = 0; fi < 100; fi++) {
+				String featureName = v.lookupObject(fi).toString();
+				for (int ci = 0; ci < numClasses; ci++) {
+					String className = ilist.getTargetAlphabet().lookupObject(ci).toString();
+					//if (classFeatureCounts[ci][fi] > .1) {
+						pwDebug.write(featureName+','+className+'='+classFeatureCounts[ci][fi] + "\n");
+					//}
+				}
+			}
+			pwDebug.close();
+		}
+		return classFeatureCounts;
+	}
+	
+	
+
+
+	
 	public static void main(String[] args) throws Exception{
 		//String result = DocumentClassification.classifyString("This is the text that I need to classify", "en-sent.bin", "en");
 		//System.out.println(result);
@@ -479,8 +508,8 @@ public class DocumentClassification {
 //		System.exit(1);
 		
 		//String[] algorithms = {"balancedwinnow", "c45", "maxentrange", "maxent", "maxentge", "maxentpr", "mcmaxent", "bayesem", "bayes", "winnow"}; // some algorithms crashed on my training set, so leaving those out...
-		String[] algorithms = {"c45", "maxent", "mcmaxent", "bayesem", "bayes", "winnow"}; // c45 takes a looooong time
-		//String[] algorithms = {"maxent"};
+		//String[] algorithms = {"c45", "maxent", "mcmaxent", "bayesem", "bayes", "winnow"}; // c45 takes a looooong time
+		String[] algorithms = {"c45"};
 		
 		
 		PrintWriter out = new PrintWriter(new File("C:\\Users\\pebo01\\Desktop\\debug.txt"));
@@ -494,13 +523,17 @@ public class DocumentClassification {
 			Double totalF1 = 0.0;
 			Double totalAccuracy = 0.0;
 			HashMap<String, HashMap<String, Double>> featureMap = new HashMap<String, HashMap<String, Double>>(); // WARNING: this only works for single algorithm executions (overwrites every time)
-			
+			ArrayList<Double> ps = new ArrayList<Double>();
+			ArrayList<Double> rs = new ArrayList<Double>();
+			ArrayList<Double> fs = new ArrayList<Double>();
+			ArrayList<Double> as = new ArrayList<Double>();
 			try{
 				for (int i = 0; i < max; i++) {
 					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\naacl_id_class_text.tsv");
-					HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\germanHatespeechRating.tsv");
+					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\germanHatespeechRating.tsv");
 					ArrayList<String> allClasses = new ArrayList<String>();
 					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\annatationSemevalForMalletBinary.tsv");
+					HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\wikiTalkData\\wikiTalkAggressionRating2013-2015.tsv");
 					String tempTrainPath = "C:\\Users\\pebo01\\Desktop\\AWL2017\\tempTrain.txt";
 					String tempTestPath = "C:\\Users\\pebo01\\Desktop\\AWL2017\\tempTest.txt";
 					PrintWriter tempTrain = new PrintWriter(new File(tempTrainPath));
@@ -523,40 +556,86 @@ public class DocumentClassification {
 					ObjectInputStream ois = new ObjectInputStream(new FileInputStream(modelFile));
 					classifier = (Classifier) ois.readObject();
 					ois.close();
+
+
+					
 					File testFile = FileFactory.generateFileInstance(tempTestPath);
 					
+					ImportData id = new ImportData("en");
+//					File trainingFile = FileFactory.generateFileInstance(tempTrainPath);
+					InstanceList testInstances = id.readFile(testFile);
+					//InstanceList testInstances = new InstanceList(classifier.getInstancePipe());
 					
-					
-					InstanceList testInstances = new InstanceList(classifier.getInstancePipe());
-			        CsvIterator reader = new CsvIterator(new FileReader(tempTrainPath), "(\\w+)\\s+(\\w+)\\s+(.*)", 3, 2, 1);           
-			        testInstances.addThruPipe(reader);
-					PerLabelInfoGain plig = new PerLabelInfoGain (testInstances);
+					Alphabet testAlpha = testInstances.getAlphabet();
+					Alphabet classifierAlpha = classifier.getAlphabet();
+
+//					InstanceList il2 = new InstanceList(testAlpha, classifierAlpha);
+
+					CsvIterator reader = new CsvIterator(new FileReader(tempTrainPath), "(\\w+)\\s+(\\S+)\\s+(.*)", 3, 2, 1);
+
+					testInstances.addThruPipe(reader);
+					PerLabelInfoGain plig = new PerLabelInfoGain(testInstances);
 					Alphabet alpha = classifier.getAlphabet();
 					LabelAlphabet la = classifier.getLabelAlphabet();
-					//debugOut.println("debugging label numbers: " + la.size());
-					for (int q = 0 ; q < la.size(); q++){ // this loops through all classes (q == index of class)
-						//debugOut.println("Class: " + la.lookupLabel(q));
+					//calcPerLabelInfoGains(testInstances);
+
+					for (int q = 0; q < la.size(); q++) { // this loops through
+															// all classes (q ==
+															// index of class)
+						// debugOut.println("Class: " + la.lookupLabel(q));
 						String cl = la.lookupLabel(q).toString();
-						HashMap<String, Double> im = (featureMap.containsKey(cl) ? featureMap.get(cl) : new HashMap<String, Double>());
-						for (int j = 0; j < alpha.size(); j++){ // this gets the top-n ranked labels (the docs here are quite concise... so not sure if this is really what I want) http://mallet.cs.umass.edu/api/cc/mallet/types/RankedFeatureVector.html#getIndexAtRank(int)
+//						System.out.println("DEBUGGING clasS:" + cl);
+						HashMap<String, Double> im = (featureMap.containsKey(cl) ? featureMap.get(cl)
+								: new HashMap<String, Double>());
+						for (int j = 0; j < alpha.size(); j++) { // this gets
+																	// the top-n
+																	// ranked
+																	// labels
+																	// (the docs
+																	// here are
+																	// quite
+																	// concise...
+																	// so not
+																	// sure if
+																	// this is
+																	// really
+																	// what I
+																	// want)
+																	// http://mallet.cs.umass.edu/api/cc/mallet/types/RankedFeatureVector.html#getIndexAtRank(int)
 							int alphaId = plig.getInfoGain(q).getIndexAtRank(j);
-							String label = (String)alpha.lookupObject(alphaId);
-							double d = (im.containsKey(label) ? im.get(label) + plig.getInfoGain(q).getValueAtRank(j) : plig.getInfoGain(q).getValueAtRank(j));
-							im.put(label,  d);
-							//debugOut.println(cl + "|" + j + "\t" + plig.getInfoGain(q).getValueAtRank(j) + "\t" + label); // TODO: put the score in the hashMap structure!
+							Alphabet localAlpha = plig.getInfoGain(q).getAlphabet();
+//							System.out.println(j+"--"+alphaId);
+//							System.out.println(j+"--"+plig.getInfoGain(q).getValueAtRank(j));
+							String label = (String) localAlpha.lookupObject(alphaId);
+							//String label = (String) classifierAlpha.lookupObject(alphaId);
+							
+							
+							//String label = (String) alpha.lookupIndex(alphaId);
+							double d = (im.containsKey(label) ? im.get(label) + plig.getInfoGain(q).getValueAtRank(j)
+									: plig.getInfoGain(q).getValueAtRank(j));
+							im.put(label, d);
+							// debugOut.println(cl + "|" + j + "\t" +
+							// plig.getInfoGain(q).getValueAtRank(j) + "\t" +
+							// label); // TODO: put the score in the hashMap
+							// structure!
 						}
 						featureMap.put(cl, im);
-						//debugOut.println("===============");
+						// debugOut.println("===============");
 					}
-					
-					//debugOut.println("================================");
+
+					// debugOut.println("================================");
 					Double[] scores = evaluate(classifier, testFile, debugOut, allClasses);
 					totalAccuracy += scores[0];
 					totalPrecision += scores[1];
 					totalRecall += scores[2];
 					totalF1 += scores[3];
+					ps.add(scores[1]);
+					rs.add(scores[2]);
+					fs.add(scores[3]);
+					as.add(scores[0]);
+
 				}
-				
+
 				for (String l : featureMap.keySet()){
 					debugOut.println("Class: " + l);
 					HashMap<String, Double> im = featureMap.get(l);
@@ -566,7 +645,7 @@ public class DocumentClassification {
 						double actualValue = sortedMap.get(s) / max;
 						debugOut.println(s + "\t" + sortedMap.get(s));
 						q ++;
-						if (q == 10){
+						if (q == 100){
 							break;
 						}
 					}
@@ -584,11 +663,12 @@ public class DocumentClassification {
 			Double a = totalAccuracy / max;
 			
 			out.println("Algorithm: " + alg);
-			out.println("\tAccuracy: " + a);
-			out.println("\tPrecision: " + p);
-			out.println("\tRecall: " + r);
-			out.println("\tF1: " + f);
+			out.println("\tAccuracy: " + a + "\t(" + findDeviation(as) + ")");
+			out.println("\tPrecision: " + p + "\t(" + findDeviation(ps) + ")");
+			out.println("\tRecall: " + r + "\t(" + findDeviation(rs) + ")");
+			out.println("\tF1: " + f + "\t(" + findDeviation(fs) + ")");
 			out.print("==========================\n");
+			
 		}
 		
 
