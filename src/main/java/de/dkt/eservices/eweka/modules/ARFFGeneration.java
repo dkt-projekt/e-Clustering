@@ -80,6 +80,7 @@ public class ARFFGeneration {
 	
 	
 	public static void main(String[] args) throws Exception {
+		
 		FastVector      atts;
 		FastVector      attsRel;
 		FastVector      attVals;
@@ -174,10 +175,11 @@ public class ARFFGeneration {
 		// 4. output data
 		//System.out.println(data);
 		
-		String nifFolder = "C:\\Users\\pebo01\\Desktop\\data\\enronCorpus\\twoNIFs";
+		String nifFolder = "C:\\Users\\pebo01\\Desktop\\data\\IAFL2017\\corefNIFs";
 		File nifList = new File(nifFolder);
 		ArrayList<Model> nifModels = new ArrayList<Model>();
 		for (File f : nifList.listFiles()){
+			System.out.println("INFO: Processing file " + f.getName());
 			byte[] encoded;
 			try {
 				encoded = Files.readAllBytes(Paths.get(f.getAbsolutePath()));String fileContent = new String(encoded, StandardCharsets.UTF_8);
@@ -190,9 +192,9 @@ public class ARFFGeneration {
 			}
 			
 		}
+		System.out.println("INFO: Done processing NIF files. Generating ARFF now.");
 		
-		
-		Instances arff = createNumericClusteringInputFromNifModelsList(nifModels, "dummy", RDFSerialization.TURTLE);
+		Instances arff = createNumericClusteringInputFromNifModelsList(nifModels, "clintonCollection", RDFSerialization.TURTLE);
 		PrintWriter out = new PrintWriter(new File("C:\\Users\\pebo01\\Desktop\\debug.txt"));
 		out.write(arff.toString());
 		out.close();

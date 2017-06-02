@@ -6,13 +6,16 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -22,6 +25,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.regex.Pattern;
+
 import org.apache.log4j.Logger;
 
 import cc.mallet.classify.Classification;
@@ -47,7 +52,9 @@ import eu.freme.common.exception.ExternalServiceFailedException;
 public class DocumentClassification {
 	
 	static Logger logger = Logger.getLogger(DocumentClassification.class);
-
+	
+	
+	
 	private static String modelsDirectory = "trainedModels" + File.separator + "documentClassification" + File.separator;
 
 	public static String classifyString(String inputText, String modelPath, String modelName, String language) throws ExternalServiceFailedException {
@@ -83,6 +90,47 @@ public class DocumentClassification {
 	        Labeling labeling = classification.getLabeling();
         	output = labeling.getLabelAtRank(0).toString();
 	        return output;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+
+			logger.error("failed", e);
+			throw new ExternalServiceFailedException(e.getMessage());
+		}
+	}
+	
+	public static String classifyString(String inputText, Classifier classifier) throws ExternalServiceFailedException {
+		try{
+			InstanceList testing = new InstanceList(classifier.getInstancePipe());
+	        testing.addThruPipe(new Instance(inputText, classifier.getLabelAlphabet().iterator().next(), "test instance", null));
+	        String output="";
+	        Classification classification = classifier.classify(testing.get(0));
+	        Labeling labeling = classification.getLabeling();
+        	output = labeling.getLabelAtRank(0).toString();
+	        return output;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+
+			logger.error("failed", e);
+			throw new ExternalServiceFailedException(e.getMessage());
+		}
+	}
+	
+	public static HashMap<String, Double> classifyStringToScores(String inputText, Classifier classifier, int numClasses) throws ExternalServiceFailedException {
+		try{
+			InstanceList testing = new InstanceList(classifier.getInstancePipe());
+	        testing.addThruPipe(new Instance(inputText, classifier.getLabelAlphabet().iterator().next(), "test instance", null));
+	        String output="";
+	        Classification classification = classifier.classify(testing.get(0));
+	        Labeling labeling = classification.getLabeling();
+	        HashMap<String, Double> classScores = new HashMap<String, Double>();
+	        for (int i = 0; i < numClasses; i++){
+	        	String className = labeling.getLabelAtRank(i).toString();
+	        	double classScore = labeling.getValueAtRank(i);
+	        	classScores.put(className, classScore);
+	        }
+        	return classScores;
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -194,18 +242,24 @@ public class DocumentClassification {
 		}
 	}
 
-	public static Double[] evaluate(Classifier classifier, File file, PrintWriter debugOut, ArrayList<String> allClasses) throws IOException {
+	public static Double[] evaluate(Classifier classifier, File file, PrintWriter debugOut, ArrayList<String> allClasses, Alphabet testAlpha, Alphabet classifierAlpha) throws IOException {
 
+//        InstanceList testInstances = new InstanceList(classifier.getInstancePipe());
+//        CsvIterator reader =
+//            new CsvIterator(new FileReader(file),
+//                            //"(\\w+)\\s+(\\S+)\\s+(.*)",
+//                            Pattern.compile("^(\\S*)[\\s,]*(\\S*)[\\s,]*(.*)$"),
+//                            3, 2, 1);  // (data, label, name) field indices               
+//
+//        testInstances.addThruPipe(reader);
+        
+        
         InstanceList testInstances = new InstanceList(classifier.getInstancePipe());
-        CsvIterator reader =
-            new CsvIterator(new FileReader(file),
-                            "(\\w+)\\s+(\\S+)\\s+(.*)",
-                            3, 2, 1);  // (data, label, name) field indices               
-
-        testInstances.addThruPipe(reader);
+        Reader fileReader = new InputStreamReader(new FileInputStream(file), "UTF-8");
+        testInstances.addThruPipe(new CsvIterator(fileReader, Pattern.compile("^(\\S*)[\\s,]*(\\S*)[\\s,]*(.*)$"),3, 2, 1)); // data, label, name fields
         
-//        classifier.
         
+                
         Trial trial = new Trial(classifier, testInstances);
 
         // why does java not allow returning multiple values? :P
@@ -509,14 +563,15 @@ public class DocumentClassification {
 		
 		//String[] algorithms = {"balancedwinnow", "c45", "maxentrange", "maxent", "maxentge", "maxentpr", "mcmaxent", "bayesem", "bayes", "winnow"}; // some algorithms crashed on my training set, so leaving those out...
 		//String[] algorithms = {"c45", "maxent", "mcmaxent", "bayesem", "bayes", "winnow"}; // c45 takes a looooong time
-		String[] algorithms = {"c45"};
+		//String[] algorithms = {"c45"};
+		String[] algorithms = {"maxent"};
 		
 		
 		PrintWriter out = new PrintWriter(new File("C:\\Users\\pebo01\\Desktop\\debug.txt"));
 		PrintWriter debugOut = new PrintWriter(new File("C:\\Users\\pebo01\\Desktop\\debug2.txt"));
 		
 		
-		int max = 10;
+		int max = 2;
 		for (String alg : algorithms){
 			Double totalPrecision = 0.0;
 			Double totalRecall = 0.0;
@@ -530,10 +585,12 @@ public class DocumentClassification {
 			try{
 				for (int i = 0; i < max; i++) {
 					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\naacl_id_class_text.tsv");
-					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\germanHatespeechRating.tsv");
+					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\germanHatespeechExpert1.tsv");
+					HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\ubuntuShare\\out.ssv");
 					ArrayList<String> allClasses = new ArrayList<String>();
 					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\annatationSemevalForMalletBinary.tsv");
-					HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\wikiTalkData\\wikiTalkAggressionRating2013-2015.tsv");
+					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\AWL2017\\wikiTalkData\\wikiTalkAggressionBinary2013-2015.tsv");
+					//HashMap<String, List<String>> data = splitDataRandom("C:\\Users\\pebo01\\Desktop\\ubuntuShare\\citationNeededClassificationInput.tsv");
 					String tempTrainPath = "C:\\Users\\pebo01\\Desktop\\AWL2017\\tempTrain.txt";
 					String tempTestPath = "C:\\Users\\pebo01\\Desktop\\AWL2017\\tempTest.txt";
 					PrintWriter tempTrain = new PrintWriter(new File(tempTrainPath));
@@ -550,9 +607,11 @@ public class DocumentClassification {
 						tempTest.println(s);
 					}
 					tempTest.close();
-					DocumentClassification.trainClassifier("C:\\Users\\pebo01\\Desktop\\AWL2017\\tempTrain.txt", "C:\\Users\\pebo01\\workspace\\e-Clustering\\src\\main\\resources\\trainedModels\\documentClassification", "tweetExperimentingModel", "en", alg);
+					//DocumentClassification.trainClassifier("C:\\Users\\pebo01\\Desktop\\AWL2017\\tempTrain.txt", "C:\\Users\\pebo01\\workspace\\e-Clustering\\src\\main\\resources\\trainedModels\\documentClassification", "tweetExperimentingModel", "en", alg);
+					DocumentClassification.trainClassifier("C:\\Users\\pebo01\\Desktop\\AWL2017\\tempTrain.txt", "C:\\Users\\pebo01\\workspace\\e-Clustering\\src\\main\\resources\\trainedModels\\documentClassification", "mendelsohnAuthorModel", "en", alg);
 					Classifier classifier;
-					File modelFile = FileFactory.generateFileInstance(modelsDirectory + "en" + "-" + "tweetExperimentingModel" + ".EXT");
+					//File modelFile = FileFactory.generateFileInstance(modelsDirectory + "en" + "-" + "tweetExperimentingModel" + ".EXT");
+					File modelFile = FileFactory.generateFileInstance(modelsDirectory + "en" + "-" + "mendelsohnAuthorModel" + ".EXT");
 					ObjectInputStream ois = new ObjectInputStream(new FileInputStream(modelFile));
 					classifier = (Classifier) ois.readObject();
 					ois.close();
@@ -624,7 +683,35 @@ public class DocumentClassification {
 					}
 
 					// debugOut.println("================================");
-					Double[] scores = evaluate(classifier, testFile, debugOut, allClasses);
+
+					
+					//Double[] scores = evaluate(classifier, testFile, debugOut, allClasses, testAlpha, classifierAlpha); // commenting this out as it kept complaining that alphabets dont match
+					
+					/*
+					 * Doing evaluation in here now...
+					 */
+				
+					Trial trial = new Trial(classifier, testInstances);
+
+					double totalP = 0.0;
+			        double totalR = 0.0;
+			        double totalF = 0.0;
+			        for (String cl : allClasses){
+			        	totalP += trial.getPrecision(cl);
+			        	totalR += trial.getRecall(cl);
+			        	totalF += trial.getF1(cl);
+			        }
+			        
+			        double averagePrecision = totalP / allClasses.size();
+			        double averageRecall = totalR / allClasses.size();
+			        double averageF1 = totalF / allClasses.size();
+			        
+			        Double[] scores = {trial.getAccuracy(), averagePrecision, averageRecall, averageF1};
+			        System.out.println("DEBUGGING SCORES:" + Arrays.toString(scores));
+					/*
+					 * end of eval section (that should happen in dedicated method)
+					 */
+					
 					totalAccuracy += scores[0];
 					totalPrecision += scores[1];
 					totalRecall += scores[2];
@@ -635,7 +722,7 @@ public class DocumentClassification {
 					as.add(scores[0]);
 
 				}
-
+				System.out.println("INFO: done with loop.");
 				for (String l : featureMap.keySet()){
 					debugOut.println("Class: " + l);
 					HashMap<String, Double> im = featureMap.get(l);
@@ -655,7 +742,7 @@ public class DocumentClassification {
 			}
 			catch (Exception e){
 				e.printStackTrace();
-				System.exit(1);
+				//System.exit(1);
 			}
 			Double p = totalPrecision / max;
 			Double r = totalRecall / max;
